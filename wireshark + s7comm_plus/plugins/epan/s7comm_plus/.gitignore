@@ -1,0 +1,9 @@
+# Ignore files generated during build with automake
+/.deps
+/.libs
+/.dirstamp
+*.o
+*.lo
+*.obj
+# Ignore editor backup files
+*~

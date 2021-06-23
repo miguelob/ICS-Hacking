@@ -1,0 +1,701 @@
+// WSUG Chapter Statistics
+
+[[ChStatistics]]
+
+== Statistics
+
+[[ChStatIntroduction]]
+
+=== Introduction
+
+Wireshark provides a wide range of network statistics which can be accessed via
+the menu:Statistics[] menu.
+
+These statistics range from general information about the loaded capture file
+(like the number of captured packets), to statistics about specific protocols
+(e.g. statistics about the number of HTTP requests and responses captured).
+
+.General statistics
+
+  - *Capture File Properties* about the capture file.
+
+  - *Protocol Hierarchy* of the captured packets.
+
+  - *Conversations* e.g. traffic between specific IP addresses.
+
+  - *Endpoints* e.g. traffic to and from an IP addresses.
+
+  - *I/O Graphs* visualizing the number of packets (or similar) in time.
+
+.Protocol specific statistics
+
+  - *Service Response Time* between request and response of some protocols.
+
+  - Various other protocol specific statistics.
+
+[NOTE]
+====
+The protocol specific statistics require detailed knowledge about the specific
+protocol. Unless you are familiar with that protocol, statistics about it may
+be difficult to understand.
+====
+
+Wireshark has many other statistics windows that display detailed
+information about specific protocols and might be described in a later
+version of this document.
+
+Some of these statistics are described at
+{wireshark-wiki-url}Statistics.
+
+[[ChStatSummary]]
+
+=== The “Capture File Properties” Dialog
+
+General information about the current capture file.
+
+.The “Capture File Properties” dialog
+image::wsug_graphics/ws-capture-file-properties.png[{screenshot-attrs}]
+
+This dialog shows the following information:
+
+Details::
+Notable information about the capture file.
+
+File:::
+General information about the capture file, including its full path, size, cryptographic hashes, file format, and encapsulation.
+
+Time:::
+The timestamps of the first and the last packet in the file along with their difference.
+
+Capture:::
+Information about the capture environment.
+This will only be shown for live captures or if this information is present in a saved capture file.
+The pcapng format supports this, while pcap doesn’t.
+
+Interfaces:::
+Information about the capture interface or interfaces.
+
+Statistics:::
+A statistical summary of the capture file.
+If a display filter is set, you will see values in the _Captured_ column, and if any packets are marked, you will see values in the _Marked_ column.
+The values in the _Captured_ column will remain the same as before, while the values in the _Displayed_ column will reflect the values corresponding to the packets shown in the display.
+The values in the _Marked_ column will reflect the values corresponding to the marked packages.
+
+Capture file comments::
+Some capture file formats (notably pcapng) allow a text comment for the entire file.
+You can view and edit this comment here.
+
+btn:[Refresh]::
+Updates the information in the dialog.
+
+btn:[Save Comments]::
+Saves the contents of the “Capture file comments” text entry.
+
+btn:[Close]::
+Closes the dialog
+
+btn:[Copy To Clipboard]::
+Copies the “Details” information to the clipboard.
+
+btn:[Help]::
+Opens this section of the User’s Guide.
+
+[[ChStatResolvedAddresses]]
+
+=== Resolved Addresses
+
+{missing}
+
+[[ChStatHierarchy]]
+
+=== The “Protocol Hierarchy” Window
+
+The protocol hierarchy of the captured packets.
+
+.The “Protocol Hierarchy” Window
+image::wsug_graphics/ws-stats-hierarchy.png[{screenshot-attrs}]
+
+This is a tree of all the protocols in the capture. Each row contains the
+statistical values of one protocol. Two of the columns (_Percent Packets_ and
+_Percent Bytes_) serve double duty as bar graphs. If a display filter is set it
+will be shown at the bottom.
+
+The btn:[Copy] button will let you copy the window contents as CSV or YAML.
+
+.Protocol hierarchy columns
+
+Protocol::
+This protocol’s name.
+
+Percent Packets::
+The percentage of protocol packets relative to all packets in the capture.
+
+Packets::
+The total number of packets of this protocol.
+
+Percent Bytes::
+The percentage of protocol bytes relative to the total bytes in the capture.
+
+Bytes::
+The total number of bytes of this protocol.
+
+Bits/s::
+The bandwidth of this protocol relative to the capture time.
+
+End Packets::
+The absolute number of packets of this protocol where it was the highest protocol in the stack (last dissected).
+
+End Bytes::
+The absolute number of bytes of this protocol where it was the highest protocol in the stack (last dissected).
+
+End Bits/s::
+The bandwidth of this protocol relative to the capture time where was the highest protocol in the stack (last dissected).
+
+Packets usually contain multiple protocols. As a result more than one protocol will
+be counted for each packet. Example: In the screenshot IP has 99.9% and TCP
+98.5% (which is together much more than 100%).
+
+Protocol layers can consist of packets that won’t contain any higher layer
+protocol, so the sum of all higher layer packets may not sum up to the protocols
+packet count. Example: In the screenshot TCP has 98.5% but the sum of the
+subprotocols (TLS, HTTP, etc) is much less. This can be caused by continuation
+frames, TCP protocol overhead, and other undissected data.
+
+A single packet can contain the same protocol more than once. In this case, the
+protocol is counted more than once. For example ICMP replies and many tunneling
+protocols will carry more than one IP header.
+
+[[ChStatConversations]]
+
+=== Conversations
+
+A network conversation is the traffic between two specific endpoints. For
+example, an IP conversation is all the traffic between two IP addresses. The
+description of the known endpoint types can be found in
+<<ChStatEndpoints>>.
+
+[[ChStatConversationsWindow]]
+
+==== The “Conversations” Window
+
+The conversations window is similar to the endpoint Window. See
+<<ChStatEndpointsWindow>> for a description of their common features. Along with
+addresses, packet counters, and byte counters the conversation window adds four
+columns: the start time of the conversation (“Rel Start”) or (“Abs Start”),
+the duration of the conversation in seconds, and the average bits (not bytes)
+per second in each direction. A timeline graph is also drawn across the
+“Rel Start” / “Abs Start” and “Duration” columns.
+
+.The “Conversations” window
+image::wsug_graphics/ws-stats-conversations.png[{screenshot-attrs}]
+
+Each row in the list shows the statistical values for exactly one conversation.
+
+_Name resolution_ will be done if selected in the window and if it is active for
+the specific protocol layer (MAC layer for the selected Ethernet endpoints
+page). _Limit to display filter_ will only show conversations matching the
+current display filter. _Absolute start time_ switches the start time column
+between relative (“Rel Start”) and absolute (“Abs Start”) times. Relative start
+times match the “Seconds Since Beginning of Capture” time display format in the
+packet list and absolute start times match the “Time of Day” display format.
+
+The btn:[Copy] button will copy the list values to the clipboard in CSV
+(Comma Separated Values) or YAML format. The btn:[Follow Stream...] button
+will show the stream contents as described in <<ChAdvFollowStream>> dialog. The
+btn:[Graph...] button will show a graph as described in <<ChStatIOGraphs>>.
+
+btn:[Conversation Types] lets you choose which traffic type tabs are shown.
+See <<ChStatEndpoints>> for a list of endpoint types. The enabled types
+are saved in your profile settings.
+
+[TIP]
+====
+This window will be updated frequently so it will be useful even if you open
+it before (or while) you are doing a live capture.
+====
+
+// Removed:
+// [[ChStatConversationListWindow]]
+
+[[ChStatEndpoints]]
+
+=== Endpoints
+
+A network endpoint is the logical endpoint of separate protocol traffic of a
+specific protocol layer. The endpoint statistics of Wireshark will take the
+following endpoints into account:
+
+[TIP]
+====
+If you are looking for a feature other network tools call a _hostlist_, here is
+the right place to look. The list of Ethernet or IP endpoints is usually what
+you’re looking for.
+====
+
+.Endpoint and Conversation types
+
+Bluetooth:: A MAC-48 address similar to Ethernet.
+
+Ethernet:: Identical to the Ethernet device’s MAC-48 identifier.
+
+Fibre Channel:: A MAC-48 address similar to Ethernet.
+
+IEEE 802.11:: A MAC-48 address similar to Ethernet.
+
+FDDI:: Identical to the FDDI MAC-48 address.
+
+IPv4:: Identical to the 32-bit IPv4 address.
+
+IPv6:: Identical to the 128-bit IPv6 address.
+
+IPX:: A concatenation of a 32 bit network number and 48 bit node address, by
+default the Ethernet interface’s MAC-48 address.
+
+JXTA:: A 160 bit SHA-1 URN.
+
+NCP:: Similar to IPX.
+
+RSVP:: A combination of various RSVP session attributes and IPv4 addresses.
+
+SCTP:: A combination of the host IP addresses (plural) and
+the SCTP port used. So different SCTP ports on the same IP address are different
+SCTP endpoints, but the same SCTP port on different IP addresses of the same
+host are still the same endpoint.
+
+TCP:: A combination of the IP address and the TCP port used.
+Different TCP ports on the same IP address are different TCP endpoints.
+
+Token Ring:: Identical to the Token Ring MAC-48 address.
+
+UDP:: A combination of the IP address and the UDP port used, so different UDP
+ports on the same IP address are different UDP endpoints.
+
+USB:: Identical to the 7-bit USB address.
+
+[NOTE]
+.Broadcast and multicast endpoints
+====
+Broadcast and multicast traffic will be shown separately as additional
+endpoints. Of course, as these aren’t physical endpoints the real traffic
+will be received by some or all of the listed unicast endpoints.
+====
+
+[[ChStatEndpointsWindow]]
+
+==== The “Endpoints” Window
+
+This window shows statistics about the endpoints captured.
+
+.The “Endpoints” window
+image::wsug_graphics/ws-stats-endpoints.png[{screenshot-attrs}]
+
+For each supported protocol, a tab is shown in this window. Each tab label shows
+the number of endpoints captured (e.g. the tab label “Ethernet &#183; 4” tells
+you that four ethernet endpoints have been captured). If no endpoints of a
+specific protocol were captured, the tab label will be greyed out (although the
+related page can still be selected).
+
+Each row in the list shows the statistical values for exactly one endpoint.
+
+_Name resolution_ will be done if selected in the window and if it is
+active for the specific protocol layer (MAC layer for the selected
+Ethernet endpoints page). _Limit to display filter_ will only show
+conversations matching the current display filter. Note that in this
+example we have MaxMind DB configured which gives us extra geographic
+columns. See <<ChMaxMindDbPaths>> for more information.
+
+The btn:[Copy] button will copy the list values to the clipboard in CSV
+(Comma Separated Values) or YAML format. The btn:[Map] button will show the
+endpoints mapped in your web browser.
+
+btn:[Endpoint Types] lets you choose which traffic type tabs are shown. See
+<<ChStatEndpoints>> above for a list of endpoint types. The enabled
+types are saved in your profile settings.
+
+[TIP]
+====
+This window will be updated frequently, so it will be useful even if you open
+it before (or while) you are doing a live capture.
+====
+
+// Removed:
+// [[ChStatEndpointListWindow]]
+
+
+[[ChStatPacketLengths]]
+
+=== Packet Lengths
+
+Shows the distribution of packet lengths and related information.
+
+.The “Packet Lengths” window
+image::wsug_graphics/ws-stats-packet-lengths.png[{medium-screenshot-attrs}]
+
+Information is broken down by packet length ranges as shown above.
+
+Packet Lengths::
+The range of packet lengths.
++
+Ranges can be configured in the “Statistics -> Stats Tree” section of the <<ChCustPreferencesSection,Preferences Dialog>>.
+
+Count::
+The number of packets that fall into this range.
+
+Average::
+The arithmetic mean length of the packets in this range.
+
+Min Val, Max Val::
+The minimum and maximum lengths in this range.
+
+Rate (ms)::
+The average packets per millisecond for the packets in this range.
+
+Percent::
+The percentage of packets in this range, by count.
+
+Burst Rate::
+Packet bursts are detected by counting the number of packets in a given time interval and comparing that count to the intervals across a window of time.
+Statistics for the interval with the maximum number of packets are shown.
+By default, bursts are detected across 5 millisecond intervals and intervals are compared across 100 millisecond windows.
++
+These calculations can be adjusted in the “Statistics” section of the <<ChCustPreferencesSection,Preferences Dialog>>.
+
+Burst Start::
+The start time, in seconds from the beginning of the capture, for the interval with the maximum number of packets.
+
+You can show statistics for a portion of the capture by entering a display filter into the _Display filter_ entry and pressing btn:[Apply].
+
+btn:[Copy] copies the statistics to the clipboard.
+btn:[Save as...] lets you save the data as text, CSV, YAML, or XML.
+
+[[ChStatIOGraphs]]
+
+=== The “I/O Graphs” Window
+
+Lets you plot packet and protocol data in a variety of ways.
+
+.The “I/O Graphs” window
+image::wsug_graphics/ws-stats-iographs.png[{screenshot-attrs}]
+
+As shown above, this window contains a chart drawing area along with a customizable list of graphs.
+Graphs are saved in your current <<ChCustConfigProfilesSection,profile>>.
+They are divided into time intervals, which can be set as described below.
+Hovering over the graph shows the last packet in each interval except as noted below.
+Clicking on the graph takes you to the associated packet in the packet list.
+Individual graphs can be configured using the following options:
+
+Enabled::
+Draw or don’t draw this graph.
+
+Graph Name::
+The name of this graph.
+
+Display Filter::
+Limits the graph to packets that match this filter.
+
+Color::
+The color to use for plotting the graph’s lines, bars, or points.
+
+Style::
+How to visually represent the graph’s data, e.g. by drawing a line, bar, circle, plus, etc.
+
+Y Axis::
+The value to use for the graph’s Y axis. Can be one of:
+
+Packets, Bytes, or Bits:::
+The total number of packets, packet bytes, or packet bits that match the graph’s display filter per interval.
+<<ChStatIOGraphsMissingValues, Zero values>> are omitted in some cases.
+
+SUM(Y Field):::
+The sum of the values of the field specified in “Y Field” per interval.
+
+COUNT FRAMES(Y Field):::
+The number of frames that contain the field specified in “Y Field” per interval.
+Unlike the plain “Packets” graph, this always displays <<ChStatIOGraphsMissingValues, zero values>>.
+
+COUNT FIELDS(Y Field):::
+The number of instances of the field specified in “Y Field” per interval.
+Some fields, such as _dns.resp.name_, can show up multiple times in a packet.
+
+MAX(Y Field), MIN(Y Field), AVG(Y Field):::
+The maximum, minimum, and arithmetic mean values of the specified “Y Field” per interval.
+For MAX and MIN values, hovering and clicking the graph will show and take you to the packet with the MAX or MIN value in the interval instead of the most recent packet.
+
+// io_graph_item.c says:
+// "LOAD graphs plot the QUEUE-depth of the connection over time"
+// (for response time fields such as smb.time, rpc.time, etc.)
+// This interval is expressed in milliseconds.
+LOAD(Y Field):::
+If the “Y Field” is a relative time value, this is the sum of the “Y Field” values divided by the interval time.
+This can be useful for tracking response times.
+
+Y Field::
+The display filter field from which to extract values for the Y axis calculations listed above.
+
+SMA Period::
+Show an average of values over a specified period of intervals.
+
+The chart as a whole can be configured using the controls under the graph list:
+
+btn:[{plus}]::
+Add a new graph.
+
+btn:[-]::
+Add a new graph.
+
+btn:[Copy]::
+Copy the selected graph.
+
+btn:[Clear]::
+Remove all graphs.
+
+Mouse drags / zooms::
+When using the mouse inside the graph area, either drag the graph contents or select a zoom area.
+
+Interval::
+Set the interval period for the graph.
+
+Time of day::
+Switch between showing the absolute time of day or the time relative from the start of capture in the X axis.
+
+Log scale::
+Switch between a logarithmic or linear Y axis.
+
+The main dialog buttons along the bottom let you do the following:
+
+The btn:[Help] button will take you to this section of the User’s Guide.
+
+The btn:[Copy] button will copy values from selected graphs to the clipboard in CSV
+(Comma Separated Values) format.
+
+btn:[Copy from] will let you copy graphs from another profile.
+
+btn:[Close] will close this dialog.
+
+btn:[Save As...] will save the currently displayed graph as an image or CSV data.
+
+[TIP]
+====
+You can see a list of useful keyboard shortcuts by right-clicking on the graph.
+====
+
+[[ChStatIOGraphsMissingValues]]
+
+[discrete]
+==== Missing Values Are Zero
+
+Wireshark's I/O Graph window doesn’t distinguish between missing and zero values.
+For scatter plots it is assumed that zero values indicate missing data, and those values are omitted.
+Zero values are shown in line graphs, and bar charts.
+
+// No longer true as of eb4e2cca69.
+// For _plain_ (Packets, Bytes, and Bits) scatter plots, it is assumed that zero values indicate missing data, and those values are omitted.
+// Zero values are shown in line graphs, bar charts, and _calculated_ scatter plots.
+// Scatter plots are considered calculated if they have a calculated Y axis field or if a moving average is set.
+
+// If you need to display zero values in a scatter plot, you can do so by making the Y Axis a calculated field.
+// For example, the calculated equivalent of “Packets” is a “COUNT FRAMES” Y Axis with a Y Field set to “frame”.
+
+[[ChStatSRT]]
+
+=== Service Response Time
+
+The service response time is the time between a request and the corresponding response.
+This information is available for many protocols, including the following:
+
+* AFP
+* CAMEL
+* DCE-RPC
+* Diameter
+* Fibre Channel
+* GTP
+* H.225 RAS
+* LDAP
+* MEGACO
+* MGCP
+* NCP
+* ONC-RPC
+* RADIUS
+* SCSI
+* SMB
+* SMB2
+* SNMP
+
+As an example, the SMB2 service response time is described below in more detail.
+The other Service Response Time windows will show statistics specific to their respective protocols, but will offer the same menu options.
+
+[[ChStatSRTSMB2]]
+
+==== The “SMB2 Service Response Time Statistics” Window
+
+This window shows the number of transactions for each SMB2 opcode present in the capture file along with various response time statistics.
+Right-clicking on a row will let you apply or prepare filters for, search for, or colorize a specific opcode.
+You can also copy all of the response time information or save it in a variety of formats.
+
+.The “SMB2 Service Response Time Statistics” window
+image::wsug_graphics/ws-stats-srt-smb2.png[{screenshot-attrs}]
+
+You can optionally apply a display filter in order to limit the statistics to a specific set of packets.
+
+The main dialog buttons along the bottom let you do the following:
+
+The btn:[Copy] button will copy the response time information as text.
+
+btn:[Save As...] will save the response time information in various formats.
+
+btn:[Close] will close this dialog.
+
+[[ChStatDHCPBOOTP]]
+
+=== DHCP (BOOTP) Statistics
+
+{missing}
+
+[[ChStatONCRPC]]
+
+=== ONC-RPC Programs
+
+{missing}
+
+[[ChStat29West]]
+
+=== 29West
+
+{missing}
+
+[[ChStatANCP]]
+
+=== ANCP
+
+{missing}
+
+[[ChStatBACnet]]
+
+=== BACnet
+
+{missing}
+
+[[ChStatCollectd]]
+
+=== Collectd
+
+{missing}
+
+[[ChStatDNS]]
+
+=== DNS
+
+{missing}
+
+[[ChStatFlowGraph]]
+
+=== Flow Graph
+
+{missing}
+
+[[ChStatHARTIP]]
+
+=== HART-IP
+
+{missing}
+
+[[ChStatHPFEEDS]]
+
+=== HPFEEDS
+
+{missing}
+
+[[ChStatHTTP]]
+
+=== HTTP Statistics
+
+[[ChStatHTTPPacketCounter]]
+
+==== HTTP Packet Counter
+
+Statistics for HTTP request types and response codes.
+
+[[ChStatHTTPRequests]]
+
+==== HTTP Requests
+
+HTTP statistics based on the host and URI.
+
+[[ChStatHTTPLoadDistribution]]
+
+==== HTTP Load Distribution
+
+HTTP request and response statistics based on the server address and host.
+
+[[ChStatHTTPRequestSequences]]
+
+==== HTTP Request Sequences
+
+HTTP Request Sequences uses HTTP's Referer and Location headers to sequence a
+capture's HTTP requests as a tree. This enables analysts to see how one HTTP
+request leads to the next.
+
+.The “HTTP Request Sequences” window
+image::wsug_graphics/ws-stats-http-requestsequences.png[{screenshot-attrs}]
+
+
+[[ChStatHTTP2]]
+
+=== HTTP2
+
+{missing}
+
+[[ChStatSametime]]
+
+=== Sametime
+
+{missing}
+
+[[ChStatTCPStreamGraphs]]
+
+=== TCP Stream Graphs
+
+Show different visual representations of the TCP streams in a capture.
+
+Time Sequence (Stevens):: This is a simple graph of the TCP sequence
+number over time, similar to the ones used in Richard Stevens’ “TCP/IP
+Illustrated” series of books.
+
+Time Sequence (tcptrace):: Shows TCP metrics similar to the
+http://www.tcptrace.org/[tcptrace] utility, including forward segments,
+acknowledgements, selective acknowledgements, reverse window sizes, and
+zero windows.
+
+Throughput:: Average throughput and goodput.
+
+Round Trip Time:: Round trip time vs time or sequence number. RTT is
+based on the acknowledgement timestamp corresponding to a particular
+segment.
+
+Window Scaling:: Window size and outstanding bytes.
+
+[[ChStatUDPMulticastGraphs]]
+
+=== UDP Multicast Graphs
+
+{missing}
+
+[[ChStatF5]]
+
+=== F5
+
+{missing}
+
+[[ChStatIPv4]]
+
+=== IPv4 Statistics
+
+{missing}
+
+[[ChStatIPv6]]
+
+=== IPv6 Statistics
+
+{missing}
+
+// End of WSUG Chapter Statistics

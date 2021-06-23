@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>randpktdump - The Wireshark Network Analyzer 3.4.2</title>
+<link rel="stylesheet" href="ws.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@osx372.sd.apple.com" />
+</head>
+
+<body>
+
+
+
+<h1 id="NAME">NAME</h1>
+
+<p>randpktdump - Provide an interface to generate random captures using randpkt</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>randpktdump</b> <span style="white-space: nowrap;">[ <b>--help</b> ]</span> <span style="white-space: nowrap;">[ <b>--version</b> ]</span> <span style="white-space: nowrap;">[ <b>--extcap-interfaces</b> ]</span> <span style="white-space: nowrap;">[ <b>--extcap-dlts</b> ]</span> <span style="white-space: nowrap;">[ <b>--extcap-interface</b>=&lt;interface&gt; ]</span> <span style="white-space: nowrap;">[ <b>--extcap-config</b> ]</span> <span style="white-space: nowrap;">[ <b>--capture</b> ]</span> <span style="white-space: nowrap;">[ <b>--fifo</b>=&lt;path to file or pipe&gt; ]</span> <span style="white-space: nowrap;">[ <b>--maxbytes</b>=&lt;bytes&gt; ]</span> <span style="white-space: nowrap;">[ <b>--count</b>=&lt;num&gt; ]</span> <span style="white-space: nowrap;">[ <b>--delay</b>=&lt;ms&gt; ]</span> <span style="white-space: nowrap;">[ <b>--random-type</b>=&lt;true|false&gt; ]</span> <span style="white-space: nowrap;">[ <b>--all-random</b>=&lt;true|false&gt; ]</span> <span style="white-space: nowrap;">[ <b>--type</b>=&lt;packet type&gt; ]</span></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><b>randpktdump</b> is a extcap tool that provides access to the random packet generator (randpkt). It is mainly used for testing and educational purpose.</p>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="help">--help</dt>
+<dd>
+
+<p>Print program arguments.</p>
+
+</dd>
+<dt id="version">--version</dt>
+<dd>
+
+<p>Print program version.</p>
+
+</dd>
+<dt id="extcap-interfaces">--extcap-interfaces</dt>
+<dd>
+
+<p>List available interfaces.</p>
+
+</dd>
+<dt id="extcap-interface-interface">--extcap-interface=&lt;interface&gt;</dt>
+<dd>
+
+<p>Use specified interfaces.</p>
+
+</dd>
+<dt id="extcap-dlts">--extcap-dlts</dt>
+<dd>
+
+<p>List DLTs of specified interface.</p>
+
+</dd>
+<dt id="extcap-config">--extcap-config</dt>
+<dd>
+
+<p>List configuration options of specified interface.</p>
+
+</dd>
+<dt id="capture">--capture</dt>
+<dd>
+
+<p>Start capturing from specified interface save saved it in place specified by --fifo.</p>
+
+</dd>
+<dt id="fifo-path-to-file-or-pipe">--fifo=&lt;path to file or pipe&gt;</dt>
+<dd>
+
+<p>Save captured packet to file or send it through pipe.</p>
+
+</dd>
+<dt id="maxbytes-bytes">--maxbytes=&lt;bytes&gt;</dt>
+<dd>
+
+<p>Set the max number of bytes per packet.</p>
+
+</dd>
+<dt id="count-num">--count=&lt;num&gt;</dt>
+<dd>
+
+<p>Number of packets to generate (-1 for infinite).</p>
+
+</dd>
+<dt id="delay-ms">--delay=&lt;ms&gt;</dt>
+<dd>
+
+<p>Wait a number of milliseconds after writing each packet.</p>
+
+</dd>
+<dt id="random-type">--random-type</dt>
+<dd>
+
+<p>Choose a random packet type for all packets if set to true.</p>
+
+</dd>
+<dt id="all-random">--all-random</dt>
+<dd>
+
+<p>Choose a different random packet type for each packet if set to true.</p>
+
+</dd>
+<dt id="type-packet-type">--type=&lt;packet type&gt;</dt>
+<dd>
+
+<p>Use the selected packet type. To list all the available packet type, run randpktdump --help.</p>
+
+</dd>
+</dl>
+
+<h1 id="EXAMPLES">EXAMPLES</h1>
+
+<p>To see program arguments:</p>
+
+<pre><code>    randpktdump --help</code></pre>
+
+<p>To see program version:</p>
+
+<pre><code>    randpktdump --version</code></pre>
+
+<p>To see interfaces:</p>
+
+<pre><code>    randpktdump --extcap-interfaces
+
+  Example output:
+    interface {value=randpkt}{display=Random packet generator}</code></pre>
+
+<p>To see interface DLTs:</p>
+
+<pre><code>    randpktdump --extcap-interface=randpkt --extcap-dlts
+
+  Example output:
+    dlt {number=1}{name=randpkt}{display=Ethernet}</code></pre>
+
+<p>To see interface configuration options:</p>
+
+<pre><code>    randpktdump --extcap-interface=randpkt --extcap-config
+
+  Example output:
+    arg {number=0}{call=--maxbytes}{display=Max bytes in a packet}{type=unsigned}{range=1,5000}{default=5000}{tooltip=The max number of bytes in a packet}
+    arg {number=1}{call=--count}{display=Number of packets}{type=long}{default=1000}{tooltip=Number of packets to generate (-1 for infinite)}
+    arg {number=2}{call=--delay}{display=Packet delay (ms)}{type=long}{default=0}{tooltip=Milliseconds to wait after writing each packet}
+    arg {number=3}{call=--random-type}{display=Random type}{type=boolflag}{default=false}{tooltip=The packets type is randomly chosen}
+    arg {number=4}{call=--all-random}{display=All random packets}{type=boolflag}{default=false}{tooltip=Packet type for each packet is randomly chosen}
+    arg {number=5}{call=--type}{display=Type of packet}{type=selector}{tooltip=Type of packet to generate}
+    value {arg=5}{value=arp}{display=Address Resolution Protocol}
+    [...]
+    value {arg=5}{value=usb-linux}{display=Universal Serial Bus with Linux specific header}</code></pre>
+
+<p>To capture:</p>
+
+<pre><code>    randpktdump --extcap-interface=randpkt --fifo=/tmp/randpkt.pcapng --capture</code></pre>
+
+<p>NOTE: To stop capturing CTRL+C/kill/terminate application.</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>wireshark(1), tshark(1), dumpcap(1), extcap(4), randpkt(1)</p>
+
+<h1 id="NOTES">NOTES</h1>
+
+<p><b>randpktdump</b> is part of the <b>Wireshark</b> distribution. The latest version of <b>Wireshark</b> can be found at <a href="https://www.wireshark.org">https://www.wireshark.org</a>.</p>
+
+<p>HTML versions of the Wireshark project man pages are available at: <a href="https://www.wireshark.org/docs/man-pages">https://www.wireshark.org/docs/man-pages</a>.</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<pre><code>  Original Author
+  ---------------
+  Dario Lombardo             &lt;lomato[AT]gmail.com&gt;</code></pre>
+
+
+</body>
+
+</html>
+
+

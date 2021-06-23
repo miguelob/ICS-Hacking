@@ -1,0 +1,488 @@
+State 0:
+          line ::= * maybe_spaces msg
+          line ::= * maybe_spaces
+          maybe_spaces ::= * maybe_spaces SPACE
+     (27) maybe_spaces ::= *
+
+                          line accept
+                  maybe_spaces shift        11     
+                     {default} reduce       27     maybe_spaces ::=
+
+State 1:
+          msg ::= timestamp SPACE ifname SPACE id flags * data_max_64
+          data_max_8 ::= * data0
+          data_max_8 ::= * data1
+          data_max_8 ::= * data2
+          data_max_8 ::= * data3
+          data_max_8 ::= * data4
+          data_max_8 ::= * data5
+          data_max_8 ::= * data6
+          data_max_8 ::= * data7
+          data_max_8 ::= * data8
+          data_max_64 ::= * data_max_8
+          data_max_64 ::= * data12
+          data_max_64 ::= * data16
+          data_max_64 ::= * data20
+          data_max_64 ::= * data24
+          data_max_64 ::= * data32
+          data_max_64 ::= * data48
+          data_max_64 ::= * data64
+          byte ::= * BYTE
+     (10) data0 ::= *
+          data1 ::= * byte
+          data2 ::= * byte byte
+          data3 ::= * byte byte byte
+          data4 ::= * byte byte byte byte
+          data5 ::= * data4 data1
+          data6 ::= * data4 data2
+          data7 ::= * data4 data3
+          data8 ::= * data4 data4
+          data12 ::= * data8 data4
+          data16 ::= * data8 data8
+          data20 ::= * data16 data4
+          data24 ::= * data16 data8
+          data32 ::= * data16 data16
+          data48 ::= * data32 data16
+          data64 ::= * data32 data32
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        22     
+                    data_max_8 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data_max_8==data_max_64 */
+                   data_max_64 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64
+                         data0 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data0==data_max_8 */
+                         data1 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data1==data_max_8 */
+                         data2 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data2==data_max_8 */
+                         data3 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data3==data_max_8 */
+                         data4 shift        4      
+                         data5 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data5==data_max_8 */
+                         data6 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data6==data_max_8 */
+                         data7 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data7==data_max_8 */
+                         data8 shift        9      
+                        data12 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data12==data_max_64 */
+                        data16 shift        6      
+                        data20 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data20==data_max_64 */
+                        data24 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data24==data_max_64 */
+                        data32 shift        3      
+                        data48 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data48==data_max_64 */
+                        data64 shift-reduce 4      msg ::= timestamp SPACE ifname SPACE id flags data_max_64  /* because data64==data_max_64 */
+                     {default} reduce       10     data0 ::=
+
+State 2:
+          msg ::= timestamp SPACE ifname SPACE id * RTR
+          msg ::= timestamp SPACE ifname SPACE id * data_max_8
+          msg ::= timestamp SPACE ifname SPACE id * flags data_max_64
+          flags ::= * FLAGS
+          data_max_8 ::= * data0
+          data_max_8 ::= * data1
+          data_max_8 ::= * data2
+          data_max_8 ::= * data3
+          data_max_8 ::= * data4
+          data_max_8 ::= * data5
+          data_max_8 ::= * data6
+          data_max_8 ::= * data7
+          data_max_8 ::= * data8
+          byte ::= * BYTE
+     (10) data0 ::= *
+          data1 ::= * byte
+          data2 ::= * byte byte
+          data3 ::= * byte byte byte
+          data4 ::= * byte byte byte byte
+          data5 ::= * data4 data1
+          data6 ::= * data4 data2
+          data7 ::= * data4 data3
+          data8 ::= * data4 data4
+
+                           RTR shift-reduce 2      msg ::= timestamp SPACE ifname SPACE id RTR
+                         FLAGS shift-reduce 8      flags ::= FLAGS
+                          BYTE shift-reduce 9      byte ::= BYTE
+                         flags shift        1      
+                          byte shift        22     
+                    data_max_8 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8
+                         data0 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data0==data_max_8 */
+                         data1 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data1==data_max_8 */
+                         data2 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data2==data_max_8 */
+                         data3 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data3==data_max_8 */
+                         data4 shift        4      
+                         data5 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data5==data_max_8 */
+                         data6 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data6==data_max_8 */
+                         data7 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data7==data_max_8 */
+                         data8 shift-reduce 3      msg ::= timestamp SPACE ifname SPACE id data_max_8  /* because data8==data_max_8 */
+                     {default} reduce       10     data0 ::=
+
+State 3:
+     (51) data_max_64 ::= data32 *
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= * data8 data8
+          data32 ::= * data16 data16
+          data48 ::= data32 * data16
+          data64 ::= data32 * data32
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift        12     
+                         data8 shift        7      
+                        data16 shift        5      
+                        data32 shift-reduce 25     data64 ::= data32 data32
+                     {default} reduce       51     data_max_64 ::= data32
+
+State 4:
+     (41) data_max_8 ::= data4 *
+          byte ::= * BYTE
+          data1 ::= * byte
+          data2 ::= * byte byte
+          data3 ::= * byte byte byte
+          data4 ::= * byte byte byte byte
+          data5 ::= data4 * data1
+          data6 ::= data4 * data2
+          data7 ::= data4 * data3
+          data8 ::= data4 * data4
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        22     
+                         data1 shift-reduce 15     data5 ::= data4 data1
+                         data2 shift-reduce 16     data6 ::= data4 data2
+                         data3 shift-reduce 17     data7 ::= data4 data3
+                         data4 shift-reduce 18     data8 ::= data4 data4
+                     {default} reduce       41     data_max_8 ::= data4
+
+State 5:
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= * data8 data8
+          data32 ::= data16 * data16
+     (24) data48 ::= data32 data16 *
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift        12     
+                         data8 shift        7      
+                        data16 shift-reduce 23     data32 ::= data16 data16
+                     {default} reduce       24     data48 ::= data32 data16
+
+State 6:
+     (48) data_max_64 ::= data16 *
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= * data8 data8
+          data20 ::= data16 * data4
+          data24 ::= data16 * data8
+          data32 ::= data16 * data16
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift        13     
+                         data8 shift        8      
+                        data16 shift-reduce 23     data32 ::= data16 data16
+                     {default} reduce       48     data_max_64 ::= data16
+
+State 7:
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= data8 * data8
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift        12     
+                         data8 shift-reduce 20     data16 ::= data8 data8
+
+State 8:
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= data8 * data8
+     (22) data24 ::= data16 data8 *
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift        12     
+                         data8 shift-reduce 20     data16 ::= data8 data8
+                     {default} reduce       22     data24 ::= data16 data8
+
+State 9:
+     (45) data_max_8 ::= data8 *
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data12 ::= data8 * data4
+          data16 ::= data8 * data8
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift        14     
+                         data8 shift-reduce 20     data16 ::= data8 data8
+                     {default} reduce       45     data_max_8 ::= data8
+
+State 10:
+          msg ::= timestamp SPACE * ifname SPACE id RTR
+          msg ::= timestamp SPACE * ifname SPACE id data_max_8
+          msg ::= timestamp SPACE * ifname SPACE id flags data_max_64
+          ifname ::= * ifname any
+          ifname ::= * any
+          any ::= * UNKNOWN
+          any ::= * RTR
+          any ::= * STD_ID
+          any ::= * EXT_ID
+          any ::= * FLAGS
+          any ::= * TIMESTAMP
+          any ::= * BYTE
+
+                           RTR shift-reduce 31     any ::= RTR
+                     TIMESTAMP shift-reduce 35     any ::= TIMESTAMP
+                       UNKNOWN shift-reduce 30     any ::= UNKNOWN
+                        STD_ID shift-reduce 32     any ::= STD_ID
+                        EXT_ID shift-reduce 33     any ::= EXT_ID
+                         FLAGS shift-reduce 34     any ::= FLAGS
+                          BYTE shift-reduce 36     any ::= BYTE
+                        ifname shift        15     
+                           any shift        15       /* because any==ifname */
+
+State 11:
+          line ::= maybe_spaces * msg
+      (1) line ::= maybe_spaces *
+          maybe_spaces ::= maybe_spaces * SPACE
+          msg ::= * timestamp SPACE ifname SPACE id RTR
+          msg ::= * timestamp SPACE ifname SPACE id data_max_8
+          msg ::= * timestamp SPACE ifname SPACE id flags data_max_64
+          timestamp ::= * TIMESTAMP
+
+                             $ reduce       1      line ::= maybe_spaces
+                         SPACE shift-reduce 26     maybe_spaces ::= maybe_spaces SPACE
+                     TIMESTAMP shift-reduce 5      timestamp ::= TIMESTAMP
+                           msg shift        24     
+                     timestamp shift        23     
+
+State 12:
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= data4 * data4
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift-reduce 18     data8 ::= data4 data4
+
+State 13:
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= data4 * data4
+     (21) data20 ::= data16 data4 *
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift-reduce 18     data8 ::= data4 data4
+                     {default} reduce       21     data20 ::= data16 data4
+
+State 14:
+          byte ::= * BYTE
+          data4 ::= * byte byte byte byte
+          data8 ::= data4 * data4
+     (19) data12 ::= data8 data4 *
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        19     
+                         data4 shift-reduce 18     data8 ::= data4 data4
+                     {default} reduce       19     data12 ::= data8 data4
+
+State 15:
+          msg ::= timestamp SPACE ifname * SPACE id RTR
+          msg ::= timestamp SPACE ifname * SPACE id data_max_8
+          msg ::= timestamp SPACE ifname * SPACE id flags data_max_64
+          ifname ::= ifname * any
+          any ::= * UNKNOWN
+          any ::= * RTR
+          any ::= * STD_ID
+          any ::= * EXT_ID
+          any ::= * FLAGS
+          any ::= * TIMESTAMP
+          any ::= * BYTE
+
+                         SPACE shift        16     
+                           RTR shift-reduce 31     any ::= RTR
+                     TIMESTAMP shift-reduce 35     any ::= TIMESTAMP
+                       UNKNOWN shift-reduce 30     any ::= UNKNOWN
+                        STD_ID shift-reduce 32     any ::= STD_ID
+                        EXT_ID shift-reduce 33     any ::= EXT_ID
+                         FLAGS shift-reduce 34     any ::= FLAGS
+                          BYTE shift-reduce 36     any ::= BYTE
+                           any shift-reduce 28     ifname ::= ifname any
+
+State 16:
+          msg ::= timestamp SPACE ifname SPACE * id RTR
+          msg ::= timestamp SPACE ifname SPACE * id data_max_8
+          msg ::= timestamp SPACE ifname SPACE * id flags data_max_64
+          id ::= * STD_ID
+          id ::= * EXT_ID
+
+                        STD_ID shift-reduce 6      id ::= STD_ID
+                        EXT_ID shift-reduce 7      id ::= EXT_ID
+                            id shift        2      
+
+State 17:
+          byte ::= * BYTE
+          data4 ::= byte byte byte * byte
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift-reduce 14     data4 ::= byte byte byte byte
+
+State 18:
+          byte ::= * BYTE
+          data4 ::= byte byte * byte byte
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        17     
+
+State 19:
+          byte ::= * BYTE
+          data4 ::= byte * byte byte byte
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        18     
+
+State 20:
+          byte ::= * BYTE
+     (13) data3 ::= byte byte byte *
+          data4 ::= byte byte byte * byte
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift-reduce 14     data4 ::= byte byte byte byte
+                     {default} reduce       13     data3 ::= byte byte byte
+
+State 21:
+          byte ::= * BYTE
+     (12) data2 ::= byte byte *
+          data3 ::= byte byte * byte
+          data4 ::= byte byte * byte byte
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        20     
+                     {default} reduce       12     data2 ::= byte byte
+
+State 22:
+          byte ::= * BYTE
+     (11) data1 ::= byte *
+          data2 ::= byte * byte
+          data3 ::= byte * byte byte
+          data4 ::= byte * byte byte byte
+
+                          BYTE shift-reduce 9      byte ::= BYTE
+                          byte shift        21     
+                     {default} reduce       11     data1 ::= byte
+
+State 23:
+          msg ::= timestamp * SPACE ifname SPACE id RTR
+          msg ::= timestamp * SPACE ifname SPACE id data_max_8
+          msg ::= timestamp * SPACE ifname SPACE id flags data_max_64
+
+                         SPACE shift        10     
+
+State 24:
+      (0) line ::= maybe_spaces msg *
+
+                             $ reduce       0      line ::= maybe_spaces msg
+
+----------------------------------------------------
+Symbols:
+The first-set of non-terminals is shown after the name.
+
+    0: $:
+    1: SPACE
+    2: RTR
+    3: TIMESTAMP
+    4: UNKNOWN
+    5: STD_ID
+    6: EXT_ID
+    7: FLAGS
+    8: BYTE
+    9: msg: TIMESTAMP
+   10: timestamp: TIMESTAMP
+   11: id: STD_ID EXT_ID
+   12: flags: FLAGS
+   13: byte: BYTE
+   14: data_max_8: <lambda> BYTE
+   15: data_max_64: <lambda> BYTE
+   16: data0: <lambda>
+   17: data1: BYTE
+   18: data2: BYTE
+   19: data3: BYTE
+   20: data4: BYTE
+   21: data5: BYTE
+   22: data6: BYTE
+   23: data7: BYTE
+   24: data8: BYTE
+   25: data12: BYTE
+   26: data16: BYTE
+   27: data20: BYTE
+   28: data24: BYTE
+   29: data32: BYTE
+   30: data48: BYTE
+   31: data64: BYTE
+   32: line: <lambda> SPACE TIMESTAMP
+   33: maybe_spaces: <lambda> SPACE
+   34: ifname: RTR TIMESTAMP UNKNOWN STD_ID EXT_ID FLAGS BYTE
+   35: any: RTR TIMESTAMP UNKNOWN STD_ID EXT_ID FLAGS BYTE
+----------------------------------------------------
+Syntax-only Symbols:
+The following symbols never carry semantic content.
+
+$ SPACE UNKNOWN data0 data5 data6 data7 data12 data20 data24 data48 data64
+line maybe_spaces ifname any
+----------------------------------------------------
+Rules:
+   0: line ::= maybe_spaces msg.
+   1: line ::= maybe_spaces.
+   2: msg ::= timestamp SPACE ifname SPACE id RTR.
+   3: msg ::= timestamp SPACE ifname SPACE id data_max_8.
+   4: msg ::= timestamp SPACE ifname SPACE id flags data_max_64.
+   5: timestamp ::= TIMESTAMP.
+   6: id ::= STD_ID.
+   7: id ::= EXT_ID.
+   8: flags ::= FLAGS.
+   9: byte ::= BYTE.
+  10: data0 ::=.
+  11: data1 ::= byte.
+  12: data2 ::= byte byte.
+  13: data3 ::= byte byte byte.
+  14: data4 ::= byte byte byte byte.
+  15: data5 ::= data4 data1.
+  16: data6 ::= data4 data2.
+  17: data7 ::= data4 data3.
+  18: data8 ::= data4 data4.
+  19: data12 ::= data8 data4.
+  20: data16 ::= data8 data8.
+  21: data20 ::= data16 data4.
+  22: data24 ::= data16 data8.
+  23: data32 ::= data16 data16.
+  24: data48 ::= data32 data16.
+  25: data64 ::= data32 data32.
+  26: maybe_spaces ::= maybe_spaces SPACE.
+  27: maybe_spaces ::=.
+  28: ifname ::= ifname any.
+  29: ifname ::= any.
+  30: any ::= UNKNOWN.
+  31: any ::= RTR.
+  32: any ::= STD_ID.
+  33: any ::= EXT_ID.
+  34: any ::= FLAGS.
+  35: any ::= TIMESTAMP.
+  36: any ::= BYTE.
+  37: data_max_8 ::= data0.
+  38: data_max_8 ::= data1.
+  39: data_max_8 ::= data2.
+  40: data_max_8 ::= data3.
+  41: data_max_8 ::= data4.
+  42: data_max_8 ::= data5.
+  43: data_max_8 ::= data6.
+  44: data_max_8 ::= data7.
+  45: data_max_8 ::= data8.
+  46: data_max_64 ::= data_max_8.
+  47: data_max_64 ::= data12.
+  48: data_max_64 ::= data16.
+  49: data_max_64 ::= data20.
+  50: data_max_64 ::= data24.
+  51: data_max_64 ::= data32.
+  52: data_max_64 ::= data48.
+  53: data_max_64 ::= data64.

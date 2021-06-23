@@ -1,0 +1,421 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>rawshark - The Wireshark Network Analyzer 3.4.2</title>
+<link rel="stylesheet" href="ws.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@osx372.sd.apple.com" />
+</head>
+
+<body>
+
+
+
+<h1 id="NAME">NAME</h1>
+
+<p>rawshark - Dump and analyze raw pcap data</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>rawshark</b> <span style="white-space: nowrap;">[ <b>-d</b> &lt;encap:linktype&gt;|&lt;proto:protoname&gt; ]</span> <span style="white-space: nowrap;">[ <b>-F</b> &lt;field to display&gt; ]</span> <span style="white-space: nowrap;">[ <b>-h</b> ]</span> <span style="white-space: nowrap;">[ <b>-l</b> ]</span> <span style="white-space: nowrap;">[ <b>-m</b> &lt;bytes&gt; ]</span> <span style="white-space: nowrap;">[ <b>-n</b> ]</span> <span style="white-space: nowrap;">[ <b>-N</b> &lt;name resolving flags&gt; ]</span> <span style="white-space: nowrap;">[ <b>-o</b> &lt;preference setting&gt; ] ...</span> <span style="white-space: nowrap;">[ <b>-p</b> ]</span> <span style="white-space: nowrap;">[ <b>-r</b> &lt;pipe&gt;|- ]</span> <span style="white-space: nowrap;">[ <b>-R</b> &lt;read (display) filter&gt; ]</span> <span style="white-space: nowrap;">[ <b>-s</b> ]</span> <span style="white-space: nowrap;">[ <b>-S</b> &lt;field format&gt; ]</span> <span style="white-space: nowrap;">[ <b>-t</b> a|ad|adoy|d|dd|e|r|u|ud|udoy ]</span> <span style="white-space: nowrap;">[ <b>-v</b> ]</span></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><b>Rawshark</b> reads a stream of packets from a file or pipe, and prints a line describing its output, followed by a set of matching fields for each packet on stdout.</p>
+
+<h1 id="INPUT">INPUT</h1>
+
+<p>Unlike <b>TShark</b>, <b>Rawshark</b> makes no assumptions about encapsulation or input. The <b>-d</b> and <b>-r</b> flags must be specified in order for it to run. One or more <b>-F</b> flags should be specified in order for the output to be useful. The other flags listed above follow the same conventions as <b>Wireshark</b> and <b>TShark</b>.</p>
+
+<p><b>Rawshark</b> expects input records with the following format by default. This matches the format of the packet header and packet data in a pcap-formatted file on disk.</p>
+
+<pre><code>    struct rawshark_rec_s {
+        uint32_t ts_sec;      /* Time stamp (seconds) */
+        uint32_t ts_usec;     /* Time stamp (microseconds) */
+        uint32_t caplen;      /* Length of the packet buffer */
+        uint32_t len;         /* &quot;On the wire&quot; length of the packet */
+        uint8_t data[caplen]; /* Packet data */
+    };</code></pre>
+
+<p>If <b>-p</b> is supplied <b>rawshark</b> expects the following format. This matches the <i>struct pcap_pkthdr</i> structure and packet data used in libpcap, Npcap, or WinPcap. This structure&#39;s format is platform-dependent; the size of the <i>tv_sec</i> field in the <i>struct timeval</i> structure could be 32 bits or 64 bits. For <b>rawshark</b> to work, the layout of the structure in the input must match the layout of the structure in <b>rawshark</b>. Note that this format will probably be the same as the previous format if <b>rawshark</b> is a 32-bit program, but will not necessarily be the same if <b>rawshark</b> is a 64-bit program.</p>
+
+<pre><code>    struct rawshark_rec_s {
+        struct timeval ts;    /* Time stamp */
+        uint32_t caplen;      /* Length of the packet buffer */
+        uint32_t len;         /* &quot;On the wire&quot; length of the packet */
+        uint8_t data[caplen]; /* Packet data */
+    };</code></pre>
+
+<p>In either case, the endianness (byte ordering) of each integer must match the system on which <b>rawshark</b> is running.</p>
+
+<h1 id="OUTPUT">OUTPUT</h1>
+
+<p>If one or more fields are specified via the <b>-F</b> flag, <b>Rawshark</b> prints the number, field type, and display format for each field on the first line as &quot;packet number&quot; 0. For each record, the packet number, matching fields, and a &quot;1&quot; or &quot;0&quot; are printed to indicate if the field matched any supplied display filter. A &quot;-&quot; is used to signal the end of a field description and at the end of each packet line. For example, the flags <b>-F ip.src -F dns.qry.type</b> might generate the following output:</p>
+
+<pre><code>    0 FT_IPv4 BASE_NONE - 1 FT_UINT16 BASE_HEX -
+    1 1=&quot;1&quot; 0=&quot;192.168.77.10&quot; 1 -
+    2 1=&quot;1&quot; 0=&quot;192.168.77.250&quot; 1 -
+    3 0=&quot;192.168.77.10&quot; 1 -
+    4 0=&quot;74.125.19.104&quot; 1 -</code></pre>
+
+<p>Note that packets 1 and 2 are DNS queries, and 3 and 4 are not. Adding <b>-R &quot;not dns&quot;</b> still prints each line, but there&#39;s an indication that packets 1 and 2 didn&#39;t pass the filter:</p>
+
+<pre><code>    0 FT_IPv4 BASE_NONE - 1 FT_UINT16 BASE_HEX -
+    1 1=&quot;1&quot; 0=&quot;192.168.77.10&quot; 0 -
+    2 1=&quot;1&quot; 0=&quot;192.168.77.250&quot; 0 -
+    3 0=&quot;192.168.77.10&quot; 1 -
+    4 0=&quot;74.125.19.104&quot; 1 -</code></pre>
+
+<p>Also note that the output may be in any order, and that multiple matching fields might be displayed.</p>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="d-encapsulation">-d &lt;encapsulation&gt;</dt>
+<dd>
+
+<p>Specify how the packet data should be dissected. The encapsulation is of the form <i>type</i><b>:</b><i>value</i>, where <i>type</i> is one of:</p>
+
+<p><b>encap</b>:<i>name</i> Packet data should be dissected using the libpcap/Npcap/WinPcap data link type (DLT) <i>name</i>, e.g. <b>encap:EN10MB</b> for Ethernet. Names are converted using pcap_datalink_name_to_val(). A complete list of DLTs can be found at <a href="https://www.tcpdump.org/linktypes.html">https://www.tcpdump.org/linktypes.html</a>.</p>
+
+<p><b>encap</b>:<i>number</i> Packet data should be dissected using the libpcap/Npcap/WinPcap LINKTYPE_ <i>number</i>, e.g. <b>encap:105</b> for raw IEEE 802.11 or <b>encap:101</b> for raw IP.</p>
+
+<p><b>proto</b>:<i>protocol</i> Packet data should be passed to the specified Wireshark protocol dissector, e.g. <b>proto:http</b> for HTTP data.</p>
+
+</dd>
+<dt id="F-field-to-display">-F &lt;field to display&gt;</dt>
+<dd>
+
+<p>Add the matching field to the output. Fields are any valid display filter field. More than one <b>-F</b> flag may be specified, and each field can match multiple times in a given packet. A single field may be specified per <b>-F</b> flag. If you want to apply a display filter, use the <b>-R</b> flag.</p>
+
+</dd>
+<dt id="h">-h</dt>
+<dd>
+
+<p>Print the version and options and exits.</p>
+
+</dd>
+<dt id="l">-l</dt>
+<dd>
+
+<p>Flush the standard output after the information for each packet is printed. (This is not, strictly speaking, line-buffered if <b>-V</b> was specified; however, it is the same as line-buffered if <b>-V</b> wasn&#39;t specified, as only one line is printed for each packet, and, as <b>-l</b> is normally used when piping a live capture to a program or script, so that output for a packet shows up as soon as the packet is seen and dissected, it should work just as well as true line-buffering. We do this as a workaround for a deficiency in the Microsoft Visual C++ C library.)</p>
+
+<p>This may be useful when piping the output of <b>TShark</b> to another program, as it means that the program to which the output is piped will see the dissected data for a packet as soon as <b>TShark</b> sees the packet and generates that output, rather than seeing it only when the standard output buffer containing that data fills up.</p>
+
+</dd>
+<dt id="m-memory-limit-bytes">-m &lt;memory limit bytes&gt;</dt>
+<dd>
+
+<p>Limit rawshark&#39;s memory usage to the specified number of bytes. POSIX (non-Windows) only.</p>
+
+</dd>
+<dt id="n">-n</dt>
+<dd>
+
+<p>Disable network object name resolution (such as hostname, TCP and UDP port names), the <b>-N</b> flag might override this one.</p>
+
+</dd>
+<dt id="N-name-resolving-flags">-N &lt;name resolving flags&gt;</dt>
+<dd>
+
+<p>Turn on name resolving only for particular types of addresses and port numbers, with name resolving for other types of addresses and port numbers turned off. This flag overrides <b>-n</b> if both <b>-N</b> and <b>-n</b> are present. If both <b>-N</b> and <b>-n</b> flags are not present, all name resolutions are turned on.</p>
+
+<p>The argument is a string that may contain the letters:</p>
+
+<p><b>m</b> to enable MAC address resolution</p>
+
+<p><b>n</b> to enable network address resolution</p>
+
+<p><b>N</b> to enable using external resolvers (e.g., DNS) for network address resolution</p>
+
+<p><b>t</b> to enable transport-layer port number resolution</p>
+
+<p><b>d</b> to enable resolution from captured DNS packets</p>
+
+<p><b>v</b> to enable VLAN IDs to names resolution</p>
+
+</dd>
+<dt id="o-preference:value">-o &lt;preference&gt;:&lt;value&gt;</dt>
+<dd>
+
+<p>Set a preference value, overriding the default value and any value read from a preference file. The argument to the option is a string of the form <i>prefname</i><b>:</b><i>value</i>, where <i>prefname</i> is the name of the preference (which is the same name that would appear in the preference file), and <i>value</i> is the value to which it should be set.</p>
+
+</dd>
+<dt id="p">-p</dt>
+<dd>
+
+<p>Assume that packet data is preceded by a pcap_pkthdr struct as defined in pcap.h. On some systems the size of the timestamp data will be different from the data written to disk. On other systems they are identical and this flag has no effect.</p>
+
+</dd>
+<dt id="r-pipe">-r &lt;pipe&gt;|-</dt>
+<dd>
+
+<p>Read packet data from <i>input source</i>. It can be either the name of a FIFO (named pipe) or ``-&#39;&#39; to read data from the standard input, and must have the record format specified above.</p>
+
+<p>If you are sending data to rawshark from a parent process on Windows you should not close rawshark&#39;s standard input handle prematurely, otherwise the C runtime might trigger an exception.</p>
+
+</dd>
+<dt id="R-read-display-filter">-R &lt;read (display) filter&gt;</dt>
+<dd>
+
+<p>Cause the specified filter (which uses the syntax of read/display filters, rather than that of capture filters) to be applied before printing the output.</p>
+
+</dd>
+<dt id="s">-s</dt>
+<dd>
+
+<p>Allows standard pcap files to be used as input, by skipping over the 24 byte pcap file header.</p>
+
+</dd>
+<dt id="S">-S</dt>
+<dd>
+
+<p>Use the specified format string to print each field. The following formats are supported:</p>
+
+<p><b>%D</b> Field name or description, e.g. &quot;Type&quot; for dns.qry.type</p>
+
+<p><b>%N</b> Base 10 numeric value of the field.</p>
+
+<p><b>%S</b> String value of the field.</p>
+
+<p>For something similar to Wireshark&#39;s standard display (&quot;Type: A (1)&quot;) you could use <b>%D: %S (%N)</b>.</p>
+
+</dd>
+<dt id="t-a-ad-adoy-d-dd-e-r-u-ud-udoy">-t a|ad|adoy|d|dd|e|r|u|ud|udoy</dt>
+<dd>
+
+<p>Set the format of the packet timestamp printed in summary lines. The format can be one of:</p>
+
+<p><b>a</b> absolute: The absolute time, as local time in your time zone, is the actual time the packet was captured, with no date displayed</p>
+
+<p><b>ad</b> absolute with date: The absolute date, displayed as YYYY-MM-DD, and time, as local time in your time zone, is the actual time and date the packet was captured</p>
+
+<p><b>adoy</b> absolute with date using day of year: The absolute date, displayed as YYYY/DOY, and time, as local time in your time zone, is the actual time and date the packet was captured</p>
+
+<p><b>d</b> delta: The delta time is the time since the previous packet was captured</p>
+
+<p><b>dd</b> delta_displayed: The delta_displayed time is the time since the previous displayed packet was captured</p>
+
+<p><b>e</b> epoch: The time in seconds since epoch (Jan 1, 1970 00:00:00)</p>
+
+<p><b>r</b> relative: The relative time is the time elapsed between the first packet and the current packet</p>
+
+<p><b>u</b> UTC: The absolute time, as UTC, is the actual time the packet was captured, with no date displayed</p>
+
+<p><b>ud</b> UTC with date: The absolute date, displayed as YYYY-MM-DD, and time, as UTC, is the actual time and date the packet was captured</p>
+
+<p><b>udoy</b> UTC with date using day of year: The absolute date, displayed as YYYY/DOY, and time, as UTC, is the actual time and date the packet was captured</p>
+
+<p>The default format is relative.</p>
+
+</dd>
+<dt id="v">-v</dt>
+<dd>
+
+<p>Print the version and exit.</p>
+
+</dd>
+</dl>
+
+<h1 id="READ-FILTER-SYNTAX">READ FILTER SYNTAX</h1>
+
+<p>For a complete table of protocol and protocol fields that are filterable in <b>TShark</b> see the wireshark-filter(4) manual page.</p>
+
+<h1 id="FILES">FILES</h1>
+
+<p>These files contains various <b>Wireshark</b> configuration values.</p>
+
+<dl>
+
+<dt id="Preferences">Preferences</dt>
+<dd>
+
+<p>The <i>preferences</i> files contain global (system-wide) and personal preference settings. If the system-wide preference file exists, it is read first, overriding the default settings. If the personal preferences file exists, it is read next, overriding any previous values. Note: If the command line option <b>-o</b> is used (possibly more than once), it will in turn override values from the preferences files.</p>
+
+<p>The preferences settings are in the form <i>prefname</i><b>:</b><i>value</i>, one per line, where <i>prefname</i> is the name of the preference and <i>value</i> is the value to which it should be set; white space is allowed between <b>:</b> and <i>value</i>. A preference setting can be continued on subsequent lines by indenting the continuation lines with white space. A <b>#</b> character starts a comment that runs to the end of the line:</p>
+
+<pre><code>  # Capture in promiscuous mode?
+  # TRUE or FALSE (case-insensitive).
+  capture.prom_mode: TRUE</code></pre>
+
+<p>The global preferences file is looked for in the <i>wireshark</i> directory under the <i>share</i> subdirectory of the main installation directory (for example, <i>/usr/local/share/wireshark/preferences</i>) on UNIX-compatible systems, and in the main installation directory (for example, <i>C:\Program Files\Wireshark\preferences</i>) on Windows systems.</p>
+
+<p>The personal preferences file is looked for in <i>$XDG_CONFIG_HOME/wireshark/preferences</i> (or, if <i>$XDG_CONFIG_HOME/wireshark</i> does not exist while <i>$HOME/.wireshark</i> is present, <i>$HOME/.wireshark/preferences</i>) on UNIX-compatible systems and <i>%APPDATA%\Wireshark\preferences</i> (or, if %APPDATA% isn&#39;t defined, <i>%USERPROFILE%\Application Data\Wireshark\preferences</i>) on Windows systems.</p>
+
+</dd>
+<dt id="Disabled-Enabled-Protocols">Disabled (Enabled) Protocols</dt>
+<dd>
+
+<p>The <i>disabled_protos</i> files contain system-wide and personal lists of protocols that have been disabled, so that their dissectors are never called. The files contain protocol names, one per line, where the protocol name is the same name that would be used in a display filter for the protocol:</p>
+
+<pre><code>  http
+  tcp     # a comment</code></pre>
+
+<p>The global <i>disabled_protos</i> file uses the same directory as the global preferences file.</p>
+
+<p>The personal <i>disabled_protos</i> file uses the same directory as the personal preferences file.</p>
+
+</dd>
+<dt id="Name-Resolution-hosts">Name Resolution (hosts)</dt>
+<dd>
+
+<p>If the personal <i>hosts</i> file exists, it is used to resolve IPv4 and IPv6 addresses before any other attempts are made to resolve them. The file has the standard <i>hosts</i> file syntax; each line contains one IP address and name, separated by whitespace. The same directory as for the personal preferences file is used.</p>
+
+<p>Capture filter name resolution is handled by libpcap on UNIX-compatible systems and Npcap or WinPcap on Windows. As such the Wireshark personal <i>hosts</i> file will not be consulted for capture filter name resolution.</p>
+
+</dd>
+<dt id="Name-Resolution-subnets">Name Resolution (subnets)</dt>
+<dd>
+
+<p>If an IPv4 address cannot be translated via name resolution (no exact match is found) then a partial match is attempted via the <i>subnets</i> file.</p>
+
+<p>Each line of this file consists of an IPv4 address, a subnet mask length separated only by a / and a name separated by whitespace. While the address must be a full IPv4 address, any values beyond the mask length are subsequently ignored.</p>
+
+<p>An example is:</p>
+
+<p># Comments must be prepended by the # sign! 192.168.0.0/24 ws_test_network</p>
+
+<p>A partially matched name will be printed as &quot;subnet-name.remaining-address&quot;. For example, &quot;192.168.0.1&quot; under the subnet above would be printed as &quot;ws_test_network.1&quot;; if the mask length above had been 16 rather than 24, the printed address would be ``ws_test_network.0.1&quot;.</p>
+
+</dd>
+<dt id="Name-Resolution-ethers">Name Resolution (ethers)</dt>
+<dd>
+
+<p>The <i>ethers</i> files are consulted to correlate 6-byte hardware addresses to names. First the personal <i>ethers</i> file is tried and if an address is not found there the global <i>ethers</i> file is tried next.</p>
+
+<p>Each line contains one hardware address and name, separated by whitespace. The digits of the hardware address are separated by colons (:), dashes (-) or periods (.). The same separator character must be used consistently in an address. The following three lines are valid lines of an <i>ethers</i> file:</p>
+
+<pre><code>  ff:ff:ff:ff:ff:ff          Broadcast
+  c0-00-ff-ff-ff-ff          TR_broadcast
+  00.00.00.00.00.00          Zero_broadcast</code></pre>
+
+<p>The global <i>ethers</i> file is looked for in the <i>/etc</i> directory on UNIX-compatible systems, and in the main installation directory (for example, <i>C:\Program Files\Wireshark</i>) on Windows systems.</p>
+
+<p>The personal <i>ethers</i> file is looked for in the same directory as the personal preferences file.</p>
+
+<p>Capture filter name resolution is handled by libpcap on UNIX-compatible systems and Npcap or WinPcap on Windows. As such the Wireshark personal <i>ethers</i> file will not be consulted for capture filter name resolution.</p>
+
+</dd>
+<dt id="Name-Resolution-manuf">Name Resolution (manuf)</dt>
+<dd>
+
+<p>The <i>manuf</i> file is used to match the 3-byte vendor portion of a 6-byte hardware address with the manufacturer&#39;s name; it can also contain well-known MAC addresses and address ranges specified with a netmask. The format of the file is the same as the <i>ethers</i> files, except that entries of the form:</p>
+
+<pre><code>  00:00:0C      Cisco</code></pre>
+
+<p>can be provided, with the 3-byte OUI and the name for a vendor, and entries such as:</p>
+
+<pre><code>  00-00-0C-07-AC/40     All-HSRP-routers</code></pre>
+
+<p>can be specified, with a MAC address and a mask indicating how many bits of the address must match. The above entry, for example, has 40 significant bits, or 5 bytes, and would match addresses from 00-00-0C-07-AC-00 through 00-00-0C-07-AC-FF. The mask need not be a multiple of 8.</p>
+
+<p>The <i>manuf</i> file is looked for in the same directory as the global preferences file.</p>
+
+</dd>
+<dt id="Name-Resolution-services">Name Resolution (services)</dt>
+<dd>
+
+<p>The <i>services</i> file is used to translate port numbers into names.</p>
+
+<p>The file has the standard <i>services</i> file syntax; each line contains one (service) name and one transport identifier separated by white space. The transport identifier includes one port number and one transport protocol name (typically tcp, udp, or sctp) separated by a /.</p>
+
+<p>An example is:</p>
+
+<p>mydns 5045/udp # My own Domain Name Server mydns 5045/tcp # My own Domain Name Server</p>
+
+</dd>
+<dt id="Name-Resolution-ipxnets">Name Resolution (ipxnets)</dt>
+<dd>
+
+<p>The <i>ipxnets</i> files are used to correlate 4-byte IPX network numbers to names. First the global <i>ipxnets</i> file is tried and if that address is not found there the personal one is tried next.</p>
+
+<p>The format is the same as the <i>ethers</i> file, except that each address is four bytes instead of six. Additionally, the address can be represented as a single hexadecimal number, as is more common in the IPX world, rather than four hex octets. For example, these four lines are valid lines of an <i>ipxnets</i> file:</p>
+
+<pre><code>  C0.A8.2C.00              HR
+  c0-a8-1c-00              CEO
+  00:00:BE:EF              IT_Server1
+  110f                     FileServer3</code></pre>
+
+<p>The global <i>ipxnets</i> file is looked for in the <i>/etc</i> directory on UNIX-compatible systems, and in the main installation directory (for example, <i>C:\Program Files\Wireshark</i>) on Windows systems.</p>
+
+<p>The personal <i>ipxnets</i> file is looked for in the same directory as the personal preferences file.</p>
+
+</dd>
+</dl>
+
+<h1 id="ENVIRONMENT-VARIABLES">ENVIRONMENT VARIABLES</h1>
+
+<dl>
+
+<dt id="WIRESHARK_CONFIG_DIR">WIRESHARK_CONFIG_DIR</dt>
+<dd>
+
+<p>This environment variable overrides the location of personal configuration files. It defaults to <i>$XDG_CONFIG_HOME/wireshark</i> (or <i>$HOME/.wireshark</i> if the former is missing while the latter exists). On Windows, <i>%APPDATA%\Wireshark</i> is used instead. Available since Wireshark 3.0.</p>
+
+</dd>
+<dt id="WIRESHARK_DEBUG_WMEM_OVERRIDE">WIRESHARK_DEBUG_WMEM_OVERRIDE</dt>
+<dd>
+
+<p>Setting this environment variable forces the wmem framework to use the specified allocator backend for *all* allocations, regardless of which backend is normally specified by the code. This is mainly useful to developers when testing or debugging. See <i>README.wmem</i> in the source distribution for details.</p>
+
+</dd>
+<dt id="WIRESHARK_RUN_FROM_BUILD_DIRECTORY">WIRESHARK_RUN_FROM_BUILD_DIRECTORY</dt>
+<dd>
+
+<p>This environment variable causes the plugins and other data files to be loaded from the build directory (where the program was compiled) rather than from the standard locations. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</p>
+
+</dd>
+<dt id="WIRESHARK_DATA_DIR">WIRESHARK_DATA_DIR</dt>
+<dd>
+
+<p>This environment variable causes the various data files to be loaded from a directory other than the standard locations. It has no effect when the program in question is running with root (or setuid) permissions on *NIX.</p>
+
+</dd>
+<dt id="ERF_RECORDS_TO_CHECK">ERF_RECORDS_TO_CHECK</dt>
+<dd>
+
+<p>This environment variable controls the number of ERF records checked when deciding if a file really is in the ERF format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</p>
+
+</dd>
+<dt id="IPFIX_RECORDS_TO_CHECK">IPFIX_RECORDS_TO_CHECK</dt>
+<dd>
+
+<p>This environment variable controls the number of IPFIX records checked when deciding if a file really is in the IPFIX format. Setting this environment variable a number higher than the default (20) would make false positives less likely.</p>
+
+</dd>
+<dt id="WIRESHARK_ABORT_ON_DISSECTOR_BUG">WIRESHARK_ABORT_ON_DISSECTOR_BUG</dt>
+<dd>
+
+<p>If this environment variable is set, <b>Rawshark</b> will call abort(3) when a dissector bug is encountered. abort(3) will cause the program to exit abnormally; if you are running <b>Rawshark</b> in a debugger, it should halt in the debugger and allow inspection of the process, and, if you are not running it in a debugger, it will, on some OSes, assuming your environment is configured correctly, generate a core dump file. This can be useful to developers attempting to troubleshoot a problem with a protocol dissector.</p>
+
+</dd>
+<dt id="WIRESHARK_ABORT_ON_TOO_MANY_ITEMS">WIRESHARK_ABORT_ON_TOO_MANY_ITEMS</dt>
+<dd>
+
+<p>If this environment variable is set, <b>Rawshark</b> will call abort(3) if a dissector tries to add too many items to a tree (generally this is an indication of the dissector not breaking out of a loop soon enough). abort(3) will cause the program to exit abnormally; if you are running <b>Rawshark</b> in a debugger, it should halt in the debugger and allow inspection of the process, and, if you are not running it in a debugger, it will, on some OSes, assuming your environment is configured correctly, generate a core dump file. This can be useful to developers attempting to troubleshoot a problem with a protocol dissector.</p>
+
+</dd>
+</dl>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>wireshark-filter(4), wireshark(1), tshark(1), editcap(1), pcap(3), dumpcap(1), text2pcap(1), pcap-filter(7) or tcpdump(8)</p>
+
+<h1 id="NOTES">NOTES</h1>
+
+<p><b>Rawshark</b> is part of the <b>Wireshark</b> distribution. The latest version of <b>Wireshark</b> can be found at <a href="https://www.wireshark.org">https://www.wireshark.org</a>.</p>
+
+<p>HTML versions of the Wireshark project man pages are available at: <a href="https://www.wireshark.org/docs/man-pages">https://www.wireshark.org/docs/man-pages</a>.</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<p><b>Rawshark</b> uses the same packet dissection code that <b>Wireshark</b> does, as well as using many other modules from <b>Wireshark</b>; see the list of authors in the <b>Wireshark</b> man page for a list of authors of that code.</p>
+
+
+</body>
+
+</html>
+
+

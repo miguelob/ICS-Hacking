@@ -1,0 +1,250 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Performing C SOURCE FILE Test C_Wlogical_op_VALID failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_240be/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_240be.dir/build.make CMakeFiles/cmTC_240be.dir/build
+Building C object CMakeFiles/cmTC_240be.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wlogical_op_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -o CMakeFiles/cmTC_240be.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+warning: unknown warning option '-Wlogical-op'; did you mean '-Wlong-long'? [-Wunknown-warning-option]
+1 warning generated.
+Linking C executable cmTC_240be
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_240be.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_240be.dir/src.c.o -o cmTC_240be 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wjump_misses_init_VALID failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_06fce/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_06fce.dir/build.make CMakeFiles/cmTC_06fce.dir/build
+Building C object CMakeFiles/cmTC_06fce.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wjump_misses_init_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wjump-misses-init -o CMakeFiles/cmTC_06fce.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+warning: unknown warning option '-Wjump-misses-init' [-Wunknown-warning-option]
+1 warning generated.
+Linking C executable cmTC_06fce
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06fce.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_06fce.dir/src.c.o -o cmTC_06fce 
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the -fPIE;-Xlinker;-pie option is supported for C language failed with the following output:
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+Determining if the -Xlinker;-no_pie option is supported for C language failed with the following output:
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+Determining if the -fPIE;-Xlinker;-pie option is supported for CXX language failed with the following output:
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+Determining if the -Xlinker;-no_pie option is supported for CXX language failed with the following output:
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+Performing C SOURCE FILE Test LINK_Wl___as_needed_VALID failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1971f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1971f.dir/build.make CMakeFiles/cmTC_1971f.dir/build
+Building C object CMakeFiles/cmTC_1971f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DLINK_Wl___as_needed_VALID  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_1971f.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1971f
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1971f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1971f.dir/src.c.o -o cmTC_1971f  -Werror=unused-command-line-argument -Wl,--as-needed 
+ld: unknown option: --as-needed
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_1971f] Error 1
+make: *** [cmTC_1971f/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0;}
+Determining if the function pcap_open exists failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b6395/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b6395.dir/build.make CMakeFiles/cmTC_b6395.dir/build
+Building C object CMakeFiles/cmTC_b6395.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_open -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_b6395.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b6395
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6395.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_open -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b6395.dir/CheckFunctionExists.c.o -o cmTC_b6395  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libpcap.tbd 
+Undefined symbols for architecture x86_64:
+  "_pcap_open", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_b6395] Error 1
+make: *** [cmTC_b6395/fast] Error 2
+
+
+
+Determining if the heimdal_version exist failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f2556/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f2556.dir/build.make CMakeFiles/cmTC_f2556.dir/build
+Building C object CMakeFiles/cmTC_f2556.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc  -I/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Kerberos.framework/Headers -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_f2556.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'heimdal_version'
+  return ((int*)(&heimdal_version))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_f2556.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_f2556/fast] Error 2
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <krb5.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef heimdal_version
+  return ((int*)(&heimdal_version))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the krb5_pac_verify exist failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a6a6f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a6a6f.dir/build.make CMakeFiles/cmTC_a6a6f.dir/build
+Building C object CMakeFiles/cmTC_a6a6f.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc  -I/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Kerberos.framework/Headers -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_a6a6f.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'krb5_pac_verify'
+  return ((int*)(&krb5_pac_verify))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_a6a6f.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_a6a6f/fast] Error 2
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <krb5.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef krb5_pac_verify
+  return ((int*)(&krb5_pac_verify))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the krb5_c_fx_cf2_simple exist failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d3805/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d3805.dir/build.make CMakeFiles/cmTC_d3805.dir/build
+Building C object CMakeFiles/cmTC_d3805.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc  -I/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Kerberos.framework/Headers -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_d3805.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'krb5_c_fx_cf2_simple'
+  return ((int*)(&krb5_c_fx_cf2_simple))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_d3805.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_d3805/fast] Error 2
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <krb5.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef krb5_c_fx_cf2_simple
+  return ((int*)(&krb5_c_fx_cf2_simple))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function setresgid exists failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_68905/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_68905.dir/build.make CMakeFiles/cmTC_68905.dir/build
+Building C object CMakeFiles/cmTC_68905.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=setresgid -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_68905.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_68905
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68905.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=setresgid -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_68905.dir/CheckFunctionExists.c.o -o cmTC_68905 
+Undefined symbols for architecture x86_64:
+  "_setresgid", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_68905] Error 1
+make: *** [cmTC_68905/fast] Error 2
+
+
+
+Determining if the function setresuid exists failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_049ac/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_049ac.dir/build.make CMakeFiles/cmTC_049ac.dir/build
+Building C object CMakeFiles/cmTC_049ac.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=setresuid -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_049ac.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_049ac
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_049ac.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=setresuid -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_049ac.dir/CheckFunctionExists.c.o -o cmTC_049ac 
+Undefined symbols for architecture x86_64:
+  "_setresuid", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_049ac] Error 1
+make: *** [cmTC_049ac/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT___ST_BIRTHTIME failed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_96033/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_96033.dir/build.make CMakeFiles/cmTC_96033.dir/build
+Building C object CMakeFiles/cmTC_96033.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT___ST_BIRTHTIME  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_96033.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+/Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c:6:36: error: no member named '__st_birthtime' in 'struct stat'
+  (void)sizeof(((struct stat *)0)->__st_birthtime);
+               ~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_96033.dir/src.c.o] Error 1
+make: *** [cmTC_96033/fast] Error 2
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->__st_birthtime);
+  return 0;
+}
+

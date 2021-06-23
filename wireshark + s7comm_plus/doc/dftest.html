@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>dftest - The Wireshark Network Analyzer 3.4.2</title>
+<link rel="stylesheet" href="ws.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@osx372.sd.apple.com" />
+</head>
+
+<body>
+
+
+
+<h1 id="NAME">NAME</h1>
+
+<p>dftest - Shows display filter byte-code, for debugging dfilter routines.</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>dftest</b> <span style="white-space: nowrap;">[ &lt;filter&gt; ]</span></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><b>dftest</b> is a simple tool which compiles a display filter and shows its bytecode.</p>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="filter">filter</dt>
+<dd>
+
+<p>The display filter expression. If needed it has to be quoted.</p>
+
+</dd>
+</dl>
+
+<h1 id="EXAMPLES">EXAMPLES</h1>
+
+<p>Show how the IP protocol is filtered:</p>
+
+<pre><code>    dftest ip</code></pre>
+
+<p>Shows how frame 150 is filtered:</p>
+
+<pre><code>    dftest &quot;frame.number == 150&quot;</code></pre>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>wireshark-filter(4)</p>
+
+
+</body>
+
+</html>
+
+

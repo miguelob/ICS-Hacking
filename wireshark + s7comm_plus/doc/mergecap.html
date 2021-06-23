@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>mergecap - The Wireshark Network Analyzer 3.4.2</title>
+<link rel="stylesheet" href="ws.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@osx372.sd.apple.com" />
+</head>
+
+<body>
+
+
+
+<h1 id="NAME">NAME</h1>
+
+<p>mergecap - Merges two or more capture files into one</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>mergecap</b> <span style="white-space: nowrap;">[ <b>-a</b> ]</span> <span style="white-space: nowrap;">[ <b>-F</b> &lt;<i>file format</i>&gt; ]</span> <span style="white-space: nowrap;">[ <b>-h</b> ]</span> <span style="white-space: nowrap;">[ <b>-I</b> &lt;<i>IDB merge mode</i>&gt; ]</span> <span style="white-space: nowrap;">[ <b>-s</b> &lt;<i>snaplen</i>&gt; ]</span> <span style="white-space: nowrap;">[ <b>-v</b> ]</span> <span style="white-space: nowrap;">[ <b>-V</b> ]</span> <span style="white-space: nowrap;"><b>-w</b> &lt;<i>outfile</i>&gt;|-</span> &lt;<i>infile</i>&gt; [&lt;<i>infile</i>&gt; <i>...</i>]</p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><b>Mergecap</b> is a program that combines multiple saved capture files into a single output file specified by the <b>-w</b> argument. <b>Mergecap</b> knows how to read <b>pcap</b> and <b>pcapng</b> capture files, including those of <b>tcpdump</b>, <b>Wireshark</b> and other tools that write captures in those formats.</p>
+
+<p>By default, <b>Mergecap</b> writes the capture file in <b>pcapng</b> format, and writes all of the packets from the input capture files to the output file.</p>
+
+<p><b>Mergecap</b> is able to detect, read and write the same capture files that are supported by <b>Wireshark</b>. The input files don&#39;t need a specific filename extension; the file format and an optional gzip compression will be automatically detected. Near the beginning of the DESCRIPTION section of wireshark(1) or <a href="https://www.wireshark.org/docs/man-pages/wireshark.html">https://www.wireshark.org/docs/man-pages/wireshark.html</a> is a detailed description of the way <b>Wireshark</b> handles this, which is the same way <b>Mergecap</b> handles this.</p>
+
+<p><b>Mergecap</b> can write the file in several output formats. The <b>-F</b> flag can be used to specify the format in which to write the capture file, <b>mergecap -F</b> provides a list of the available output formats.</p>
+
+<p>Packets from the input files are merged in chronological order based on each frame&#39;s timestamp, unless the <b>-a</b> flag is specified. <b>Mergecap</b> assumes that frames within a single capture file are already stored in chronological order. When the <b>-a</b> flag is specified, packets are copied directly from each input file to the output file, independent of each frame&#39;s timestamp.</p>
+
+<p>The output file frame encapsulation type is set to the type of the input files if all input files have the same type. If not all of the input files have the same frame encapsulation type, the output file type is set to WTAP_ENCAP_PER_PACKET. Note that some capture file formats, most notably <b>pcap</b>, do not currently support WTAP_ENCAP_PER_PACKET. This combination will cause the output file creation to fail.</p>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="a">-a</dt>
+<dd>
+
+<p>Causes the frame timestamps to be ignored, writing all packets from the first input file followed by all packets from the second input file. By default, when <b>-a</b> is not specified, the contents of the input files are merged in chronological order based on each frame&#39;s timestamp.</p>
+
+<p>Note: when merging, <b>mergecap</b> assumes that packets within a capture file are already in chronological order.</p>
+
+</dd>
+<dt id="F-file-format">-F &lt;file format&gt;</dt>
+<dd>
+
+<p>Sets the file format of the output capture file. <b>Mergecap</b> can write the file in several formats; <b>mergecap -F</b> provides a list of the available output formats. By default this is the <b>pcapng</b> format.</p>
+
+</dd>
+<dt id="h">-h</dt>
+<dd>
+
+<p>Prints the version and options and exits.</p>
+
+</dd>
+<dt id="I-IDB-merge-mode">-I &lt;IDB merge mode&gt;</dt>
+<dd>
+
+<p>Sets the Interface Description Block (IDB) merge mode to use during merging. <b>mergecap -I</b> provides a list of the available IDB merge modes.</p>
+
+<p>Every input file has one or more IDBs, which describe the interface(s) the capture was performed on originally. This includes encapsulation type, interface name, etc. When mergecap merges multiple input files, it has to merge these IDBs somehow for the new merged output file. This flag controls how that is accomplished. The currently available modes are:</p>
+
+<ul>
+
+<p><b>none</b>: No merging of IDBs is performed, and instead all IDBs are copied to the merged output file.</p>
+
+</ul>
+
+<ul>
+
+<p><b>all</b>: IDBs are merged only if all input files have the same number of IDBs, and each IDB matches their respective entry in the other files. This is the default mode.</p>
+
+</ul>
+
+<ul>
+
+<p><b>any</b>: Any and all duplicate IDBs are merged into one IDB, regardless of what file they are in.</p>
+
+</ul>
+
+<p>Note that an IDB is only considered a matching duplicate if it has the same encapsulation type, name, speed, time precision, comments, description, etc.</p>
+
+</dd>
+<dt id="s-snaplen">-s &lt;snaplen&gt;</dt>
+<dd>
+
+<p>Sets the snapshot length to use when writing the data. If the <b>-s</b> flag is used to specify a snapshot length, frames in the input file with more captured data than the specified snapshot length will have only the amount of data specified by the snapshot length written to the output file. This may be useful if the program that is to read the output file cannot handle packets larger than a certain size (for example, the versions of snoop in Solaris 2.5.1 and Solaris 2.6 appear to reject Ethernet frames larger than the standard Ethernet MTU, making them incapable of handling gigabit Ethernet captures if jumbo frames were used).</p>
+
+</dd>
+<dt id="v">-v</dt>
+<dd>
+
+<p>Causes <b>mergecap</b> to print a number of messages while it&#39;s working.</p>
+
+</dd>
+<dt id="V">-V</dt>
+<dd>
+
+<p>Print the version and exit.</p>
+
+</dd>
+<dt id="w-outfile">-w &lt;outfile&gt;|-</dt>
+<dd>
+
+<p>Sets the output filename. If the name is &#39;<b>-</b>&#39;, stdout will be used. This setting is mandatory.</p>
+
+</dd>
+</dl>
+
+<h1 id="EXAMPLES">EXAMPLES</h1>
+
+<p>To merge two capture files together, 100 seconds apart use:</p>
+
+<pre><code>    capinfos -aeS a.pcap b.pcap</code></pre>
+
+<p>(Let&#39;s suppose a.pcap starts at 1009932757 and b.pcap ends at 873660281. 1009932757 - 873660281 - 100 = 136272376 seconds.)</p>
+
+<pre><code>    editcap -t 136272376 b.pcap b-shifted.pcap
+    mergecap -w compare.pcap a.pcap b-shifted.pcap</code></pre>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>pcap(3), wireshark(1), tshark(1), dumpcap(1), editcap(1), text2pcap(1), pcap-filter(7) or tcpdump(8)</p>
+
+<h1 id="NOTES">NOTES</h1>
+
+<p><b>Mergecap</b> is based heavily upon <b>editcap</b> by Richard Sharpe &lt;sharpe[AT]ns.aus.com&gt; and Guy Harris &lt;guy[AT]alum.mit.edu&gt;.</p>
+
+<p><b>Mergecap</b> is part of the <b>Wireshark</b> distribution. The latest version of <b>Wireshark</b> can be found at <a href="https://www.wireshark.org">https://www.wireshark.org</a>.</p>
+
+<p>HTML versions of the Wireshark project man pages are available at: <a href="https://www.wireshark.org/docs/man-pages">https://www.wireshark.org/docs/man-pages</a>.</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<pre><code>  Original Author
+  -------- ------
+  Scott Renfro             &lt;scott[AT]renfro.org&gt;
+
+
+  Contributors
+  ------------
+  Bill Guyton              &lt;guyton[AT]bguyton.com&gt;</code></pre>
+
+
+</body>
+
+</html>
+
+

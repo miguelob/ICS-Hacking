@@ -1,0 +1,147 @@
+include::attributes.adoc[]
+:stylesheet: ws.css
+:linkcss:
+
+= Wireshark {wireshark-version} Release Notes
+// Asciidoctor Syntax Quick Reference:
+// https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+
+== What is Wireshark?
+
+Wireshark is the world’s most popular network protocol analyzer.
+It is used for troubleshooting, analysis, development and education.
+
+== What’s New
+
+// The Windows installers now ship with Npcap 1.x.
+// They previously shipped with Npcap 1.00.
+
+// The Windows installers now ship with USBPcap 1.5.X.0.
+// They previously shipped with USBPcap 1.5.4.0.
+
+// The Windows installers now ship with Qt 5.15.x.
+// They previously shipped with Qt 5.12.1.
+
+=== Bug Fixes
+
+// https://about.gitlab.com/security/cve/#requesting-a-cve-from-gitlab
+// CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')
+// CWE-126: Buffer Over-read
+// CWE-401: Missing Release of Memory after Effective Lifetime
+
+The following vulnerabilities have been fixed:
+
+* wssalink:2020-20[]
+QUIC dissector crash
+wsbuglink:17073[].
+// cveidlink:2020-xxxxx[].
+// Fixed in master: 4227e5a1ad
+// Fixed in release-3.4: a2ceb50866
+// Fixed in master-3.2: n/a
+
+The following bugs have been fixed:
+
+=== New and Updated Features
+
+//* wsbuglink:5000[]
+//* wsbuglink:6000[Wireshark bug]
+//* cveidlink:2014-2486[]
+//* Wireshark exposed details your sordid redneck past, which were subsequently widely disseminated on social media.
+// cp /dev/null /tmp/buglist.txt ; for bugnumber in `git log v3.4.2rc0.. | gsed -e 's/\(close\|fix\|resolv\)[^ ]* #/\nclose #/gI' | grep ^close | sed -e 's/close.*#\([1-9][0-9]*\).*/\1/' | sort -V -u` ; do "$(git rev-parse --show-toplevel)/tools/gen-bugnote" $bugnumber; pbpaste >> /tmp/buglist.txt; done
+
+* IETF QUIC TLS decryption errors when packets are coalesced with random data wsbuglink:16914[].
+
+* QUIC: missing dissection of some coalesced SH packets wsbuglink:17011[].
+
+* macos-setup.sh can't find SDK on macOS Big Sur, as it went to 11 wsbuglink:17043[].
+
+* Mapping endpoints in browser => Map file error wsbuglink:17074[].
+
+* Wireshark 3.4.1 hangs on startup on macOS Big Sur 11.0.1 wsbuglink:17075[].
+
+* False expect error seen on FCoE frames (not seen with older release wireshark 1.2.18) wsbuglink:17084[].
+
+* Several libraries missing in 3.4.1 and 3.2.9 installers for macOS wsbuglink:17086[].
+
+// === Removed Features and Support
+
+//=== Removed Dissectors
+
+// === New File Format Decoding Support
+
+// [commaize]
+// --
+// --
+
+=== New Protocol Support
+
+There are no new protocols in this release.
+
+=== Updated Protocol Support
+
+// Add one protocol per line between the -- delimiters.
+[commaize]
+--
+DOCSIS
+FCoE
+FC-dNS
+FC-SWILS
+QUIC
+SNMP
+USBHID
+--
+
+=== New and Updated Capture File Support
+
+There is no new or updated capture file support in this release.
+// Add one file type per line between the -- delimiters.
+// [commaize]
+// --
+// --
+
+// === New and Updated Capture Interfaces support
+
+//_Non-empty section placeholder._
+
+// === Major API Changes
+
+== Getting Wireshark
+
+Wireshark source code and installation packages are available from
+https://www.wireshark.org/download.html.
+
+=== Vendor-supplied Packages
+
+Most Linux and Unix vendors supply their own Wireshark packages.
+You can usually install or upgrade Wireshark using the package management system specific to that platform.
+A list of third-party packages can be found on the
+https://www.wireshark.org/download.html#thirdparty[download page]
+on the Wireshark web site.
+
+== File Locations
+
+Wireshark and TShark look in several different locations for preference files, plugins, SNMP MIBS, and RADIUS dictionaries.
+These locations vary from platform to platform.
+You can use About → Folders to find the default locations on your system.
+
+== Getting Help
+
+The User’s Guide, manual pages and various other documentation can be found at
+https://www.wireshark.org/docs/
+
+Community support is available on
+https://ask.wireshark.org/[Wireshark’sQ&A site]
+and on the wireshark-users mailing list.
+Subscription information and archives for all of Wireshark’s mailing lists can be found on
+https://www.wireshark.org/lists/[the web site].
+
+Issues and feature requests can be reported on
+https://gitlab.com/wireshark/wireshark/-/issues[the issue tracker].
+
+// Official Wireshark training and certification are available from
+// https://www.wiresharktraining.com/[Wireshark University].
+
+== Frequently Asked Questions
+
+A complete FAQ is available on the
+https://www.wireshark.org/faq.html[Wireshark web site].

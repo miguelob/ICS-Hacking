@@ -1,0 +1,332 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>capinfos - The Wireshark Network Analyzer 3.4.2</title>
+<link rel="stylesheet" href="ws.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@osx372.sd.apple.com" />
+</head>
+
+<body>
+
+
+
+<h1 id="NAME">NAME</h1>
+
+<p>capinfos - Prints information about capture files</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>capinfos</b> <span style="white-space: nowrap;">[ <b>-a</b> ]</span> <span style="white-space: nowrap;">[ <b>-A</b> ]</span> <span style="white-space: nowrap;">[ <b>-b</b> ]</span> <span style="white-space: nowrap;">[ <b>-B</b> ]</span> <span style="white-space: nowrap;">[ <b>-c</b> ]</span> <span style="white-space: nowrap;">[ <b>-C</b> ]</span> <span style="white-space: nowrap;">[ <b>-d</b> ]</span> <span style="white-space: nowrap;">[ <b>-D</b> ]</span> <span style="white-space: nowrap;">[ <b>-e</b> ]</span> <span style="white-space: nowrap;">[ <b>-E</b> ]</span> <span style="white-space: nowrap;">[ <b>-F</b> ]</span> <span style="white-space: nowrap;">[ <b>-h</b> ]</span> <span style="white-space: nowrap;">[ <b>-H</b> ]</span> <span style="white-space: nowrap;">[ <b>-i</b> ]</span> <span style="white-space: nowrap;">[ <b>-I</b> ]</span> <span style="white-space: nowrap;">[ <b>-k</b> ]</span> <span style="white-space: nowrap;">[ <b>-K</b> ]</span> <span style="white-space: nowrap;">[ <b>-l</b> ]</span> <span style="white-space: nowrap;">[ <b>-L</b> ]</span> <span style="white-space: nowrap;">[ <b>-m</b> ]</span> <span style="white-space: nowrap;">[ <b>-M</b> ]</span> <span style="white-space: nowrap;">[ <b>-n</b> ]</span> <span style="white-space: nowrap;">[ <b>-N</b> ]</span> <span style="white-space: nowrap;">[ <b>-o</b> ]</span> <span style="white-space: nowrap;">[ <b>-q</b> ]</span> <span style="white-space: nowrap;">[ <b>-Q</b> ]</span> <span style="white-space: nowrap;">[ <b>-r</b> ]</span> <span style="white-space: nowrap;">[ <b>-R</b> ]</span> <span style="white-space: nowrap;">[ <b>-s</b> ]</span> <span style="white-space: nowrap;">[ <b>-S</b> ]</span> <span style="white-space: nowrap;">[ <b>-t</b> ]</span> <span style="white-space: nowrap;">[ <b>-T</b> ]</span> <span style="white-space: nowrap;">[ <b>-u</b> ]</span> <span style="white-space: nowrap;">[ <b>-v</b> ]</span> <span style="white-space: nowrap;">[ <b>-x</b> ]</span> <span style="white-space: nowrap;">[ <b>-y</b> ]</span> <span style="white-space: nowrap;">[ <b>-z</b> ]</span> &lt;<i>infile</i>&gt; <i>...</i></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><b>Capinfos</b> is a program that reads one or more capture files and returns some or all available statistics (infos) of each &lt;<i>infile</i>&gt; in one of two types of output formats: long or table.</p>
+
+<p>The long output is suitable for a human to read. The table output is useful for generating a report that can be easily imported into a spreadsheet or database.</p>
+
+<p>The user specifies what type of output (long or table) and which statistics to display by specifying flags (options) that corresponding to the report type and desired infos. If no options are specified, <b>Capinfos</b> will report all statistics available in &quot;long&quot; format.</p>
+
+<p>Options are processed from left to right order with later options superseding or adding to earlier options.</p>
+
+<p><b>Capinfos</b> is able to detect and read the same capture files that are supported by <b>Wireshark</b>. The input files don&#39;t need a specific filename extension; the file format and an optional gzip compression will be automatically detected. Near the beginning of the DESCRIPTION section of wireshark(1) or <a href="https://www.wireshark.org/docs/man-pages/wireshark.html">https://www.wireshark.org/docs/man-pages/wireshark.html</a> is a detailed description of the way <b>Wireshark</b> handles this, which is the same way <b>Capinfos</b> handles this.</p>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="a">-a</dt>
+<dd>
+
+<p>Displays the start time of the capture. <b>Capinfos</b> considers the earliest timestamp seen to be the start time, so the first packet in the capture is not necessarily the earliest - if packets exist &quot;out-of-order&quot;, time-wise, in the capture, <b>Capinfos</b> detects this.</p>
+
+</dd>
+<dt id="A">-A</dt>
+<dd>
+
+<p>Generate all infos. By default capinfos will display all infos values for each input file, but enabling any of the individual display infos options will disable the generate all option.</p>
+
+</dd>
+<dt id="b">-b</dt>
+<dd>
+
+<p>Separate infos with ASCII SPACE (0x20) characters. This option is only useful when generating a table style report (-T). The various info values will be separated (delimited) from one another with a single ASCII SPACE character.</p>
+
+<p>NOTE: Since some of the header labels as well as some of the value fields contain SPACE characters. This option is of limited value unless one of the quoting options (-q or -Q) is also specified.</p>
+
+</dd>
+<dt id="B">-B</dt>
+<dd>
+
+<p>Separate the infos with ASCII TAB characters. This option is only useful when generating a table style report (-T). The various info values will be separated (delimited) from one another with a single ASCII TAB character. The TAB character is the default delimiter when -T style report is enabled.</p>
+
+</dd>
+<dt id="c">-c</dt>
+<dd>
+
+<p>Displays the number of packets in the capture file.</p>
+
+</dd>
+<dt id="C">-C</dt>
+<dd>
+
+<p>Cancel processing any additional files if and when capinfos fails to open an input file or gets an error reading an input file. By default capinfos will continue processing files even if it gets an error opening or reading a file.</p>
+
+<p>Note: An error message will be written to stderr whenever capinfos fails to open a file or gets an error reading from a file regardless whether the -C option is specified or not. Upon exit, capinfos will return an error status if any errors occurred during processing.</p>
+
+</dd>
+<dt id="d">-d</dt>
+<dd>
+
+<p>Displays the total length of all packets in the file, in bytes. This counts the size of the packets as they appeared in their original form, not as they appear in this file. For example, if a packet was originally 1514 bytes and only 256 of those bytes were saved to the capture file (if packets were captured with a snaplen or other slicing option), <b>Capinfos</b> will consider the packet to have been 1514 bytes.</p>
+
+</dd>
+<dt id="D">-D</dt>
+<dd>
+
+<p>Displays a count of the number of decryption secrets in the file.</p>
+
+</dd>
+<dt id="e">-e</dt>
+<dd>
+
+<p>Displays the end time of the capture. <b>Capinfos</b> considers the latest timestamp seen to be the end time, so the last packet in the capture is not necessarily the latest - if packets exist &quot;out-of-order&quot;, time-wise, in the capture, <b>Capinfos</b> detects this.</p>
+
+</dd>
+<dt id="E">-E</dt>
+<dd>
+
+<p>Displays the per-file encapsulation of the capture file.</p>
+
+</dd>
+<dt id="F">-F</dt>
+<dd>
+
+<p>Displays additional capture file information.</p>
+
+</dd>
+<dt id="h">-h</dt>
+<dd>
+
+<p>Prints the help listing and exits.</p>
+
+</dd>
+<dt id="H">-H</dt>
+<dd>
+
+<p>Displays the SHA256, RIPEMD160, and SHA1 hashes for the file. SHA1 output may be removed in the future.</p>
+
+</dd>
+<dt id="i">-i</dt>
+<dd>
+
+<p>Displays the average data rate, in bits/sec</p>
+
+</dd>
+<dt id="I">-I</dt>
+<dd>
+
+<p>Displays detailed capture file interface information. This information is not available in table format.</p>
+
+</dd>
+<dt id="k">-k</dt>
+<dd>
+
+<p>Displays the capture comment. For pcapng files, this is the comment from the section header block.</p>
+
+</dd>
+<dt id="K">-K</dt>
+<dd>
+
+<p>Use this option to suppress printing capture comments. By default capture comments are enabled. Capture comments are relatively freeform and might contain embedded new-line characters and/or other delimiting characters making it harder for a human or machine to easily parse the capinfos output. Excluding capture comments can aid in post-processing of output.</p>
+
+</dd>
+<dt id="l">-l</dt>
+<dd>
+
+<p>Display the snaplen (if any) for a file. snaplen (if available) is determined from the capture file header and by looking for truncated records in the capture file.</p>
+
+</dd>
+<dt id="L">-L</dt>
+<dd>
+
+<p>Generate long report. Capinfos can generate two different styles of reports. The &quot;long&quot; report is the default style of output and is suitable for a human to use.</p>
+
+</dd>
+<dt id="m">-m</dt>
+<dd>
+
+<p>Separate the infos with comma (,) characters. This option is only useful when generating a table style report (-T). The various info values will be separated (delimited) from one another with a single comma &quot;,&quot; character.</p>
+
+</dd>
+<dt id="M">-M</dt>
+<dd>
+
+<p>Print raw (machine readable) numeric values in long reports. By default capinfos prints human-readable values with SI suffixes. Table reports (-T) always print raw values.</p>
+
+</dd>
+<dt id="n">-n</dt>
+<dd>
+
+<p>Displays a count of the number of resolved IPv4 addresses and a count of the number of resolved IPv6 addresses in the file.</p>
+
+</dd>
+<dt id="N">-N</dt>
+<dd>
+
+<p>Do not quote the infos. This option is only useful when generating a table style report (-T). Excluding any quoting characters around the various values and using a TAB delimiter produces a very &quot;clean&quot; table report that is easily parsed with CLI tools. By default infos are <b>NOT</b> quoted.</p>
+
+</dd>
+<dt id="o">-o</dt>
+<dd>
+
+<p>Displays &quot;True&quot; if packets exist in strict chronological order or &quot;False&quot; if one or more packets in the capture exists &quot;out-of-order&quot; time-wise.</p>
+
+</dd>
+<dt id="q">-q</dt>
+<dd>
+
+<p>Quote infos with single quotes (&#39;). This option is only useful when generating a table style report (-T). When this option is enabled, each value will be encapsulated within a pair of single quote (&#39;) characters. This option (when used with the -m option) is useful for generating one type of CSV style file report.</p>
+
+</dd>
+<dt id="Q">-Q</dt>
+<dd>
+
+<p>Quote infos with double quotes (&quot;). This option is only useful when generating a table style report (-T). When this option is enabled, each value will be encapsulated within a pair of double quote (&quot;) characters. This option (when used with the -m option) is useful for generating the most common type of CSV style file report.</p>
+
+</dd>
+<dt id="r">-r</dt>
+<dd>
+
+<p>Do not generate header record. This option is only useful when generating a table style report (-T). If this option is specified then <b>no</b> header record will be generated within the table report.</p>
+
+</dd>
+<dt id="R">-R</dt>
+<dd>
+
+<p>Generate header record. This option is only useful when generating a table style report (-T). A header is generated by default. A header record (if generated) is the first line of data reported and includes labels for all the columns included within the table report.</p>
+
+</dd>
+<dt id="s">-s</dt>
+<dd>
+
+<p>Displays the size of the file, in bytes. This reports the size of the capture file itself.</p>
+
+</dd>
+<dt id="S">-S</dt>
+<dd>
+
+<p>Display the start and end times as seconds since January 1, 1970. Handy for synchronizing dumps using <b>editcap -t</b>.</p>
+
+</dd>
+<dt id="t">-t</dt>
+<dd>
+
+<p>Displays the capture type of the capture file.</p>
+
+</dd>
+<dt id="T">-T</dt>
+<dd>
+
+<p>Generate a table report. A table report is a text file that is suitable for importing into a spreadsheet or database. Capinfos can build a tab delimited text file (the default) or several variations on Comma-separated values (CSV) files.</p>
+
+</dd>
+<dt id="u">-u</dt>
+<dd>
+
+<p>Displays the capture duration, in seconds. This is the difference in time between the earliest packet seen and latest packet seen.</p>
+
+</dd>
+<dt id="v">-v</dt>
+<dd>
+
+<p>Displays the tool&#39;s version and exits.</p>
+
+</dd>
+<dt id="x">-x</dt>
+<dd>
+
+<p>Displays the average packet rate, in packets/sec</p>
+
+</dd>
+<dt id="y">-y</dt>
+<dd>
+
+<p>Displays the average data rate, in bytes/sec</p>
+
+</dd>
+<dt id="z">-z</dt>
+<dd>
+
+<p>Displays the average packet size, in bytes</p>
+
+</dd>
+</dl>
+
+<h1 id="EXAMPLES">EXAMPLES</h1>
+
+<p>To see a description of the capinfos options use:</p>
+
+<pre><code>    capinfos -h</code></pre>
+
+<p>To generate a long form report for the capture file mycapture.pcap use:</p>
+
+<pre><code>    capinfos mycapture.pcap</code></pre>
+
+<p>To generate a TAB delimited table form report for the capture file mycapture.pcap use:</p>
+
+<pre><code>    capinfos -T mycapture.pcap</code></pre>
+
+<p>To generate a CSV style table form report for the capture file mycapture.pcap use:</p>
+
+<pre><code>    capinfos -T -m -Q mycapture.pcap</code></pre>
+
+<p>or</p>
+
+<pre><code>    capinfos -TmQ mycapture.pcap</code></pre>
+
+<p>To generate a TAB delimited table style report with just the filenames, capture type, capture encapsulation type and packet count for all the pcap files in the current directory use:</p>
+
+<pre><code>    capinfos -T -t -E -c *.pcap</code></pre>
+
+<p>or</p>
+
+<pre><code>    capinfos -TtEs *.pcap</code></pre>
+
+<p>Note: The ability to use of filename globbing characters are a feature of *nix style command shells.</p>
+
+<p>To generate a CSV delimited table style report of all infos for all pcap files in the current directory and write it to a text file called mycaptures.csv use:</p>
+
+<pre><code>    capinfos -TmQ *.pcap &gt;mycaptures.csv</code></pre>
+
+<p>The resulting mycaptures.csv file can be easily imported into spreadsheet applications.</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>pcap(3), wireshark(1), mergecap(1), editcap(1), tshark(1), dumpcap(1), pcap-filter(7) or tcpdump(8)</p>
+
+<h1 id="NOTES">NOTES</h1>
+
+<p><b>Capinfos</b> is part of the <b>Wireshark</b> distribution. The latest version of <b>Wireshark</b> can be found at <a href="https://www.wireshark.org">https://www.wireshark.org</a>.</p>
+
+<p>HTML versions of the Wireshark project man pages are available at: <a href="https://www.wireshark.org/docs/man-pages">https://www.wireshark.org/docs/man-pages</a>.</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<pre><code>  Original Author
+  -------- ------
+  Ian Schorr           &lt;ian[AT]ianschorr.com&gt;
+
+
+  Contributors
+  ------------
+  Gerald Combs         &lt;gerald[AT]wireshark.org&gt;
+  Jim Young            &lt;jyoung[AT]gsu.edu&gt;</code></pre>
+
+
+</body>
+
+</html>
+
+

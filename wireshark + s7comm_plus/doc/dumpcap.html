@@ -1,0 +1,346 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>dumpcap - The Wireshark Network Analyzer 3.4.2</title>
+<link rel="stylesheet" href="ws.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@osx372.sd.apple.com" />
+</head>
+
+<body>
+
+
+
+<h1 id="NAME">NAME</h1>
+
+<p>dumpcap - Dump network traffic</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>dumpcap</b> <span style="white-space: nowrap;">[ <b>-a</b>|<b>--autostop</b> &lt;capture autostop condition&gt; ] ...</span> <span style="white-space: nowrap;">[ <b>-b</b>|<b>--ring-buffer</b> &lt;capture ring buffer option&gt;] ...</span> <span style="white-space: nowrap;">[ <b>-B</b>|<b>--buffer-size</b> &lt;capture buffer size&gt; ] </span> <span style="white-space: nowrap;">[ <b>-c</b> &lt;capture packet count&gt; ]</span> <span style="white-space: nowrap;">[ <b>-C</b> &lt;byte limit&gt; ]</span> <span style="white-space: nowrap;">[ <b>-d</b> ]</span> <span style="white-space: nowrap;">[ <b>-D</b>|<b>--list-interfaces</b> ]</span> <span style="white-space: nowrap;">[ <b>-f</b> &lt;capture filter&gt; ]</span> <span style="white-space: nowrap;">[ <b>-g</b> ]</span> <span style="white-space: nowrap;">[ <b>-h</b>|<b>--help</b> ]</span> <span style="white-space: nowrap;">[ <b>-i</b>|<b>--interface</b> &lt;capture interface&gt;|rpcap://&lt;host&gt;:&lt;port&gt;/&lt;capture interface&gt;|TCP@&lt;host&gt;:&lt;port&gt;|- ]</span> <span style="white-space: nowrap;">[ <b>-I</b>|<b>--monitor-mode</b> ]</span> <span style="white-space: nowrap;">[ <b>-k</b> &lt;freq&gt;,[&lt;type&gt;],[&lt;center_freq1&gt;],[&lt;center_freq2</span>&gt;] <span style="white-space: nowrap;">[ <b>-L</b>|<b>--list-data-link-types</b> ]</span> <span style="white-space: nowrap;">[ <b>-M</b> ]</span> <span style="white-space: nowrap;">[ <b>-n</b> ]</span> <span style="white-space: nowrap;">[ <b>-N</b> &lt;packet limit&gt; ]</span> <span style="white-space: nowrap;">[ <b>-p</b>|<b>--no-promiscuous-mode</b> ]</span> <span style="white-space: nowrap;">[ <b>-P</b> ]</span> <span style="white-space: nowrap;">[ <b>-q</b> ]</span> <span style="white-space: nowrap;">[ <b>-s</b>|<b>--snapshot-length</b> &lt;capture snaplen&gt; ]</span> <span style="white-space: nowrap;">[ <b>-S</b> ]</span> <span style="white-space: nowrap;">[ <b>-t</b> ]</span> <span style="white-space: nowrap;">[ <b>-v</b>|<b>--version</b> ]</span> <span style="white-space: nowrap;">[ <b>-w</b> &lt;outfile&gt; ]</span> <span style="white-space: nowrap;">[ <b>-y</b>|<b>--linktype</b> &lt;capture link type&gt; ]</span> <span style="white-space: nowrap;">[ <b>--capture-comment</b> &lt;comment&gt; ]</span> <span style="white-space: nowrap;">[ <b>--list-time-stamp-types</b> ]</span> <span style="white-space: nowrap;">[ <b>--time-stamp-type</b> &lt;type&gt; ]</span></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><b>Dumpcap</b> is a network traffic dump tool. It lets you capture packet data from a live network and write the packets to a file. <b>Dumpcap</b>&#39;s default capture file format is <b>pcapng</b> format. When the <b>-P</b> option is specified, the output file is written in the <b>pcap</b> format.</p>
+
+<p>Without any options set it will use the libpcap, Npcap, or WinPcap library to capture traffic from the first available network interface and writes the received raw packet data, along with the packets&#39; time stamps into a pcap file.</p>
+
+<p>If the <b>-w</b> option is not specified, <b>Dumpcap</b> writes to a newly created pcap file with a randomly chosen name. If the <b>-w</b> option is specified, <b>Dumpcap</b> writes to the file specified by that option.</p>
+
+<p>Packet capturing is performed with the pcap library. The capture filter syntax follows the rules of the pcap library.</p>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="a---autostop-capture-autostop-condition">-a|--autostop &lt;capture autostop condition&gt;</dt>
+<dd>
+
+<p>Specify a criterion that specifies when <b>Dumpcap</b> is to stop writing to a capture file. The criterion is of the form <i>test</i><b>:</b><i>value</i>, where <i>test</i> is one of:</p>
+
+<p><b>duration</b>:<i>value</i> Stop writing to a capture file after <i>value</i> seconds have elapsed. Floating point values (e.g. 0.5) are allowed.</p>
+
+<p><b>files</b>:<i>value</i> Stop writing to capture files after <i>value</i> number of files were written.</p>
+
+<p><b>filesize</b>:<i>value</i> Stop writing to a capture file after it reaches a size of <i>value</i> kB. If this option is used together with the -b option, dumpcap will stop writing to the current capture file and switch to the next one if filesize is reached. Note that the filesize is limited to a maximum value of 2 GiB.</p>
+
+<p><b>packets</b>:<i>value</i> Stop writing to a capture file after <i>value</i> packets have been written. Same as <b>-c</b> &lt;capture packet count&gt;.</p>
+
+</dd>
+<dt id="b---ring-buffer-capture-ring-buffer-option">-b|--ring-buffer &lt;capture ring buffer option&gt;</dt>
+<dd>
+
+<p>Cause <b>Dumpcap</b> to run in &quot;multiple files&quot; mode. In &quot;multiple files&quot; mode, <b>Dumpcap</b> will write to several capture files. When the first capture file fills up, <b>Dumpcap</b> will switch writing to the next file and so on.</p>
+
+<p>The created filenames are based on the filename given with the <b>-w</b> option, the number of the file and on the creation date and time, e.g. outfile_00001_20200714120117.pcap, outfile_00002_20200714120523.pcap, ...</p>
+
+<p>With the <i>files</i> option it&#39;s also possible to form a &quot;ring buffer&quot;. This will fill up new files until the number of files specified, at which point <b>Dumpcap</b> will discard the data in the first file and start writing to that file and so on. If the <i>files</i> option is not set, new files filled up until one of the capture stop conditions match (or until the disk is full).</p>
+
+<p>The criterion is of the form <i>key</i><b>:</b><i>value</i>, where <i>key</i> is one of:</p>
+
+<p><b>duration</b>:<i>value</i> switch to the next file after <i>value</i> seconds have elapsed, even if the current file is not completely filled up. Floating point values (e.g. 0.5) are allowed.</p>
+
+<p><b>files</b>:<i>value</i> begin again with the first file after <i>value</i> number of files were written (form a ring buffer). This value must be less than 100000. Caution should be used when using large numbers of files: some filesystems do not handle many files in a single directory well. The <b>files</b> criterion requires either <b>duration</b>, <b>interval</b> or <b>filesize</b> to be specified to control when to go to the next file. It should be noted that each <b>-b</b> parameter takes exactly one criterion; to specify two criterion, each must be preceded by the <b>-b</b> option.</p>
+
+<p><b>filesize</b>:<i>value</i> switch to the next file after it reaches a size of <i>value</i> kB. Note that the filesize is limited to a maximum value of 2 GiB.</p>
+
+<p><b>interval</b>:<i>value</i> switch to the next file when the time is an exact multiple of <i>value</i> seconds. For example, use 3600 to switch to a new file every hour on the hour.</p>
+
+<p><b>packets</b>:<i>value</i> switch to the next file after it contains <i>value</i> packets.</p>
+
+<p><b>printname</b>:<i>filename</i> print the name of the most recently written file to <i>filename</i> after the file is closed. <i>filename</i> can be <code>stdout</code> or <code>-</code> for standard output, or <code>stderr</code> for standard error.</p>
+
+<p>Example: <b>-b filesize:1000 -b files:5</b> results in a ring buffer of five files of size one megabyte each.</p>
+
+</dd>
+<dt id="B---buffer-size-capture-buffer-size">-B|--buffer-size &lt;capture buffer size&gt;</dt>
+<dd>
+
+<p>Set capture buffer size (in MiB, default is 2 MiB). This is used by the capture driver to buffer packet data until that data can be written to disk. If you encounter packet drops while capturing, try to increase this size. Note that, while <b>Dumpcap</b> attempts to set the buffer size to 2 MiB by default, and can be told to set it to a larger value, the system or interface on which you&#39;re capturing might silently limit the capture buffer size to a lower value or raise it to a higher value.</p>
+
+<p>This is available on UNIX systems with libpcap 1.0.0 or later and on Windows. It is not available on UNIX systems with earlier versions of libpcap.</p>
+
+<p>This option can occur multiple times. If used before the first occurrence of the <b>-i</b> option, it sets the default capture buffer size. If used after an <b>-i</b> option, it sets the capture buffer size for the interface specified by the last <b>-i</b> option occurring before this option. If the capture buffer size is not set specifically, the default capture buffer size is used instead.</p>
+
+</dd>
+<dt id="c-capture-packet-count">-c &lt;capture packet count&gt;</dt>
+<dd>
+
+<p>Set the maximum number of packets to read when capturing live data. Same as <b>-a packets:</b>&lt;capture packet count&gt;.</p>
+
+</dd>
+<dt id="C-byte-limit">-C &lt;byte limit&gt;</dt>
+<dd>
+
+<p>Limit the amount of memory in bytes used for storing captured packets in memory while processing it. If used in combination with the <b>-N</b> option, both limits will apply. Setting this limit will enable the usage of the separate thread per interface.</p>
+
+</dd>
+<dt id="d">-d</dt>
+<dd>
+
+<p>Dump the code generated for the capture filter in a human-readable form, and exit.</p>
+
+</dd>
+<dt id="D---list-interfaces">-D|--list-interfaces</dt>
+<dd>
+
+<p>Print a list of the interfaces on which <b>Dumpcap</b> can capture, and exit. For each network interface, a number and an interface name, possibly followed by a text description of the interface, is printed. The interface name or the number can be supplied to the <b>-i</b> option to specify an interface on which to capture.</p>
+
+<p>This can be useful on systems that don&#39;t have a command to list them (UNIX systems lacking <b>ifconfig -a</b> or Linux systems lacking <b>ip link show</b>). The number can be useful on Windows systems, where the interface name might be a long name or a GUID.</p>
+
+<p>Note that &quot;can capture&quot; means that <b>Dumpcap</b> was able to open that device to do a live capture. Depending on your system you may need to run dumpcap from an account with special privileges (for example, as root) to be able to capture network traffic. If &quot;<b>dumpcap -D</b>&quot; is not run from such an account, it will not list any interfaces.</p>
+
+</dd>
+<dt id="f-capture-filter">-f &lt;capture filter&gt;</dt>
+<dd>
+
+<p>Set the capture filter expression.</p>
+
+<p>The entire filter expression must be specified as a single argument (which means that if it contains spaces, it must be quoted).</p>
+
+<p>This option can occur multiple times. If used before the first occurrence of the <b>-i</b> option, it sets the default capture filter expression. If used after an <b>-i</b> option, it sets the capture filter expression for the interface specified by the last <b>-i</b> option occurring before this option. If the capture filter expression is not set specifically, the default capture filter expression is used if provided.</p>
+
+<p>Pre-defined capture filter names, as shown in the GUI menu item Capture-&gt;Capture Filters, can be used by prefixing the argument with &quot;predef:&quot;. Example: <b>-f &quot;predef:MyPredefinedHostOnlyFilter&quot;</b></p>
+
+</dd>
+<dt id="g">-g</dt>
+<dd>
+
+<p>This option causes the output file(s) to be created with group-read permission (meaning that the output file(s) can be read by other members of the calling user&#39;s group).</p>
+
+</dd>
+<dt id="h---help">-h|--help</dt>
+<dd>
+
+<p>Print the version and options and exits.</p>
+
+</dd>
+<dt id="i---interface-capture-interface-rpcap:-host:port-capture-interface-TCP-host:port">-i|--interface &lt;capture interface&gt;|rpcap://&lt;host&gt;:&lt;port&gt;/&lt;capture interface&gt;|TCP@&lt;host&gt;:&lt;port&gt;|-</dt>
+<dd>
+
+<p>Set the name of the network interface or pipe to use for live packet capture.</p>
+
+<p>Network interface names should match one of the names listed in &quot;<b>dumpcap -D</b>&quot; (described above); a number, as reported by &quot;<b>dumpcap -D</b>&quot;, can also be used. If you&#39;re using UNIX, &quot;<b>netstat -i</b>&quot;, &quot;<b>ifconfig -a</b>&quot; or &quot;<b>ip link</b>&quot; might also work to list interface names, although not all versions of UNIX support the <b>-a</b> option to <b>ifconfig</b>.</p>
+
+<p>If no interface is specified, <b>Dumpcap</b> searches the list of interfaces, choosing the first non-loopback interface if there are any non-loopback interfaces, and choosing the first loopback interface if there are no non-loopback interfaces. If there are no interfaces at all, <b>Dumpcap</b> reports an error and doesn&#39;t start the capture.</p>
+
+<p>Pipe names should be either the name of a FIFO (named pipe) or &quot;-&quot; to read data from the standard input. On Windows systems, pipe names must be of the form &quot;\\pipe\.\<b>pipename</b>&quot;. Data read from pipes must be in standard pcapng or pcap format. Pcapng data must have the same endianness as the capturing host.</p>
+
+<p>This option can occur multiple times. When capturing from multiple interfaces, the capture file will be saved in pcapng format.</p>
+
+</dd>
+<dt id="I---monitor-mode">-I|--monitor-mode</dt>
+<dd>
+
+<p>Put the interface in &quot;monitor mode&quot;; this is supported only on IEEE 802.11 Wi-Fi interfaces, and supported only on some operating systems.</p>
+
+<p>Note that in monitor mode the adapter might disassociate from the network with which it&#39;s associated, so that you will not be able to use any wireless networks with that adapter. This could prevent accessing files on a network server, or resolving host names or network addresses, if you are capturing in monitor mode and are not connected to another network with another adapter.</p>
+
+<p>This option can occur multiple times. If used before the first occurrence of the <b>-i</b> option, it enables the monitor mode for all interfaces. If used after an <b>-i</b> option, it enables the monitor mode for the interface specified by the last <b>-i</b> option occurring before this option.</p>
+
+</dd>
+<dt id="k-freq-type-center_freq1-center_freq2">-k &lt;freq&gt;,[&lt;type&gt;],[&lt;center_freq1&gt;],[&lt;center_freq2&gt;&gt;</dt>
+<dd>
+
+<p>Set the channel on the interface; this is supported only on IEEE 802.11 Wi-Fi interfaces, and supported only on some operating systems.</p>
+
+<p><i>freq</i> is the frequency of the channel. <i>type</i> is the type of the channel, for 802.11n and 802.11ac. The values for <i>type</i> are</p>
+
+<dl>
+
+<dt id="NOHT">NOHT</dt>
+<dd>
+
+<p>Used for non-802.11n/non-802.1ac channels</p>
+
+</dd>
+<dt id="HT20">HT20</dt>
+<dd>
+
+<p>20 MHz channel</p>
+
+</dd>
+<dt id="HT40">HT40-</dt>
+<dd>
+
+<p>40 MHz primary channel and a lower secondary channel</p>
+
+</dd>
+<dt id="HT401">HT40+</dt>
+<dd>
+
+<p>40 MHz primary channel and a higher secondary channel</p>
+
+</dd>
+<dt id="HT80">HT80</dt>
+<dd>
+
+<p>80 MHz channel, with <i>centerfreq1</i> as its center frequency</p>
+
+</dd>
+<dt id="VHT80-80">VHT80+80</dt>
+<dd>
+
+<p>two 80 MHz channels combined, with <i>centerfreq1</i> and <i>centerfreq2</i> as the center frequencies of the two channels</p>
+
+</dd>
+<dt id="VHT160">VHT160</dt>
+<dd>
+
+<p>160 MHz channel, with <i>centerfreq1</i> as its center frequency</p>
+
+</dd>
+</dl>
+
+</dd>
+<dt id="L---list-data-link-types">-L|--list-data-link-types</dt>
+<dd>
+
+<p>List the data link types supported by the interface and exit. The reported link types can be used for the <b>-y</b> option.</p>
+
+</dd>
+<dt id="M">-M</dt>
+<dd>
+
+<p>When used with <b>-D</b>, <b>-L</b>, <b>-S</b> or <b>--list-time-stamp-types</b> print machine-readable output. The machine-readable output is intended to be read by <b>Wireshark</b> and <b>TShark</b>; its format is subject to change from release to release.</p>
+
+</dd>
+<dt id="n">-n</dt>
+<dd>
+
+<p>Save files as pcapng. This is the default.</p>
+
+</dd>
+<dt id="N-packet-limit">-N &lt;packet limit&gt;</dt>
+<dd>
+
+<p>Limit the number of packets used for storing captured packets in memory while processing it. If used in combination with the <b>-C</b> option, both limits will apply. Setting this limit will enable the usage of the separate thread per interface.</p>
+
+</dd>
+<dt id="p---no-promiscuous-mode">-p|--no-promiscuous-mode</dt>
+<dd>
+
+<p><i>Don&#39;t</i> put the interface into promiscuous mode. Note that the interface might be in promiscuous mode for some other reason; hence, <b>-p</b> cannot be used to ensure that the only traffic that is captured is traffic sent to or from the machine on which <b>Dumpcap</b> is running, broadcast traffic, and multicast traffic to addresses received by that machine.</p>
+
+<p>This option can occur multiple times. If used before the first occurrence of the <b>-i</b> option, no interface will be put into the promiscuous mode. If used after an <b>-i</b> option, the interface specified by the last <b>-i</b> option occurring before this option will not be put into the promiscuous mode.</p>
+
+</dd>
+<dt id="P">-P</dt>
+<dd>
+
+<p>Save files as pcap instead of the default pcapng. In situations that require pcapng, such as capturing from multiple interfaces, this option will be overridden.</p>
+
+</dd>
+<dt id="q">-q</dt>
+<dd>
+
+<p>When capturing packets, don&#39;t display the continuous count of packets captured that is normally shown when saving a capture to a file; instead, just display, at the end of the capture, a count of packets captured. On systems that support the SIGINFO signal, such as various BSDs, you can cause the current count to be displayed by typing your &quot;status&quot; character (typically control-T, although it might be set to &quot;disabled&quot; by default on at least some BSDs, so you&#39;d have to explicitly set it to use it).</p>
+
+</dd>
+<dt id="s---snapshot-length-capture-snaplen">-s|--snapshot-length &lt;capture snaplen&gt;</dt>
+<dd>
+
+<p>Set the default snapshot length to use when capturing live data. No more than <i>snaplen</i> bytes of each network packet will be read into memory, or saved to disk. A value of 0 specifies a snapshot length of 262144, so that the full packet is captured; this is the default.</p>
+
+<p>This option can occur multiple times. If used before the first occurrence of the <b>-i</b> option, it sets the default snapshot length. If used after an <b>-i</b> option, it sets the snapshot length for the interface specified by the last <b>-i</b> option occurring before this option. If the snapshot length is not set specifically, the default snapshot length is used if provided.</p>
+
+</dd>
+<dt id="S">-S</dt>
+<dd>
+
+<p>Print statistics for each interface once every second.</p>
+
+</dd>
+<dt id="t">-t</dt>
+<dd>
+
+<p>Use a separate thread per interface.</p>
+
+</dd>
+<dt id="v---version">-v|--version</dt>
+<dd>
+
+<p>Print the version and exit.</p>
+
+</dd>
+<dt id="w-outfile">-w &lt;outfile&gt;</dt>
+<dd>
+
+<p>Write raw packet data to <i>outfile</i>. Use &quot;-&quot; for stdout.</p>
+
+</dd>
+<dt id="y---linktype-capture-link-type">-y|--linktype &lt;capture link type&gt;</dt>
+<dd>
+
+<p>Set the data link type to use while capturing packets. The values reported by <b>-L</b> are the values that can be used.</p>
+
+<p>This option can occur multiple times. If used before the first occurrence of the <b>-i</b> option, it sets the default capture link type. If used after an <b>-i</b> option, it sets the capture link type for the interface specified by the last <b>-i</b> option occurring before this option. If the capture link type is not set specifically, the default capture link type is used if provided.</p>
+
+</dd>
+<dt id="capture-comment-comment">--capture-comment &lt;comment&gt;</dt>
+<dd>
+
+<p>Add a capture comment to the output file.</p>
+
+<p>This option is only available if we output the captured packets to a single file in pcapng format. Only one capture comment may be set per output file.</p>
+
+</dd>
+<dt id="list-time-stamp-types">--list-time-stamp-types</dt>
+<dd>
+
+<p>List time stamp types supported for the interface. If no time stamp type can be set, no time stamp types are listed.</p>
+
+</dd>
+<dt id="time-stamp-type-type">--time-stamp-type &lt;type&gt;</dt>
+<dd>
+
+<p>Change the interface&#39;s timestamp method.</p>
+
+</dd>
+</dl>
+
+<h1 id="CAPTURE-FILTER-SYNTAX">CAPTURE FILTER SYNTAX</h1>
+
+<p>See the manual page of pcap-filter(7) or, if that doesn&#39;t exist, tcpdump(8), or, if that doesn&#39;t exist, <a href="https://gitlab.com/wireshark/wireshark/-/wikis/CaptureFilters">https://gitlab.com/wireshark/wireshark/-/wikis/CaptureFilters</a>.</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>wireshark(1), tshark(1), editcap(1), mergecap(1), capinfos(1), pcap(3), pcap-filter(7) or tcpdump(8)</p>
+
+<h1 id="NOTES">NOTES</h1>
+
+<p><b>Dumpcap</b> is part of the <b>Wireshark</b> distribution. The latest version of <b>Wireshark</b> can be found at <a href="https://www.wireshark.org">https://www.wireshark.org</a>.</p>
+
+<p>HTML versions of the Wireshark project man pages are available at: <a href="https://www.wireshark.org/docs/man-pages">https://www.wireshark.org/docs/man-pages</a>.</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<p><b>Dumpcap</b> is derived from the <b>Wireshark</b> capturing engine code; see the list of authors in the <b>Wireshark</b> man page for a list of authors of that code.</p>
+
+
+</body>
+
+</html>
+
+

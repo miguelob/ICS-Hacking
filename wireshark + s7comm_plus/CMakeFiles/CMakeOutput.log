@@ -1,0 +1,1595 @@
+The system is: Darwin - 20.2.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is AppleClang, found in "/Users/miguel/Downloads/make/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is AppleClang, found in "/Users/miguel/Downloads/make/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a23c9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a23c9.dir/build.make CMakeFiles/cmTC_a23c9.dir/build
+Building C object CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk   -v -Wl,-v -o CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCCompilerABI.c
+Apple clang version 12.0.0 (clang-1200.0.32.28)
+Target: x86_64-apple-darwin20.2.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdebug-compilation-dir /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-11.0.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCCompilerABI.c
+clang -cc1 version 12.0.0 (clang-1200.0.32.28) default target x86_64-apple-darwin20.2.0
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include
+ /Library/Developer/CommandLineTools/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking C executable cmTC_a23c9
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a23c9.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -o cmTC_a23c9 
+Apple clang version 12.0.0 (clang-1200.0.32.28)
+Target: x86_64-apple-darwin20.2.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_a23c9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-609.8
+BUILD 20:09:52 Nov  4 2020
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include]
+    add: [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include]
+    add: [/Library/Developer/CommandLineTools/usr/include]
+  end of search list found
+  collapse include dir [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include] ==> [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include]
+  collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include]
+  collapse include dir [/Library/Developer/CommandLineTools/usr/include] ==> [/Library/Developer/CommandLineTools/usr/include]
+  implicit include dirs: [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_a23c9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a23c9.dir/build.make CMakeFiles/cmTC_a23c9.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk   -v -Wl -v -o CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.28)]
+  ignore line: [Target: x86_64-apple-darwin20.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdebug-compilation-dir /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-11.0.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 12.0.0 (clang-1200.0.32.28) default target x86_64-apple-darwin20.2.0]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_a23c9]
+  ignore line: [/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a23c9.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -o cmTC_a23c9 ]
+  ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.28)]
+  ignore line: [Target: x86_64-apple-darwin20.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_a23c9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Library/Developer/CommandLineTools/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-platform_version] ==> ignore
+    arg [macos] ==> ignore
+    arg [11.0.0] ==> ignore
+    arg [11.1] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a23c9] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_a23c9.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks]
+  implicit libs: []
+  implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks]
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d6b9a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d6b9a.dir/build.make CMakeFiles/cmTC_d6b9a.dir/build
+Building CXX object CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk   -v -Wl,-v -o CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Apple clang version 12.0.0 (clang-1200.0.32.28)
+Target: x86_64-apple-darwin20.2.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/c++/v1"
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdeprecated-macro -fdebug-compilation-dir /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-11.0.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 12.0.0 (clang-1200.0.32.28) default target x86_64-apple-darwin20.2.0
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1
+ /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include
+ /Library/Developer/CommandLineTools/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking CXX executable cmTC_d6b9a
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6b9a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d6b9a 
+Apple clang version 12.0.0 (clang-1200.0.32.28)
+Target: x86_64-apple-darwin20.2.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_d6b9a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-609.8
+BUILD 20:09:52 Nov  4 2020
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1]
+    add: [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include]
+    add: [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include]
+    add: [/Library/Developer/CommandLineTools/usr/include]
+  end of search list found
+  collapse include dir [/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1] ==> [/Library/Developer/CommandLineTools/usr/include/c++/v1]
+  collapse include dir [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include] ==> [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include]
+  collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include]
+  collapse include dir [/Library/Developer/CommandLineTools/usr/include] ==> [/Library/Developer/CommandLineTools/usr/include]
+  implicit include dirs: [/Library/Developer/CommandLineTools/usr/include/c++/v1;/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_d6b9a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d6b9a.dir/build.make CMakeFiles/cmTC_d6b9a.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk   -v -Wl -v -o CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.28)]
+  ignore line: [Target: x86_64-apple-darwin20.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/c++/v1"]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mframe-pointer=all -fno-strict-return -masm-verbose -munwind-tables -target-sdk-version=11.1 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -target-linker-version 609.8 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -fdeprecated-macro -fdebug-compilation-dir /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fobjc-runtime=macosx-11.0.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 12.0.0 (clang-1200.0.32.28) default target x86_64-apple-darwin20.2.0]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1]
+  ignore line: [ /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_d6b9a]
+  ignore line: [/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6b9a.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d6b9a ]
+  ignore line: [Apple clang version 12.0.0 (clang-1200.0.32.28)]
+  ignore line: [Target: x86_64-apple-darwin20.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o cmTC_d6b9a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Library/Developer/CommandLineTools/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-platform_version] ==> ignore
+    arg [macos] ==> ignore
+    arg [11.0.0] ==> ignore
+    arg [11.1] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_d6b9a] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_d6b9a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lSystem] ==> lib [System]
+    arg [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks]
+  implicit libs: [c++]
+  implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks]
+
+
+Performing C SOURCE FILE Test C_Qunused_arguments_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_abaf0/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_abaf0.dir/build.make CMakeFiles/cmTC_abaf0.dir/build
+Building C object CMakeFiles/cmTC_abaf0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Qunused_arguments_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -o CMakeFiles/cmTC_abaf0.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_abaf0
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abaf0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_abaf0.dir/src.c.o -o cmTC_abaf0 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wall_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_75415/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_75415.dir/build.make CMakeFiles/cmTC_75415.dir/build
+Building C object CMakeFiles/cmTC_75415.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wall_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -o CMakeFiles/cmTC_75415.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_75415
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75415.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_75415.dir/src.c.o -o cmTC_75415 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wextra_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b7510/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b7510.dir/build.make CMakeFiles/cmTC_b7510.dir/build
+Building C object CMakeFiles/cmTC_b7510.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wextra_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -o CMakeFiles/cmTC_b7510.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b7510
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7510.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b7510.dir/src.c.o -o cmTC_b7510 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wendif_labels_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ed9a7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ed9a7.dir/build.make CMakeFiles/cmTC_ed9a7.dir/build
+Building C object CMakeFiles/cmTC_ed9a7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wendif_labels_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -o CMakeFiles/cmTC_ed9a7.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ed9a7
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed9a7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ed9a7.dir/src.c.o -o cmTC_ed9a7 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wpointer_arith_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c84ca/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c84ca.dir/build.make CMakeFiles/cmTC_c84ca.dir/build
+Building C object CMakeFiles/cmTC_c84ca.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wpointer_arith_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -o CMakeFiles/cmTC_c84ca.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c84ca
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c84ca.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c84ca.dir/src.c.o -o cmTC_c84ca 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wformat_security_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_76d9f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_76d9f.dir/build.make CMakeFiles/cmTC_76d9f.dir/build
+Building C object CMakeFiles/cmTC_76d9f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wformat_security_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -o CMakeFiles/cmTC_76d9f.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_76d9f
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76d9f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_76d9f.dir/src.c.o -o cmTC_76d9f 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_fwrapv_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f46f7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f46f7.dir/build.make CMakeFiles/cmTC_f46f7.dir/build
+Building C object CMakeFiles/cmTC_f46f7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_fwrapv_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -o CMakeFiles/cmTC_f46f7.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f46f7
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f46f7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f46f7.dir/src.c.o -o cmTC_f46f7 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_fno_strict_overflow_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_06b27/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_06b27.dir/build.make CMakeFiles/cmTC_06b27.dir/build
+Building C object CMakeFiles/cmTC_06b27.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_fno_strict_overflow_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -o CMakeFiles/cmTC_06b27.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_06b27
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06b27.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_06b27.dir/src.c.o -o cmTC_06b27 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wvla_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3b511/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3b511.dir/build.make CMakeFiles/cmTC_3b511.dir/build
+Building C object CMakeFiles/cmTC_3b511.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wvla_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -o CMakeFiles/cmTC_3b511.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3b511
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b511.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3b511.dir/src.c.o -o cmTC_3b511 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Waddress_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0ca3e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0ca3e.dir/build.make CMakeFiles/cmTC_0ca3e.dir/build
+Building C object CMakeFiles/cmTC_0ca3e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Waddress_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -o CMakeFiles/cmTC_0ca3e.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0ca3e
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ca3e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0ca3e.dir/src.c.o -o cmTC_0ca3e 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wattributes_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_86c3c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_86c3c.dir/build.make CMakeFiles/cmTC_86c3c.dir/build
+Building C object CMakeFiles/cmTC_86c3c.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wattributes_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -o CMakeFiles/cmTC_86c3c.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_86c3c
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86c3c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_86c3c.dir/src.c.o -o cmTC_86c3c 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wdiv_by_zero_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b80b3/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b80b3.dir/build.make CMakeFiles/cmTC_b80b3.dir/build
+Building C object CMakeFiles/cmTC_b80b3.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wdiv_by_zero_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -o CMakeFiles/cmTC_b80b3.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b80b3
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b80b3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b80b3.dir/src.c.o -o cmTC_b80b3 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wignored_qualifiers_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_35b90/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_35b90.dir/build.make CMakeFiles/cmTC_35b90.dir/build
+Building C object CMakeFiles/cmTC_35b90.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wignored_qualifiers_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -o CMakeFiles/cmTC_35b90.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_35b90
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35b90.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_35b90.dir/src.c.o -o cmTC_35b90 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wpragmas_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7286f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7286f.dir/build.make CMakeFiles/cmTC_7286f.dir/build
+Building C object CMakeFiles/cmTC_7286f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wpragmas_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -o CMakeFiles/cmTC_7286f.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7286f
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7286f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7286f.dir/src.c.o -o cmTC_7286f 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wno_overlength_strings_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_29ca3/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_29ca3.dir/build.make CMakeFiles/cmTC_29ca3.dir/build
+Building C object CMakeFiles/cmTC_29ca3.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wno_overlength_strings_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -o CMakeFiles/cmTC_29ca3.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_29ca3
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29ca3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_29ca3.dir/src.c.o -o cmTC_29ca3 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wno_long_long_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8d495/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8d495.dir/build.make CMakeFiles/cmTC_8d495.dir/build
+Building C object CMakeFiles/cmTC_8d495.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wno_long_long_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -o CMakeFiles/cmTC_8d495.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8d495
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d495.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8d495.dir/src.c.o -o cmTC_8d495 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wheader_guard_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_50700/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_50700.dir/build.make CMakeFiles/cmTC_50700.dir/build
+Building C object CMakeFiles/cmTC_50700.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wheader_guard_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -o CMakeFiles/cmTC_50700.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_50700
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50700.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_50700.dir/src.c.o -o cmTC_50700 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wcomma_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d6adb/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d6adb.dir/build.make CMakeFiles/cmTC_d6adb.dir/build
+Building C object CMakeFiles/cmTC_d6adb.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wcomma_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -o CMakeFiles/cmTC_d6adb.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d6adb
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6adb.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d6adb.dir/src.c.o -o cmTC_d6adb 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wshorten_64_to_32_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_59359/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_59359.dir/build.make CMakeFiles/cmTC_59359.dir/build
+Building C object CMakeFiles/cmTC_59359.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wshorten_64_to_32_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -o CMakeFiles/cmTC_59359.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_59359
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59359.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_59359.dir/src.c.o -o cmTC_59359 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wframe_larger_than_32768_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c3ad0/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c3ad0.dir/build.make CMakeFiles/cmTC_c3ad0.dir/build
+Building C object CMakeFiles/cmTC_c3ad0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wframe_larger_than_32768_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -o CMakeFiles/cmTC_c3ad0.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c3ad0
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3ad0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c3ad0.dir/src.c.o -o cmTC_c3ad0 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wc___compat_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ec3db/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ec3db.dir/build.make CMakeFiles/cmTC_ec3db.dir/build
+Building C object CMakeFiles/cmTC_ec3db.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wc___compat_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -o CMakeFiles/cmTC_ec3db.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ec3db
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec3db.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ec3db.dir/src.c.o -o cmTC_ec3db 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wunused_const_variable_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_72fef/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_72fef.dir/build.make CMakeFiles/cmTC_72fef.dir/build
+Building C object CMakeFiles/cmTC_72fef.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wunused_const_variable_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -o CMakeFiles/cmTC_72fef.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_72fef
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72fef.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_72fef.dir/src.c.o -o cmTC_72fef 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wshadow_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_01033/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_01033.dir/build.make CMakeFiles/cmTC_01033.dir/build
+Building C object CMakeFiles/cmTC_01033.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wshadow_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -o CMakeFiles/cmTC_01033.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_01033
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01033.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_01033.dir/src.c.o -o cmTC_01033 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wold_style_definition_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_06233/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_06233.dir/build.make CMakeFiles/cmTC_06233.dir/build
+Building C object CMakeFiles/cmTC_06233.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wold_style_definition_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -o CMakeFiles/cmTC_06233.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_06233
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06233.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_06233.dir/src.c.o -o cmTC_06233 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wstrict_prototypes_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_23975/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_23975.dir/build.make CMakeFiles/cmTC_23975.dir/build
+Building C object CMakeFiles/cmTC_23975.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wstrict_prototypes_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -o CMakeFiles/cmTC_23975.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_23975
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23975.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_23975.dir/src.c.o -o cmTC_23975 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Werror_implicit_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e25a1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e25a1.dir/build.make CMakeFiles/cmTC_e25a1.dir/build
+Building C object CMakeFiles/cmTC_e25a1.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Werror_implicit_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -o CMakeFiles/cmTC_e25a1.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e25a1
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e25a1.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e25a1.dir/src.c.o -o cmTC_e25a1 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wno_pointer_sign_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_49e95/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_49e95.dir/build.make CMakeFiles/cmTC_49e95.dir/build
+Building C object CMakeFiles/cmTC_49e95.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wno_pointer_sign_VALID  -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -o CMakeFiles/cmTC_49e95.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_49e95
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49e95.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_49e95.dir/src.c.o -o cmTC_49e95 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_Qunused_arguments_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4db47/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4db47.dir/build.make CMakeFiles/cmTC_4db47.dir/build
+Building CXX object CMakeFiles/cmTC_4db47.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Qunused_arguments_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -o CMakeFiles/cmTC_4db47.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4db47
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4db47.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4db47.dir/src.cxx.o -o cmTC_4db47 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wall_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_53e97/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_53e97.dir/build.make CMakeFiles/cmTC_53e97.dir/build
+Building CXX object CMakeFiles/cmTC_53e97.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wall_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -o CMakeFiles/cmTC_53e97.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_53e97
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53e97.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_53e97.dir/src.cxx.o -o cmTC_53e97 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wextra_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ad978/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ad978.dir/build.make CMakeFiles/cmTC_ad978.dir/build
+Building CXX object CMakeFiles/cmTC_ad978.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wextra_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -o CMakeFiles/cmTC_ad978.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ad978
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad978.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ad978.dir/src.cxx.o -o cmTC_ad978 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wendif_labels_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dcc37/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_dcc37.dir/build.make CMakeFiles/cmTC_dcc37.dir/build
+Building CXX object CMakeFiles/cmTC_dcc37.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wendif_labels_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -o CMakeFiles/cmTC_dcc37.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_dcc37
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dcc37.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_dcc37.dir/src.cxx.o -o cmTC_dcc37 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wpointer_arith_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4be82/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4be82.dir/build.make CMakeFiles/cmTC_4be82.dir/build
+Building CXX object CMakeFiles/cmTC_4be82.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wpointer_arith_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -o CMakeFiles/cmTC_4be82.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4be82
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4be82.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4be82.dir/src.cxx.o -o cmTC_4be82 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wformat_security_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_31cb5/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_31cb5.dir/build.make CMakeFiles/cmTC_31cb5.dir/build
+Building CXX object CMakeFiles/cmTC_31cb5.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wformat_security_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -o CMakeFiles/cmTC_31cb5.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_31cb5
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31cb5.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_31cb5.dir/src.cxx.o -o cmTC_31cb5 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_fwrapv_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0da89/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0da89.dir/build.make CMakeFiles/cmTC_0da89.dir/build
+Building CXX object CMakeFiles/cmTC_0da89.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_fwrapv_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -o CMakeFiles/cmTC_0da89.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0da89
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0da89.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0da89.dir/src.cxx.o -o cmTC_0da89 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_fno_strict_overflow_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ab7b3/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ab7b3.dir/build.make CMakeFiles/cmTC_ab7b3.dir/build
+Building CXX object CMakeFiles/cmTC_ab7b3.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_fno_strict_overflow_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -o CMakeFiles/cmTC_ab7b3.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ab7b3
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab7b3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ab7b3.dir/src.cxx.o -o cmTC_ab7b3 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wvla_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e3f6a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e3f6a.dir/build.make CMakeFiles/cmTC_e3f6a.dir/build
+Building CXX object CMakeFiles/cmTC_e3f6a.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wvla_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -o CMakeFiles/cmTC_e3f6a.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e3f6a
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3f6a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e3f6a.dir/src.cxx.o -o cmTC_e3f6a 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Waddress_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ff198/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ff198.dir/build.make CMakeFiles/cmTC_ff198.dir/build
+Building CXX object CMakeFiles/cmTC_ff198.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Waddress_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -o CMakeFiles/cmTC_ff198.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ff198
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff198.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ff198.dir/src.cxx.o -o cmTC_ff198 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wattributes_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_88aae/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_88aae.dir/build.make CMakeFiles/cmTC_88aae.dir/build
+Building CXX object CMakeFiles/cmTC_88aae.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wattributes_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -o CMakeFiles/cmTC_88aae.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_88aae
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88aae.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_88aae.dir/src.cxx.o -o cmTC_88aae 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wdiv_by_zero_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_03a98/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_03a98.dir/build.make CMakeFiles/cmTC_03a98.dir/build
+Building CXX object CMakeFiles/cmTC_03a98.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wdiv_by_zero_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -o CMakeFiles/cmTC_03a98.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_03a98
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03a98.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_03a98.dir/src.cxx.o -o cmTC_03a98 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wignored_qualifiers_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_69a43/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_69a43.dir/build.make CMakeFiles/cmTC_69a43.dir/build
+Building CXX object CMakeFiles/cmTC_69a43.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wignored_qualifiers_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -o CMakeFiles/cmTC_69a43.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_69a43
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69a43.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_69a43.dir/src.cxx.o -o cmTC_69a43 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wpragmas_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d83aa/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d83aa.dir/build.make CMakeFiles/cmTC_d83aa.dir/build
+Building CXX object CMakeFiles/cmTC_d83aa.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wpragmas_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -o CMakeFiles/cmTC_d83aa.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d83aa
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d83aa.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d83aa.dir/src.cxx.o -o cmTC_d83aa 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wno_overlength_strings_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c919c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c919c.dir/build.make CMakeFiles/cmTC_c919c.dir/build
+Building CXX object CMakeFiles/cmTC_c919c.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wno_overlength_strings_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -o CMakeFiles/cmTC_c919c.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c919c
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c919c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c919c.dir/src.cxx.o -o cmTC_c919c 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wno_long_long_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_08351/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_08351.dir/build.make CMakeFiles/cmTC_08351.dir/build
+Building CXX object CMakeFiles/cmTC_08351.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wno_long_long_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -o CMakeFiles/cmTC_08351.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_08351
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08351.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_08351.dir/src.cxx.o -o cmTC_08351 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wheader_guard_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ca949/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ca949.dir/build.make CMakeFiles/cmTC_ca949.dir/build
+Building CXX object CMakeFiles/cmTC_ca949.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wheader_guard_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -o CMakeFiles/cmTC_ca949.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ca949
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca949.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ca949.dir/src.cxx.o -o cmTC_ca949 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wcomma_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c5baa/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c5baa.dir/build.make CMakeFiles/cmTC_c5baa.dir/build
+Building CXX object CMakeFiles/cmTC_c5baa.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wcomma_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -o CMakeFiles/cmTC_c5baa.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c5baa
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5baa.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c5baa.dir/src.cxx.o -o cmTC_c5baa 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wshorten_64_to_32_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_edeaa/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_edeaa.dir/build.make CMakeFiles/cmTC_edeaa.dir/build
+Building CXX object CMakeFiles/cmTC_edeaa.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wshorten_64_to_32_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -o CMakeFiles/cmTC_edeaa.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_edeaa
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edeaa.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_edeaa.dir/src.cxx.o -o cmTC_edeaa 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wframe_larger_than_32768_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ac7b1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ac7b1.dir/build.make CMakeFiles/cmTC_ac7b1.dir/build
+Building CXX object CMakeFiles/cmTC_ac7b1.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wframe_larger_than_32768_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -o CMakeFiles/cmTC_ac7b1.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ac7b1
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac7b1.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ac7b1.dir/src.cxx.o -o cmTC_ac7b1 
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_Wextra_semi_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_87b97/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_87b97.dir/build.make CMakeFiles/cmTC_87b97.dir/build
+Building CXX object CMakeFiles/cmTC_87b97.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_Wextra_semi_VALID  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE    -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wextra-semi -o CMakeFiles/cmTC_87b97.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_87b97
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87b97.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_87b97.dir/src.cxx.o -o cmTC_87b97 
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_fmacro_prefix_map_old_new_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_74986/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_74986.dir/build.make CMakeFiles/cmTC_74986.dir/build
+Building C object CMakeFiles/cmTC_74986.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_fmacro_prefix_map_old_new_VALID  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE   -fmacro-prefix-map=old=new -o CMakeFiles/cmTC_74986.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_74986
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74986.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_74986.dir/src.c.o -o cmTC_74986 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_fmacro_prefix_map_old_new_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8d614/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8d614.dir/build.make CMakeFiles/cmTC_8d614.dir/build
+Building CXX object CMakeFiles/cmTC_8d614.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DCXX_fmacro_prefix_map_old_new_VALID  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wextra-semi   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE   -fmacro-prefix-map=old=new -o CMakeFiles/cmTC_8d614.dir/src.cxx.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8d614
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d614.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wextra-semi   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8d614.dir/src.cxx.o -o cmTC_8d614 
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test FVHIDDEN succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4d38d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4d38d.dir/build.make CMakeFiles/cmTC_4d38d.dir/build
+Building C object CMakeFiles/cmTC_4d38d.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DFVHIDDEN  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE   -fvisibility=hidden -o CMakeFiles/cmTC_4d38d.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4d38d
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d38d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4d38d.dir/src.c.o -o cmTC_4d38d 
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the pcap_lib_version exist passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_70e6e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_70e6e.dir/build.make CMakeFiles/cmTC_70e6e.dir/build
+Building C object CMakeFiles/cmTC_70e6e.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_70e6e.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_70e6e
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70e6e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_70e6e.dir/CheckSymbolExists.c.o -o cmTC_70e6e  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libpcap.tbd 
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include </Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pcap.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pcap_lib_version
+  return ((int*)(&pcap_lib_version))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function pcap_freecode exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f885f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f885f.dir/build.make CMakeFiles/cmTC_f885f.dir/build
+Building C object CMakeFiles/cmTC_f885f.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_freecode -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_f885f.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f885f
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f885f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_freecode -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f885f.dir/CheckFunctionExists.c.o -o cmTC_f885f  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libpcap.tbd 
+
+
+
+Determining if the function pcap_create exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d77e5/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d77e5.dir/build.make CMakeFiles/cmTC_d77e5.dir/build
+Building C object CMakeFiles/cmTC_d77e5.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_create -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_d77e5.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d77e5
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d77e5.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_create -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d77e5.dir/CheckFunctionExists.c.o -o cmTC_d77e5  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libpcap.tbd 
+
+
+
+Determining if the function pcap_free_datalinks exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c9817/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c9817.dir/build.make CMakeFiles/cmTC_c9817.dir/build
+Building C object CMakeFiles/cmTC_c9817.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_free_datalinks -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_c9817.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c9817
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9817.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_free_datalinks -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c9817.dir/CheckFunctionExists.c.o -o cmTC_c9817  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libpcap.tbd 
+
+
+
+Determining if the function pcap_set_tstamp_precision exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b0c13/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b0c13.dir/build.make CMakeFiles/cmTC_b0c13.dir/build
+Building C object CMakeFiles/cmTC_b0c13.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_set_tstamp_precision -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_b0c13.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b0c13
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0c13.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_set_tstamp_precision -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b0c13.dir/CheckFunctionExists.c.o -o cmTC_b0c13  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libpcap.tbd 
+
+
+
+Determining if the function pcap_set_tstamp_type exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dfe07/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_dfe07.dir/build.make CMakeFiles/cmTC_dfe07.dir/build
+Building C object CMakeFiles/cmTC_dfe07.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_set_tstamp_type -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_dfe07.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dfe07
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfe07.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=pcap_set_tstamp_type -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_dfe07.dir/CheckFunctionExists.c.o -o cmTC_dfe07  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libpcap.tbd 
+
+
+
+Determining if the function inflate exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_caadd/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_caadd.dir/build.make CMakeFiles/cmTC_caadd.dir/build
+Building C object CMakeFiles/cmTC_caadd.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=inflate -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_caadd.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_caadd
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_caadd.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=inflate -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_caadd.dir/CheckFunctionExists.c.o -o cmTC_caadd  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libz.tbd 
+
+
+
+Determining if the function inflatePrime exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_74c77/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_74c77.dir/build.make CMakeFiles/cmTC_74c77.dir/build
+Building C object CMakeFiles/cmTC_74c77.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=inflatePrime -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_74c77.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_74c77
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74c77.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=inflatePrime -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_74c77.dir/CheckFunctionExists.c.o -o cmTC_74c77  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib/libz.tbd 
+
+
+
+Determining if the gnutls_pkcs11_obj_list_import_url4 exist passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6c1e8/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6c1e8.dir/build.make CMakeFiles/cmTC_6c1e8.dir/build
+Building C object CMakeFiles/cmTC_6c1e8.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc  -I/usr/local/Cellar/gnutls/3.6.15/include -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_6c1e8.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6c1e8
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c1e8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6c1e8.dir/CheckSymbolExists.c.o -o cmTC_6c1e8  /usr/local/Cellar/gnutls/3.6.15/lib/libgnutls.dylib 
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <gnutls/pkcs11.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gnutls_pkcs11_obj_list_import_url4
+  return ((int*)(&gnutls_pkcs11_obj_list_import_url4))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file arpa/inet.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_894d6/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_894d6.dir/build.make CMakeFiles/cmTC_894d6.dir/build
+Building C object CMakeFiles/cmTC_894d6.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_894d6.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_894d6
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_894d6.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_894d6.dir/CheckIncludeFile.c.o -o cmTC_894d6 
+
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1262e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1262e.dir/build.make CMakeFiles/cmTC_1262e.dir/build
+Building C object CMakeFiles/cmTC_1262e.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_1262e.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_1262e
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1262e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1262e.dir/CheckIncludeFile.c.o -o cmTC_1262e 
+
+
+
+Determining if the include file getopt.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9638d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9638d.dir/build.make CMakeFiles/cmTC_9638d.dir/build
+Building C object CMakeFiles/cmTC_9638d.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_9638d.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9638d
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9638d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9638d.dir/CheckIncludeFile.c.o -o cmTC_9638d 
+
+
+
+Determining if the include file grp.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5dd75/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5dd75.dir/build.make CMakeFiles/cmTC_5dd75.dir/build
+Building C object CMakeFiles/cmTC_5dd75.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_5dd75.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5dd75
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dd75.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5dd75.dir/CheckIncludeFile.c.o -o cmTC_5dd75 
+
+
+
+Determining if files sys/types.h;ifaddrs.h exist passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3c853/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3c853.dir/build.make CMakeFiles/cmTC_3c853.dir/build
+Building C object CMakeFiles/cmTC_3c853.dir/HAVE_IFADDRS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_3c853.dir/HAVE_IFADDRS_H.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CheckIncludeFiles/HAVE_IFADDRS_H.c
+Linking C executable cmTC_3c853
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c853.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3c853.dir/HAVE_IFADDRS_H.c.o -o cmTC_3c853 
+
+
+
+Determining if the include file netinet/in.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_54fc2/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_54fc2.dir/build.make CMakeFiles/cmTC_54fc2.dir/build
+Building C object CMakeFiles/cmTC_54fc2.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_54fc2.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_54fc2
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54fc2.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_54fc2.dir/CheckIncludeFile.c.o -o cmTC_54fc2 
+
+
+
+Determining if the include file netdb.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_761a9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_761a9.dir/build.make CMakeFiles/cmTC_761a9.dir/build
+Building C object CMakeFiles/cmTC_761a9.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_761a9.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_761a9
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_761a9.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_761a9.dir/CheckIncludeFile.c.o -o cmTC_761a9 
+
+
+
+Determining if the include file pwd.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_378ba/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_378ba.dir/build.make CMakeFiles/cmTC_378ba.dir/build
+Building C object CMakeFiles/cmTC_378ba.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_378ba.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_378ba
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_378ba.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_378ba.dir/CheckIncludeFile.c.o -o cmTC_378ba 
+
+
+
+Determining if the include file sys/ioctl.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_13991/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_13991.dir/build.make CMakeFiles/cmTC_13991.dir/build
+Building C object CMakeFiles/cmTC_13991.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_13991.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_13991
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13991.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_13991.dir/CheckIncludeFile.c.o -o cmTC_13991 
+
+
+
+Determining if the include file sys/select.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6ba3f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6ba3f.dir/build.make CMakeFiles/cmTC_6ba3f.dir/build
+Building C object CMakeFiles/cmTC_6ba3f.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_6ba3f.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6ba3f
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ba3f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6ba3f.dir/CheckIncludeFile.c.o -o cmTC_6ba3f 
+
+
+
+Determining if the include file sys/socket.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_14a5a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_14a5a.dir/build.make CMakeFiles/cmTC_14a5a.dir/build
+Building C object CMakeFiles/cmTC_14a5a.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_14a5a.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_14a5a
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14a5a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_14a5a.dir/CheckIncludeFile.c.o -o cmTC_14a5a 
+
+
+
+Determining if the include file sys/sockio.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_add29/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_add29.dir/build.make CMakeFiles/cmTC_add29.dir/build
+Building C object CMakeFiles/cmTC_add29.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_add29.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_add29
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_add29.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_add29.dir/CheckIncludeFile.c.o -o cmTC_add29 
+
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6fd5a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6fd5a.dir/build.make CMakeFiles/cmTC_6fd5a.dir/build
+Building C object CMakeFiles/cmTC_6fd5a.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_6fd5a.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6fd5a
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fd5a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6fd5a.dir/CheckIncludeFile.c.o -o cmTC_6fd5a 
+
+
+
+Determining if the include file sys/utsname.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5b26c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5b26c.dir/build.make CMakeFiles/cmTC_5b26c.dir/build
+Building C object CMakeFiles/cmTC_5b26c.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_5b26c.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5b26c
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b26c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5b26c.dir/CheckIncludeFile.c.o -o cmTC_5b26c 
+
+
+
+Determining if the include file sys/wait.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_74e3b/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_74e3b.dir/build.make CMakeFiles/cmTC_74e3b.dir/build
+Building C object CMakeFiles/cmTC_74e3b.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_74e3b.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_74e3b
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74e3b.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_74e3b.dir/CheckIncludeFile.c.o -o cmTC_74e3b 
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_125f7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_125f7.dir/build.make CMakeFiles/cmTC_125f7.dir/build
+Building C object CMakeFiles/cmTC_125f7.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_125f7.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_125f7
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_125f7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_125f7.dir/CheckIncludeFile.c.o -o cmTC_125f7 
+
+
+
+Determining if the floorl exist passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_25b39/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_25b39.dir/build.make CMakeFiles/cmTC_25b39.dir/build
+Building C object CMakeFiles/cmTC_25b39.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_25b39.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_25b39
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25b39.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_25b39.dir/CheckSymbolExists.c.o -o cmTC_25b39  -lm 
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef floorl
+  return ((int*)(&floorl))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function getopt_long exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e3dbf/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e3dbf.dir/build.make CMakeFiles/cmTC_e3dbf.dir/build
+Building C object CMakeFiles/cmTC_e3dbf.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=getopt_long -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_e3dbf.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e3dbf
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3dbf.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=getopt_long -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e3dbf.dir/CheckFunctionExists.c.o -o cmTC_e3dbf 
+
+
+
+Determining if the optreset exist passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_decac/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_decac.dir/build.make CMakeFiles/cmTC_decac.dir/build
+Building C object CMakeFiles/cmTC_decac.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_decac.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_decac
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_decac.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_decac.dir/CheckSymbolExists.c.o -o cmTC_decac 
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <getopt.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef optreset
+  return ((int*)(&optreset))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function getifaddrs exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f4d51/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f4d51.dir/build.make CMakeFiles/cmTC_f4d51.dir/build
+Building C object CMakeFiles/cmTC_f4d51.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=getifaddrs -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_f4d51.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f4d51
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4d51.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=getifaddrs -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f4d51.dir/CheckFunctionExists.c.o -o cmTC_f4d51 
+
+
+
+Determining if the function issetugid exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f202d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f202d.dir/build.make CMakeFiles/cmTC_f202d.dir/build
+Building C object CMakeFiles/cmTC_f202d.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=issetugid -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_f202d.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f202d
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f202d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=issetugid -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f202d.dir/CheckFunctionExists.c.o -o cmTC_f202d 
+
+
+
+Determining if the function mkstemps exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1a660/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1a660.dir/build.make CMakeFiles/cmTC_1a660.dir/build
+Building C object CMakeFiles/cmTC_1a660.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=mkstemps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_1a660.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1a660
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a660.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=mkstemps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1a660.dir/CheckFunctionExists.c.o -o cmTC_1a660 
+
+
+
+Determining if the function strptime exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e7654/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e7654.dir/build.make CMakeFiles/cmTC_e7654.dir/build
+Building C object CMakeFiles/cmTC_e7654.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=strptime -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_e7654.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7654
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7654.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=strptime -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e7654.dir/CheckFunctionExists.c.o -o cmTC_e7654 
+
+
+
+Determining if the function CFPropertyListCreateWithStream exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d6449/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d6449.dir/build.make CMakeFiles/cmTC_d6449.dir/build
+Building C object CMakeFiles/cmTC_d6449.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=CFPropertyListCreateWithStream -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_d6449.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d6449
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6449.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=CFPropertyListCreateWithStream -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d6449.dir/CheckFunctionExists.c.o -o cmTC_d6449  -framework CoreFoundation 
+
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_SOCKADDR_SA_LEN succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3c933/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3c933.dir/build.make CMakeFiles/cmTC_3c933.dir/build
+Building C object CMakeFiles/cmTC_3c933.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_SOCKADDR_SA_LEN  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_3c933.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3c933
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c933.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3c933.dir/src.c.o -o cmTC_3c933 
+
+
+Source file was:
+
+#include <sys/socket.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr *)0)->sa_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_FLAGS succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b4060/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b4060.dir/build.make CMakeFiles/cmTC_b4060.dir/build
+Building C object CMakeFiles/cmTC_b4060.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT_ST_FLAGS  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_b4060.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b4060
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4060.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b4060.dir/src.c.o -o cmTC_b4060 
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_flags);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_BLKSIZE succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f0eac/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f0eac.dir/build.make CMakeFiles/cmTC_f0eac.dir/build
+Building C object CMakeFiles/cmTC_f0eac.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT_ST_BLKSIZE  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_f0eac.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f0eac
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0eac.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f0eac.dir/src.c.o -o cmTC_f0eac 
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_blksize);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_BIRTHTIME succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_05c11/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_05c11.dir/build.make CMakeFiles/cmTC_05c11.dir/build
+Building C object CMakeFiles/cmTC_05c11.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT_ST_BIRTHTIME  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_05c11.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_05c11
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05c11.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_05c11.dir/src.c.o -o cmTC_05c11 
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_birthtime);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_TM_TM_ZONE succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_67ae8/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_67ae8.dir/build.make CMakeFiles/cmTC_67ae8.dir/build
+Building C object CMakeFiles/cmTC_67ae8.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_TM_TM_ZONE  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_67ae8.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_67ae8
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67ae8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_67ae8.dir/src.c.o -o cmTC_67ae8 
+
+
+Source file was:
+
+#include <time.h>
+
+int main()
+{
+  (void)sizeof(((struct tm *)0)->tm_zone);
+  return 0;
+}
+
+Determining if the tzname exist passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d0926/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d0926.dir/build.make CMakeFiles/cmTC_d0926.dir/build
+Building C object CMakeFiles/cmTC_d0926.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_d0926.dir/CheckSymbolExists.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d0926
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0926.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d0926.dir/CheckSymbolExists.c.o -o cmTC_d0926 
+
+
+File /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef tzname
+  return ((int*)(&tzname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function ssh_userauth_agent exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d2061/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d2061.dir/build.make CMakeFiles/cmTC_d2061.dir/build
+Building C object CMakeFiles/cmTC_d2061.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc  -I/usr/local/include -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=ssh_userauth_agent -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_d2061.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.19.2/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2061
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2061.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -DCHECK_FUNCTION_EXISTS=ssh_userauth_agent -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d2061.dir/CheckFunctionExists.c.o -o cmTC_d2061  /usr/local/lib/libssh.dylib 
+
+
+
+Performing C SOURCE FILE Test C_Wimplicit_fallthrough_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_01d11/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_01d11.dir/build.make CMakeFiles/cmTC_01d11.dir/build
+Building C object CMakeFiles/cmTC_01d11.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wimplicit_fallthrough_VALID  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE   -Wimplicit-fallthrough -o CMakeFiles/cmTC_01d11.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_01d11
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01d11.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_01d11.dir/src.c.o -o cmTC_01d11 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wsign_compare_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f78d8/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f78d8.dir/build.make CMakeFiles/cmTC_f78d8.dir/build
+Building C object CMakeFiles/cmTC_f78d8.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wsign_compare_VALID  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE   -Wsign-compare -o CMakeFiles/cmTC_f78d8.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f78d8
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f78d8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f78d8.dir/src.c.o -o cmTC_f78d8 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_Wunused_parameter_VALID succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6677a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6677a.dir/build.make CMakeFiles/cmTC_6677a.dir/build
+Building C object CMakeFiles/cmTC_6677a.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DC_Wunused_parameter_VALID  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE   -Wunused-parameter -o CMakeFiles/cmTC_6677a.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6677a
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6677a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6677a.dir/src.c.o -o cmTC_6677a 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test COMPILER_CAN_HANDLE_SSE4_2 succeeded with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5df7d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5df7d.dir/build.make CMakeFiles/cmTC_5df7d.dir/build
+Building C object CMakeFiles/cmTC_5df7d.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DCOMPILER_CAN_HANDLE_SSE4_2  -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE   -msse4.2 -o CMakeFiles/cmTC_5df7d.dir/src.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5df7d
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5df7d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5df7d.dir/src.c.o -o cmTC_5df7d 
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the include file emmintrin.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d40e7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d40e7.dir/build.make CMakeFiles/cmTC_d40e7.dir/build
+Building C object CMakeFiles/cmTC_d40e7.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_d40e7.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d40e7
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d40e7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/=  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d40e7.dir/CheckIncludeFile.c.o -o cmTC_d40e7 
+
+
+
+Determining if the include file nmmintrin.h exists passed with the following output:
+Change Dir: /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_75654/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_75654.dir/build.make CMakeFiles/cmTC_75654.dir/build
+Building C object CMakeFiles/cmTC_75654.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -msse4.2 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIE -o CMakeFiles/cmTC_75654.dir/CheckIncludeFile.c.o -c /Users/miguel/Downloads/make/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_75654
+/usr/local/Cellar/cmake/3.19.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75654.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fvisibility=hidden  -Qunused-arguments -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wheader-guard -Wcomma -Wshorten-64-to-32 -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/Users/miguel/Downloads/wireshark-3.4.2/= -fmacro-prefix-map=/Users/miguel/Downloads/make/= -msse4.2 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_75654.dir/CheckIncludeFile.c.o -o cmTC_75654 
+
+
+

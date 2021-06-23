@@ -1,0 +1,18 @@
+
+This is an example of how to build a Wireshark plugin out-of-tree.
+
+Note that this builds against Wireshark's *installed* version. You should of
+course adapt to your own needs.
+
+To build/install the plugin:
+
+$ mkdir build && cd build
+$ cmake ..
+$ make
+$ sudo make install
+
+If your WiresharkConfig.cmake file is not in one of the standard cmake search
+paths you will have to tell cmake where to find it. You can do so using
+CMAKE_PREFIX_PATH, for example
+
+$ cmake -DCMAKE_PREFIX_PATH="/opt/wireshark" ..

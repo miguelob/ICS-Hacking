@@ -1,0 +1,861 @@
+State 0:
+          entry ::= * empty_line
+          entry ::= * footer_and_header
+          entry ::= * header
+          entry ::= * footer
+          entry ::= * msg
+          entry ::= * err_msg
+          entry ::= * j1939_msg
+      (0) empty_line ::= *
+          footer_and_header ::= * footer ENDL header
+          header ::= * version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+          version ::= * HEADER_VER maybe_chars
+          footer ::= * end_time ENDL STOP_SESSION
+          end_time ::= * END_TIME ref_date ref_time
+          msg ::= * msg_time MSG_DIR INT msg_id msg_type msg_length data
+          err_msg ::= * msg_time MSG_DIR INT INT err_msg_type
+          j1939_msg ::= * msg_time INT msg_id INT J1939_MSG_TYPE INT INT INT MSG_DIR msg_length data
+          msg_time ::= * MSG_TIME
+
+                    HEADER_VER shift        35     
+                      END_TIME shift        28     
+                      MSG_TIME shift-reduce 10     msg_time ::= MSG_TIME
+                      msg_time shift        42     
+                         entry accept
+                    empty_line shift        77     
+             footer_and_header shift        76     
+                        header shift        75     
+                        footer shift        45     
+                           msg shift        57     
+                       err_msg shift        56     
+                     j1939_msg shift        55     
+                       version shift        74     
+                      end_time shift        54     
+                     {default} reduce       0      empty_line ::=
+
+State 1:
+          j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE INT INT INT MSG_DIR msg_length * data
+          data ::= * data0
+          data ::= * data1
+          data ::= * data2
+          data ::= * data3
+          data ::= * data4
+          data ::= * data5
+          data ::= * data6
+          data ::= * data7
+          data ::= * data8
+          data ::= * data12
+          data ::= * data16
+          data ::= * data20
+          data ::= * data24
+          data ::= * data32
+          data ::= * data48
+          data ::= * data64
+          byte ::= * INT
+     (32) data0 ::= *
+          data1 ::= * byte
+          data2 ::= * byte byte
+          data3 ::= * byte byte byte
+          data4 ::= * byte byte byte byte
+          data5 ::= * data4 data1
+          data6 ::= * data4 data2
+          data7 ::= * data4 data3
+          data8 ::= * data4 data4
+          data12 ::= * data8 data4
+          data16 ::= * data8 data8
+          data20 ::= * data16 data4
+          data24 ::= * data16 data8
+          data32 ::= * data16 data16
+          data48 ::= * data32 data16
+          data64 ::= * data32 data32
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        23     
+                          data shift-reduce 7      j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE INT INT INT MSG_DIR msg_length data
+                         data0 shift-reduce 15     data ::= data0
+                         data1 shift-reduce 16     data ::= data1
+                         data2 shift-reduce 17     data ::= data2
+                         data3 shift-reduce 18     data ::= data3
+                         data4 shift        4      
+                         data5 shift-reduce 20     data ::= data5
+                         data6 shift-reduce 21     data ::= data6
+                         data7 shift-reduce 22     data ::= data7
+                         data8 shift        9      
+                        data12 shift-reduce 24     data ::= data12
+                        data16 shift        6      
+                        data20 shift-reduce 26     data ::= data20
+                        data24 shift-reduce 27     data ::= data24
+                        data32 shift        3      
+                        data48 shift-reduce 29     data ::= data48
+                        data64 shift-reduce 30     data ::= data64
+                     {default} reduce       32     data0 ::=
+
+State 2:
+          msg ::= msg_time MSG_DIR INT msg_id msg_type msg_length * data
+          data ::= * data0
+          data ::= * data1
+          data ::= * data2
+          data ::= * data3
+          data ::= * data4
+          data ::= * data5
+          data ::= * data6
+          data ::= * data7
+          data ::= * data8
+          data ::= * data12
+          data ::= * data16
+          data ::= * data20
+          data ::= * data24
+          data ::= * data32
+          data ::= * data48
+          data ::= * data64
+          byte ::= * INT
+     (32) data0 ::= *
+          data1 ::= * byte
+          data2 ::= * byte byte
+          data3 ::= * byte byte byte
+          data4 ::= * byte byte byte byte
+          data5 ::= * data4 data1
+          data6 ::= * data4 data2
+          data7 ::= * data4 data3
+          data8 ::= * data4 data4
+          data12 ::= * data8 data4
+          data16 ::= * data8 data8
+          data20 ::= * data16 data4
+          data24 ::= * data16 data8
+          data32 ::= * data16 data16
+          data48 ::= * data32 data16
+          data64 ::= * data32 data32
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        23     
+                          data shift-reduce 5      msg ::= msg_time MSG_DIR INT msg_id msg_type msg_length data
+                         data0 shift-reduce 15     data ::= data0
+                         data1 shift-reduce 16     data ::= data1
+                         data2 shift-reduce 17     data ::= data2
+                         data3 shift-reduce 18     data ::= data3
+                         data4 shift        4      
+                         data5 shift-reduce 20     data ::= data5
+                         data6 shift-reduce 21     data ::= data6
+                         data7 shift-reduce 22     data ::= data7
+                         data8 shift        9      
+                        data12 shift-reduce 24     data ::= data12
+                        data16 shift        6      
+                        data20 shift-reduce 26     data ::= data20
+                        data24 shift-reduce 27     data ::= data24
+                        data32 shift        3      
+                        data48 shift-reduce 29     data ::= data48
+                        data64 shift-reduce 30     data ::= data64
+                     {default} reduce       32     data0 ::=
+
+State 3:
+     (28) data ::= data32 *
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= * data8 data8
+          data32 ::= * data16 data16
+          data48 ::= data32 * data16
+          data64 ::= data32 * data32
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift        10     
+                         data8 shift        7      
+                        data16 shift        5      
+                        data32 shift-reduce 47     data64 ::= data32 data32
+                     {default} reduce       28     data ::= data32
+
+State 4:
+     (19) data ::= data4 *
+          byte ::= * INT
+          data1 ::= * byte
+          data2 ::= * byte byte
+          data3 ::= * byte byte byte
+          data4 ::= * byte byte byte byte
+          data5 ::= data4 * data1
+          data6 ::= data4 * data2
+          data7 ::= data4 * data3
+          data8 ::= data4 * data4
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        23     
+                         data1 shift-reduce 37     data5 ::= data4 data1
+                         data2 shift-reduce 38     data6 ::= data4 data2
+                         data3 shift-reduce 39     data7 ::= data4 data3
+                         data4 shift-reduce 40     data8 ::= data4 data4
+                     {default} reduce       19     data ::= data4
+
+State 5:
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= * data8 data8
+          data32 ::= data16 * data16
+     (46) data48 ::= data32 data16 *
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift        10     
+                         data8 shift        7      
+                        data16 shift-reduce 45     data32 ::= data16 data16
+                     {default} reduce       46     data48 ::= data32 data16
+
+State 6:
+     (25) data ::= data16 *
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= * data8 data8
+          data20 ::= data16 * data4
+          data24 ::= data16 * data8
+          data32 ::= data16 * data16
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift        11     
+                         data8 shift        8      
+                        data16 shift-reduce 45     data32 ::= data16 data16
+                     {default} reduce       25     data ::= data16
+
+State 7:
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= data8 * data8
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift        10     
+                         data8 shift-reduce 42     data16 ::= data8 data8
+
+State 8:
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data16 ::= data8 * data8
+     (44) data24 ::= data16 data8 *
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift        10     
+                         data8 shift-reduce 42     data16 ::= data8 data8
+                     {default} reduce       44     data24 ::= data16 data8
+
+State 9:
+     (23) data ::= data8 *
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= * data4 data4
+          data12 ::= data8 * data4
+          data16 ::= data8 * data8
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift        12     
+                         data8 shift-reduce 42     data16 ::= data8 data8
+                     {default} reduce       23     data ::= data8
+
+State 10:
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= data4 * data4
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift-reduce 40     data8 ::= data4 data4
+
+State 11:
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= data4 * data4
+     (43) data20 ::= data16 data4 *
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift-reduce 40     data8 ::= data4 data4
+                     {default} reduce       43     data20 ::= data16 data4
+
+State 12:
+          byte ::= * INT
+          data4 ::= * byte byte byte byte
+          data8 ::= data4 * data4
+     (41) data12 ::= data8 data4 *
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        20     
+                         data4 shift-reduce 40     data8 ::= data4 data4
+                     {default} reduce       41     data12 ::= data8 data4
+
+State 13:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines * start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (56) maybe_chars ::= *
+          maybe_chars ::= * maybe_chars HEADER_CHAR
+          maybe_lines ::= maybe_lines * maybe_chars ENDL
+          start_time ::= * START_TIME ref_date ref_time
+
+                    START_TIME shift        30     
+                    start_time shift        71     
+                   maybe_chars shift        43     
+                     {default} reduce       56     maybe_chars ::=
+
+State 14:
+          footer_and_header ::= footer ENDL * header
+          header ::= * version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+          version ::= * HEADER_VER maybe_chars
+
+                    HEADER_VER shift        35     
+                        header shift-reduce 1      footer_and_header ::= footer ENDL header
+                       version shift        74     
+
+State 15:
+          j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE INT INT INT MSG_DIR * msg_length data
+          msg_length ::= * INT
+
+                           INT shift-reduce 12     msg_length ::= INT
+                    msg_length shift        1      
+
+State 16:
+          j1939_msg ::= msg_time INT * msg_id INT J1939_MSG_TYPE INT INT INT MSG_DIR msg_length data
+          msg_id ::= * INT
+
+                           INT shift-reduce 11     msg_id ::= INT
+                        msg_id shift        51     
+
+State 17:
+          err_msg ::= msg_time MSG_DIR INT INT * err_msg_type
+     (11) msg_id ::= INT *
+          err_msg_type ::= * ERR_MSG_TYPE
+
+                  ERR_MSG_TYPE shift-reduce 14     err_msg_type ::= ERR_MSG_TYPE
+                  err_msg_type shift-reduce 6      err_msg ::= msg_time MSG_DIR INT INT err_msg_type
+                     {default} reduce       11     msg_id ::= INT
+
+State 18:
+          byte ::= * INT
+          data4 ::= byte byte byte * byte
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift-reduce 36     data4 ::= byte byte byte byte
+
+State 19:
+          byte ::= * INT
+          data4 ::= byte byte * byte byte
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        18     
+
+State 20:
+          byte ::= * INT
+          data4 ::= byte * byte byte byte
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        19     
+
+State 21:
+          byte ::= * INT
+     (35) data3 ::= byte byte byte *
+          data4 ::= byte byte byte * byte
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift-reduce 36     data4 ::= byte byte byte byte
+                     {default} reduce       35     data3 ::= byte byte byte
+
+State 22:
+          byte ::= * INT
+     (34) data2 ::= byte byte *
+          data3 ::= byte byte * byte
+          data4 ::= byte byte * byte byte
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        21     
+                     {default} reduce       34     data2 ::= byte byte
+
+State 23:
+          byte ::= * INT
+     (33) data1 ::= byte *
+          data2 ::= byte * byte
+          data3 ::= byte * byte byte
+          data4 ::= byte * byte byte byte
+
+                           INT shift-reduce 31     byte ::= INT
+                          byte shift        22     
+                     {default} reduce       33     data1 ::= byte
+
+State 24:
+          msg ::= msg_time MSG_DIR INT msg_id msg_type * msg_length data
+          msg_length ::= * INT
+
+                           INT shift-reduce 12     msg_length ::= INT
+                    msg_length shift        2      
+
+State 25:
+          msg ::= msg_time MSG_DIR INT msg_id * msg_type msg_length data
+          msg_type ::= * MSG_TYPE
+
+                      MSG_TYPE shift-reduce 13     msg_type ::= MSG_TYPE
+                      msg_type shift        24     
+
+State 26:
+          msg ::= msg_time MSG_DIR INT * msg_id msg_type msg_length data
+          err_msg ::= msg_time MSG_DIR INT * INT err_msg_type
+          msg_id ::= * INT
+
+                           INT shift        17     
+                        msg_id shift        25     
+
+State 27:
+          end_time ::= END_TIME ref_date * ref_time
+          ref_time ::= * INT COLON INT COLON INT COLON INT
+
+                           INT shift        68     
+                      ref_time shift-reduce 63     end_time ::= END_TIME ref_date ref_time
+
+State 28:
+          end_time ::= END_TIME * ref_date ref_time
+          ref_date ::= * INT COLON INT COLON INT
+
+                           INT shift        62     
+                      ref_date shift        27     
+
+State 29:
+          start_time ::= START_TIME ref_date * ref_time
+          ref_time ::= * INT COLON INT COLON INT COLON INT
+
+                           INT shift        68     
+                      ref_time shift-reduce 3      start_time ::= START_TIME ref_date ref_time
+
+State 30:
+          start_time ::= START_TIME * ref_date ref_time
+          ref_date ::= * INT COLON INT COLON INT
+
+                           INT shift        62     
+                      ref_date shift        29     
+
+State 31:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines * TIME_MODE ENDL anything
+     (56) maybe_chars ::= *
+          maybe_chars ::= * maybe_chars HEADER_CHAR
+          maybe_lines ::= maybe_lines * maybe_chars ENDL
+
+                     TIME_MODE shift        69     
+                   maybe_chars shift        43     
+                     {default} reduce       56     maybe_chars ::=
+
+State 32:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines * DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (56) maybe_chars ::= *
+          maybe_chars ::= * maybe_chars HEADER_CHAR
+          maybe_lines ::= maybe_lines * maybe_chars ENDL
+
+                     DATA_MODE shift        70     
+                   maybe_chars shift        43     
+                     {default} reduce       56     maybe_chars ::=
+
+State 33:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines * START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (56) maybe_chars ::= *
+          maybe_chars ::= * maybe_chars HEADER_CHAR
+          maybe_lines ::= maybe_lines * maybe_chars ENDL
+
+                 START_SESSION shift        72     
+                   maybe_chars shift        43     
+                     {default} reduce       56     maybe_chars ::=
+
+State 34:
+          header ::= version ENDL maybe_lines * PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (56) maybe_chars ::= *
+          maybe_chars ::= * maybe_chars HEADER_CHAR
+          maybe_lines ::= maybe_lines * maybe_chars ENDL
+
+                 PROTOCOL_TYPE shift        73     
+                   maybe_chars shift        43     
+                     {default} reduce       56     maybe_chars ::=
+
+State 35:
+          version ::= HEADER_VER * maybe_chars
+     (56) maybe_chars ::= *
+          maybe_chars ::= * maybe_chars HEADER_CHAR
+
+                   maybe_chars shift        58     
+                     {default} reduce       56     maybe_chars ::=
+
+State 36:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL * anything
+     (60) anything ::= *
+          anything ::= * anything HEADER_CHAR
+          anything ::= * anything ENDL
+
+                      anything shift        44     
+                     {default} reduce       60     anything ::=
+
+State 37:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL * maybe_lines TIME_MODE ENDL anything
+     (58) maybe_lines ::= *
+          maybe_lines ::= * maybe_lines maybe_chars ENDL
+
+                   maybe_lines shift        31     
+                     {default} reduce       58     maybe_lines ::=
+
+State 38:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL * maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (58) maybe_lines ::= *
+          maybe_lines ::= * maybe_lines maybe_chars ENDL
+
+                   maybe_lines shift        32     
+                     {default} reduce       58     maybe_lines ::=
+
+State 39:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL * maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (58) maybe_lines ::= *
+          maybe_lines ::= * maybe_lines maybe_chars ENDL
+
+                   maybe_lines shift        13     
+                     {default} reduce       58     maybe_lines ::=
+
+State 40:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL * maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (58) maybe_lines ::= *
+          maybe_lines ::= * maybe_lines maybe_chars ENDL
+
+                   maybe_lines shift        33     
+                     {default} reduce       58     maybe_lines ::=
+
+State 41:
+          header ::= version ENDL * maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+     (58) maybe_lines ::= *
+          maybe_lines ::= * maybe_lines maybe_chars ENDL
+
+                   maybe_lines shift        34     
+                     {default} reduce       58     maybe_lines ::=
+
+State 42:
+          msg ::= msg_time * MSG_DIR INT msg_id msg_type msg_length data
+          err_msg ::= msg_time * MSG_DIR INT INT err_msg_type
+          j1939_msg ::= msg_time * INT msg_id INT J1939_MSG_TYPE INT INT INT MSG_DIR msg_length data
+
+                       MSG_DIR shift        52     
+                           INT shift        16     
+
+State 43:
+          maybe_chars ::= maybe_chars * HEADER_CHAR
+          maybe_lines ::= maybe_lines maybe_chars * ENDL
+
+                          ENDL shift-reduce 59     maybe_lines ::= maybe_lines maybe_chars ENDL
+                   HEADER_CHAR shift-reduce 57     maybe_chars ::= maybe_chars HEADER_CHAR
+
+State 44:
+      (2) header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything *
+          anything ::= anything * HEADER_CHAR
+          anything ::= anything * ENDL
+
+                          ENDL shift-reduce 62     anything ::= anything ENDL
+                   HEADER_CHAR shift-reduce 61     anything ::= anything HEADER_CHAR
+                     {default} reduce       2      header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+
+State 45:
+     (51) entry ::= footer *
+          footer_and_header ::= footer * ENDL header
+
+                             $ reduce       51     entry ::= footer
+                          ENDL shift        14     
+
+State 46:
+          j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE INT INT INT * MSG_DIR msg_length data
+
+                       MSG_DIR shift        15     
+
+State 47:
+          j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE INT INT * INT MSG_DIR msg_length data
+
+                           INT shift        46     
+
+State 48:
+          j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE INT * INT INT MSG_DIR msg_length data
+
+                           INT shift        47     
+
+State 49:
+          j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE * INT INT INT MSG_DIR msg_length data
+
+                           INT shift        48     
+
+State 50:
+          j1939_msg ::= msg_time INT msg_id INT * J1939_MSG_TYPE INT INT INT MSG_DIR msg_length data
+
+                J1939_MSG_TYPE shift        49     
+
+State 51:
+          j1939_msg ::= msg_time INT msg_id * INT J1939_MSG_TYPE INT INT INT MSG_DIR msg_length data
+
+                           INT shift        50     
+
+State 52:
+          msg ::= msg_time MSG_DIR * INT msg_id msg_type msg_length data
+          err_msg ::= msg_time MSG_DIR * INT INT err_msg_type
+
+                           INT shift        26     
+
+State 53:
+          footer ::= end_time ENDL * STOP_SESSION
+
+                  STOP_SESSION shift-reduce 4      footer ::= end_time ENDL STOP_SESSION
+
+State 54:
+          footer ::= end_time * ENDL STOP_SESSION
+
+                          ENDL shift        53     
+
+State 55:
+     (54) entry ::= j1939_msg *
+
+                             $ reduce       54     entry ::= j1939_msg
+
+State 56:
+     (53) entry ::= err_msg *
+
+                             $ reduce       53     entry ::= err_msg
+
+State 57:
+     (52) entry ::= msg *
+
+                             $ reduce       52     entry ::= msg
+
+State 58:
+     (55) version ::= HEADER_VER maybe_chars *
+          maybe_chars ::= maybe_chars * HEADER_CHAR
+
+                   HEADER_CHAR shift-reduce 57     maybe_chars ::= maybe_chars HEADER_CHAR
+                     {default} reduce       55     version ::= HEADER_VER maybe_chars
+
+State 59:
+          ref_date ::= INT COLON INT COLON * INT
+
+                           INT shift-reduce 8      ref_date ::= INT COLON INT COLON INT
+
+State 60:
+          ref_date ::= INT COLON INT * COLON INT
+
+                         COLON shift        59     
+
+State 61:
+          ref_date ::= INT COLON * INT COLON INT
+
+                           INT shift        60     
+
+State 62:
+          ref_date ::= INT * COLON INT COLON INT
+
+                         COLON shift        61     
+
+State 63:
+          ref_time ::= INT COLON INT COLON INT COLON * INT
+
+                           INT shift-reduce 9      ref_time ::= INT COLON INT COLON INT COLON INT
+
+State 64:
+          ref_time ::= INT COLON INT COLON INT * COLON INT
+
+                         COLON shift        63     
+
+State 65:
+          ref_time ::= INT COLON INT COLON * INT COLON INT
+
+                           INT shift        64     
+
+State 66:
+          ref_time ::= INT COLON INT * COLON INT COLON INT
+
+                         COLON shift        65     
+
+State 67:
+          ref_time ::= INT COLON * INT COLON INT COLON INT
+
+                           INT shift        66     
+
+State 68:
+          ref_time ::= INT * COLON INT COLON INT COLON INT
+
+                         COLON shift        67     
+
+State 69:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE * ENDL anything
+
+                          ENDL shift        36     
+
+State 70:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE * ENDL maybe_lines TIME_MODE ENDL anything
+
+                          ENDL shift        37     
+
+State 71:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time * ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+
+                          ENDL shift        38     
+
+State 72:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION * ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+
+                          ENDL shift        39     
+
+State 73:
+          header ::= version ENDL maybe_lines PROTOCOL_TYPE * ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+
+                          ENDL shift        40     
+
+State 74:
+          header ::= version * ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything
+
+                          ENDL shift        41     
+
+State 75:
+     (50) entry ::= header *
+
+                             $ reduce       50     entry ::= header
+
+State 76:
+     (49) entry ::= footer_and_header *
+
+                             $ reduce       49     entry ::= footer_and_header
+
+State 77:
+     (48) entry ::= empty_line *
+
+                             $ reduce       48     entry ::= empty_line
+
+----------------------------------------------------
+Symbols:
+The first-set of non-terminals is shown after the name.
+
+    0: $:
+    1: INVALID_CHAR (precedence=1)
+    2: INVALID_NUMBER (precedence=2)
+    3: ENDL
+    4: PROTOCOL_TYPE
+    5: START_SESSION
+    6: DATA_MODE
+    7: TIME_MODE
+    8: HEADER_VER
+    9: HEADER_CHAR
+   10: START_TIME
+   11: STOP_SESSION
+   12: END_TIME
+   13: MSG_DIR
+   14: INT
+   15: J1939_MSG_TYPE
+   16: COLON
+   17: MSG_TIME
+   18: MSG_TYPE
+   19: ERR_MSG_TYPE
+   20: msg_time: MSG_TIME
+   21: msg_type: MSG_TYPE
+   22: err_msg_type: ERR_MSG_TYPE
+   23: msg_length: INT
+   24: msg_id: INT
+   25: ref_date: INT
+   26: ref_time: INT
+   27: start_time: START_TIME
+   28: byte: INT
+   29: data: <lambda> INT
+   30: data0: <lambda>
+   31: data1: INT
+   32: data2: INT
+   33: data3: INT
+   34: data4: INT
+   35: data5: INT
+   36: data6: INT
+   37: data7: INT
+   38: data8: INT
+   39: data12: INT
+   40: data16: INT
+   41: data20: INT
+   42: data24: INT
+   43: data32: INT
+   44: data48: INT
+   45: data64: INT
+   46: entry: <lambda> HEADER_VER END_TIME MSG_TIME
+   47: empty_line: <lambda>
+   48: footer_and_header: END_TIME
+   49: header: HEADER_VER
+   50: footer: END_TIME
+   51: msg: MSG_TIME
+   52: err_msg: MSG_TIME
+   53: j1939_msg: MSG_TIME
+   54: version: HEADER_VER
+   55: maybe_lines: <lambda> ENDL HEADER_CHAR
+   56: anything: <lambda> ENDL HEADER_CHAR
+   57: maybe_chars: <lambda> HEADER_CHAR
+   58: end_time: END_TIME
+----------------------------------------------------
+Syntax-only Symbols:
+The following symbols never carry semantic content.
+
+$ INVALID_CHAR INVALID_NUMBER ENDL START_SESSION HEADER_VER HEADER_CHAR
+START_TIME STOP_SESSION END_TIME MSG_DIR J1939_MSG_TYPE COLON entry
+empty_line footer_and_header header footer msg err_msg j1939_msg version
+maybe_lines anything maybe_chars end_time
+----------------------------------------------------
+Rules:
+   0: empty_line ::=.
+   1: footer_and_header ::= footer ENDL header.
+   2: header ::= version ENDL maybe_lines PROTOCOL_TYPE ENDL maybe_lines START_SESSION ENDL maybe_lines start_time ENDL maybe_lines DATA_MODE ENDL maybe_lines TIME_MODE ENDL anything.
+   3: start_time ::= START_TIME ref_date ref_time.
+   4: footer ::= end_time ENDL STOP_SESSION.
+   5: msg ::= msg_time MSG_DIR INT msg_id msg_type msg_length data.
+   6: err_msg ::= msg_time MSG_DIR INT INT err_msg_type.
+   7: j1939_msg ::= msg_time INT msg_id INT J1939_MSG_TYPE INT INT INT MSG_DIR msg_length data.
+   8: ref_date ::= INT COLON INT COLON INT.
+   9: ref_time ::= INT COLON INT COLON INT COLON INT.
+  10: msg_time ::= MSG_TIME.
+  11: msg_id ::= INT.
+  12: msg_length ::= INT.
+  13: msg_type ::= MSG_TYPE.
+  14: err_msg_type ::= ERR_MSG_TYPE.
+  15: data ::= data0.
+  16: data ::= data1.
+  17: data ::= data2.
+  18: data ::= data3.
+  19: data ::= data4.
+  20: data ::= data5.
+  21: data ::= data6.
+  22: data ::= data7.
+  23: data ::= data8.
+  24: data ::= data12.
+  25: data ::= data16.
+  26: data ::= data20.
+  27: data ::= data24.
+  28: data ::= data32.
+  29: data ::= data48.
+  30: data ::= data64.
+  31: byte ::= INT.
+  32: data0 ::=.
+  33: data1 ::= byte.
+  34: data2 ::= byte byte.
+  35: data3 ::= byte byte byte.
+  36: data4 ::= byte byte byte byte.
+  37: data5 ::= data4 data1.
+  38: data6 ::= data4 data2.
+  39: data7 ::= data4 data3.
+  40: data8 ::= data4 data4.
+  41: data12 ::= data8 data4.
+  42: data16 ::= data8 data8.
+  43: data20 ::= data16 data4.
+  44: data24 ::= data16 data8.
+  45: data32 ::= data16 data16.
+  46: data48 ::= data32 data16.
+  47: data64 ::= data32 data32.
+  48: entry ::= empty_line.
+  49: entry ::= footer_and_header.
+  50: entry ::= header.
+  51: entry ::= footer.
+  52: entry ::= msg.
+  53: entry ::= err_msg.
+  54: entry ::= j1939_msg.
+  55: version ::= HEADER_VER maybe_chars.
+  56: maybe_chars ::=.
+  57: maybe_chars ::= maybe_chars HEADER_CHAR.
+  58: maybe_lines ::=.
+  59: maybe_lines ::= maybe_lines maybe_chars ENDL.
+  60: anything ::=.
+  61: anything ::= anything HEADER_CHAR.
+  62: anything ::= anything ENDL.
+  63: end_time ::= END_TIME ref_date ref_time.

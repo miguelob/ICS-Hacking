@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>sshdump - The Wireshark Network Analyzer 3.4.2</title>
+<link rel="stylesheet" href="ws.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@osx372.sd.apple.com" />
+</head>
+
+<body>
+
+
+
+<h1 id="NAME">NAME</h1>
+
+<p>sshdump - Provide interfaces to capture from a remote host through SSH using a remote capture binary.</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>sshdump</b> <span style="white-space: nowrap;">[ <b>--help</b> ]</span> <span style="white-space: nowrap;">[ <b>--version</b> ]</span> <span style="white-space: nowrap;">[ <b>--extcap-interfaces</b> ]</span> <span style="white-space: nowrap;">[ <b>--extcap-dlts</b> ]</span> <span style="white-space: nowrap;">[ <b>--extcap-interface</b>=&lt;interface&gt; ]</span> <span style="white-space: nowrap;">[ <b>--extcap-config</b> ]</span> <span style="white-space: nowrap;">[ <b>--extcap-capture-filter</b>=&lt;capture filter&gt; ]</span> <span style="white-space: nowrap;">[ <b>--capture</b> ]</span> <span style="white-space: nowrap;">[ <b>--fifo</b>=&lt;path to file or pipe&gt; ]</span> <span style="white-space: nowrap;">[ <b>--remote-host</b>=&lt;IP address&gt; ]</span> <span style="white-space: nowrap;">[ <b>--remote-port</b>=&lt;TCP port&gt; ]</span> <span style="white-space: nowrap;">[ <b>--remote-username</b>=&lt;username&gt; ]</span> <span style="white-space: nowrap;">[ <b>--remote-password</b>=&lt;password&gt; ]</span> <span style="white-space: nowrap;">[ <b>--sshkey</b>=&lt;public key path&lt;gt</span> ]&gt; <span style="white-space: nowrap;">[ <b>--remote-interface</b>=&lt;interface&gt; ]</span> <span style="white-space: nowrap;">[ <b>--remote-capture-command</b>=&lt;capture command&gt; ]</span> <span style="white-space: nowrap;">[ <b>--remote-sudo</b> ]</span></p>
+
+<p><b>sshdump</b> <span style="white-space: nowrap;"><b>--extcap-interfaces</b></span></p>
+
+<p><b>sshdump</b> <span style="white-space: nowrap;"><b>--extcap-interface</b>=&lt;interface&gt;</span> <span style="white-space: nowrap;"><b>--extcap-dlts</b></span></p>
+
+<p><b>sshdump</b> <span style="white-space: nowrap;"><b>--extcap-interface</b>=&lt;interface&gt;</span> <span style="white-space: nowrap;"><b>--extcap-config</b></span></p>
+
+<p><b>sshdump</b> <span style="white-space: nowrap;"><b>--extcap-interface</b>=&lt;interface&gt;</span> <span style="white-space: nowrap;"><b>--fifo</b>=&lt;path to file or pipe&gt;</span> <span style="white-space: nowrap;"><b>--capture</b></span> <span style="white-space: nowrap;"><b>--remote-host=myremotehost</b></span> <span style="white-space: nowrap;"><b>--remote-port=22</b></span> <span style="white-space: nowrap;"><b>--remote-username=user</b></span> <span style="white-space: nowrap;"><b>--remote-interface=eth2</b></span> <span style="white-space: nowrap;"><b>--remote-capture-command=&#39;tcpdump -U -i eth0 -w-&#39;</b></span></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><b>Sshdump</b> is an extcap tool that allows one to run a remote capture tool over a SSH connection. The requirement is that the capture executable must have the capabilities to capture from the wanted interface.</p>
+
+<p>The feature is functionally equivalent to run commands like</p>
+
+<pre><code>    $ ssh remoteuser@remotehost -p 22222 &#39;tcpdump -U -i IFACE -w -&#39; &gt; FILE &amp;
+    $ wireshark FILE
+
+    $ ssh remoteuser@remotehost &#39;/sbin/dumpcap -i IFACE -P -w - -f &quot;not port 22&quot;&#39; &gt; FILE &amp;
+    $ wireshark FILE
+
+    $ ssh somehost dumpcap -P -w - -f udp | tshark -i -</code></pre>
+
+<p>Typically sshdump is not invoked directly. Instead it can be configured through the Wireshark graphical user interface or its command line. The following will start Wireshark and start capturing from host <b>remotehost</b>:</p>
+
+<pre><code>    $ wireshark &#39;-oextcap.sshdump.remotehost:&quot;remotehost&quot;&#39; -i sshdump -k</code></pre>
+
+<p>To explicitly control the remote capture command:</p>
+
+<pre><code>    $ wireshark &#39;-oextcap.sshdump.remotehost:&quot;remotehost&quot;&#39; \
+                &#39;-oextcap.sshdump.remotecapturecommand:&quot;tcpdump -i eth0 -Uw- not port 22&quot;&#39; \
+                -i sshdump -k</code></pre>
+
+<p>Supported interfaces:</p>
+
+<dl>
+
+<dt id="ssh">1. ssh</dt>
+<dd>
+
+</dd>
+</dl>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="help">--help</dt>
+<dd>
+
+<p>Print program arguments.</p>
+
+</dd>
+<dt id="version">--version</dt>
+<dd>
+
+<p>Print program version.</p>
+
+</dd>
+<dt id="extcap-interfaces">--extcap-interfaces</dt>
+<dd>
+
+<p>List available interfaces.</p>
+
+</dd>
+<dt id="extcap-interface-interface">--extcap-interface=&lt;interface&gt;</dt>
+<dd>
+
+<p>Use specified interfaces.</p>
+
+</dd>
+<dt id="extcap-dlts">--extcap-dlts</dt>
+<dd>
+
+<p>List DLTs of specified interface.</p>
+
+</dd>
+<dt id="extcap-config">--extcap-config</dt>
+<dd>
+
+<p>List configuration options of specified interface.</p>
+
+</dd>
+<dt id="capture">--capture</dt>
+<dd>
+
+<p>Start capturing from specified interface and write raw packet data to the location specified by --fifo.</p>
+
+</dd>
+<dt id="fifo-path-to-file-or-pipe">--fifo=&lt;path to file or pipe&gt;</dt>
+<dd>
+
+<p>Save captured packet to file or send it through pipe.</p>
+
+</dd>
+<dt id="remote-host-remote-host">--remote-host=&lt;remote host&gt;</dt>
+<dd>
+
+<p>The address of the remote host for capture.</p>
+
+</dd>
+<dt id="remote-port-remote-port">--remote-port=&lt;remote port&gt;</dt>
+<dd>
+
+<p>The SSH port of the remote host.</p>
+
+</dd>
+<dt id="remote-username-username">--remote-username=&lt;username&gt;</dt>
+<dd>
+
+<p>The username for ssh authentication.</p>
+
+</dd>
+<dt id="remote-password-password">--remote-password=&lt;password&gt;</dt>
+<dd>
+
+<p>The password to use (if not ssh-agent and pubkey are used). WARNING: the passwords are stored in plaintext and visible to all users on this system. It is recommended to use keyfiles with a SSH agent.</p>
+
+</dd>
+<dt id="sshkey-SSH-private-key-path">--sshkey=&lt;SSH private key path&gt;</dt>
+<dd>
+
+<p>The path to a private key for authentication.</p>
+
+</dd>
+<dt id="remote-interface-remote-interface">--remote-interface=&lt;remote interface&gt;</dt>
+<dd>
+
+<p>The remote network interface to capture from.</p>
+
+</dd>
+<dt id="remote-capture-command-capture-command">--remote-capture-command=&lt;capture command&gt;</dt>
+<dd>
+
+<p>A custom remote capture command that produces the remote stream that is shown in Wireshark. The command must be able to produce a PCAP stream written to STDOUT. See below for more examples.</p>
+
+<p>If using tcpdump, use the <b>-w-</b> option to ensure that packets are written to standard output (stdout). Include the <b>-U</b> option to write packets as soon as they are received.</p>
+
+<p>When specified, this command will be used as is, options such as the capture filter (<b>--extcap-capture-filter</b>) will not be appended.</p>
+
+</dd>
+<dt id="extcap-capture-filter-capture-filter">--extcap-capture-filter=&lt;capture filter&gt;</dt>
+<dd>
+
+<p>The capture filter. It corresponds to the value provided via the <b>tshark -f</b> option, and the Capture Filter field next to the interfaces list in the Wireshark interface.</p>
+
+</dd>
+</dl>
+
+<h1 id="EXAMPLES">EXAMPLES</h1>
+
+<p>To see program arguments:</p>
+
+<pre><code>    sshdump --help</code></pre>
+
+<p>To see program version:</p>
+
+<pre><code>    sshdump --version</code></pre>
+
+<p>To see interfaces:</p>
+
+<pre><code>    sshdump --extcap-interfaces</code></pre>
+
+<p>Only one interface (sshdump) is supported.</p>
+
+<pre><code>  Output:
+    interface {value=sshdump}{display=SSH remote capture}</code></pre>
+
+<p>To see interface DLTs:</p>
+
+<pre><code>    sshdump --extcap-interface=sshdump --extcap-dlts
+
+  Output:
+    dlt {number=147}{name=sshdump}{display=Remote capture dependent DLT}</code></pre>
+
+<p>To see interface configuration options:</p>
+
+<pre><code>    sshdump --extcap-interface=sshdump --extcap-config
+
+  Output:
+
+    arg {number=0}{call=--remote-host}{display=Remote SSH server address}{type=string}
+        {tooltip=The remote SSH host. It can be both an IP address or a hostname}{required=true}{group=Server}
+    arg {number=1}{call=--remote-port}{display=Remote SSH server port}{type=unsigned}
+        {tooltip=The remote SSH host port (1-65535)}{range=1,65535}{group=Server}
+    arg {number=2}{call=--remote-username}{display=Remote SSH server username}{type=string}
+        {tooltip=The remote SSH username. If not provided, the current user will be used}{group=Authentication}
+    arg {number=3}{call=--remote-password}{display=Remote SSH server password}{type=password}
+        {tooltip=The SSH password, used when other methods (SSH agent or key files) are unavailable.}{group=Authentication}
+    arg {number=4}{call=--sshkey}{display=Path to SSH private key}{type=fileselect}
+        {tooltip=The path on the local filesystem of the private ssh key}{group=Authentication}
+    arg {number=5}{call=--sshkey-passphrase}{display=SSH key passphrase}{type=password}
+        {tooltip=Passphrase to unlock the SSH private key}{group=Authentication}
+    arg {number=6}{call=--proxycommand}{display=ProxyCommand}{type=string}
+        {tooltip=The command to use as proxy for the SSH connection}{group=Authentication}
+    arg {number=7}{call=--remote-interface}{display=Remote interface}{type=string}
+        {tooltip=The remote network interface used for capture}{group=Capture}
+    arg {number=8}{call=--remote-capture-command}{display=Remote capture command}{type=string}
+        {tooltip=The remote command used to capture}{group=Capture}
+    arg {number=9}{call=--remote-sudo}{display=Use sudo on the remote machine}{type=boolean}
+        {tooltip=Prepend the capture command with sudo on the remote machine}{group=Capture}
+    arg {number=10}{call=--remote-noprom}{display=No promiscuous mode}{type=boolflag}
+        {tooltip=Don&#39;t use promiscuous mode on the remote machine}{group=Capture}
+    arg {number=11}{call=--remote-filter}{display=Remote capture filter}{type=string}
+        {tooltip=The remote capture filter}{default=not ((host myhost) and port 22)}{group=Capture}
+    arg {number=12}{call=--remote-count}{display=Packets to capture}{type=unsigned}{default=0}
+        {tooltip=The number of remote packets to capture. (Default: inf)}{group=Capture}
+    arg {number=13}{call=--debug}{display=Run in debug mode}{type=boolflag}{default=false}
+        {tooltip=Print debug messages}{required=false}{group=Debug}
+    arg {number=14}{call=--debug-file}{display=Use a file for debug}{type=string}
+        {tooltip=Set a file where the debug messages are written}{required=false}{group=Debug}</code></pre>
+
+<p>To capture:</p>
+
+<pre><code>    sshdump --extcap-interface=sshdump --fifo=/tmp/ssh.pcap --capture --remote-host 192.168.1.10
+    --remote-username user --remote-filter &quot;not port 22&quot;</code></pre>
+
+<p>To use different capture binaries:</p>
+
+<pre><code>    sshdump --extcap-interface=sshdump --fifo=/tmp/ssh.pcap --capture --remote-host 192.168.1.10
+    --remote-capture-command=&#39;dumpcap -i eth0 -P -w -&#39;
+
+    sshdump --extcap-interface=sshdump --fifo=/tmp/ssh.pcap --capture --remote-host 192.168.1.10
+    --remote-capture-command=&#39;sudo tcpdump -i eth0 -U -w -&#39;</code></pre>
+
+<p>NOTE: To stop capturing CTRL+C/kill/terminate application.</p>
+
+<p>The sshdump binary can be renamed to support multiple instances. For instance if we want sshdump to show up twice in wireshark (for instance to handle multiple profiles), we can copy sshdump to sshdump-host1 and sshdump-host2. Each binary will show up an interface name same as the executable name. Those executables not being &quot;sshdump&quot; will show up as &quot;custom version&quot; in the interface description.</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>wireshark(1), tshark(1), dumpcap(1), extcap(4), tcpdump(1)</p>
+
+<h1 id="NOTES">NOTES</h1>
+
+<p><b>Sshdump</b> is part of the <b>Wireshark</b> distribution. The latest version of <b>Wireshark</b> can be found at <a href="https://www.wireshark.org">https://www.wireshark.org</a>.</p>
+
+<p>HTML versions of the Wireshark project man pages are available at: <a href="https://www.wireshark.org/docs/man-pages">https://www.wireshark.org/docs/man-pages</a>.</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<pre><code>  Original Author
+  -------- ------
+  Dario Lombardo             &lt;lomato[AT]gmail.com&gt;</code></pre>
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# Given a Wireshark issue ID, fetch its title and prepare an entry suitable
+# for pasting into the release notes. Requires curl and jq.
+#
+# Usage: gen-bugnote <issue number>
+#
+# Copyright 2013 Gerald Combs
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+#
+
+gitlab_issue_url_pfx="https://gitlab.com/api/v4/projects/wireshark%2Fwireshark/issues"
+issue_id="${1#\#}" # Strip leading "#"
+
+case "$OSTYPE" in
+    darwin*)
+        clipboard_cmd="pbcopy -Pascii"
+        ;;
+    cygwin*)
+        clipboard_cmd="cat > /dev/clipboard"
+        ;;
+    linux*)
+        clipboard_cmd="xsel --clipboard"
+        ;;
+    *)
+        echo "Unable to copy to clipboard"
+        clipboard_cmd="cat > /dev/null"
+        ;;
+esac
+
+if [ -z "$issue_id" ] ; then
+    echo "Usage: $( basename "$0" ) <issue id>"
+    exit 1
+fi
+
+issue_title=$(
+    curl -s -o - "${gitlab_issue_url_pfx}/$issue_id" \
+    | jq --raw-output '.title'
+    )
+
+echo -e "* $issue_title wsbuglink:${issue_id}[].\\n" \
+    | $clipboard_cmd
+
+echo "Copied $issue_id: $issue_title"

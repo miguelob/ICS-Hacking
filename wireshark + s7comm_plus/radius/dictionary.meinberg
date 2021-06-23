@@ -1,0 +1,21 @@
+# -*- text -*-
+# Copyright (C) 2015 The FreeRADIUS Server project and contributors
+##############################################################################
+#
+#	Meinberg
+#
+#	$Id: a396b823d836df50320de7645a7b56e90b1a5659 $
+#
+##############################################################################
+
+VENDOR		Meinberg			5597
+
+BEGIN-VENDOR	Meinberg
+
+ATTRIBUTE	MBG-Management-Privilege-Level		1	integer
+
+VALUE		MBG-Management-Privilege-Level	MBG-Priv-Superuser	100
+VALUE		MBG-Management-Privilege-Level	MBG-Priv-Admin		200
+VALUE		MBG-Management-Privilege-Level	MBG-Priv-Info		300
+
+END-VENDOR     Meinberg
