@@ -1,0 +1,52 @@
+Version 8.4
+Diagram_Title ""
+Notes1 
+Notes2 
+Page_Settings_Table Width Height Orientation Pos_X Pos_Y Draw_Scale Fine_Scale Created_By Create_Date Updated_By Update_Date Adjust_X Adjust_Y Page_Locked
+ page_settings 3000 2000 landscape -55 -239 0.5 2 oleob 06/02/2021 oleob 06/02/2021 0 0 Unlocked
+Colours_Table Bkgnd Link_Text Grid Float_Foregnd Float_Backgnd
+ colours &hFFFFFF& &hFF0000& &hFEEDED& &h0& &hC0FFFF&
+Text_Styles_Table Font Size Bold Italic UL ST FColour BColour F_Transpcy B_Transpcy
+ text_style Normal Calibri 10 False False False False &h0& &hFFFFFF& 255 0 
+ text_style Heading1 "Calibri Light" 16 False False False False &h0& &hFFFFFF& 255 0 
+ text_style Heading2 "Calibri Light" 13 False False False False &h0& &hFFFFFF& 255 0 
+ text_style Title "Calibri Light" 28 False False False False &h0& &hFFFFFF& 255 0 
+ text_style Subtitle Calibri 11 False False False False &h0& &hFFFFFF& 255 0 
+ text_style Small Calibri 6 False False False False &h0& &hFFFFFF& 255 0 
+Obj_Table Index Type X Y Caption_Lbl Float_text Hyperlink Parent Addr_Lbl X_scale Y_scale Layer Type_bits Rotate Options Backgnd Width Height Locked Toolset Var1 Var2
+ object 1 workstation 2172 1086 1 ! ! 0 2 1 1 2 0 0 0 false 108 97 false 0 ! !
+ object 2 workstation 980 1082 3 ! ! 0 4 1 1 2 0 0 0 false 108 97 false 0 ! !
+ object 3 workstation 1568 1358 5 ! ! 0 6 1 1 2 0 0 0 false 108 97 false 0 ! !
+ object 4 "small hub_2.wmf" 1568 1086 10 ! ! 0 11 2 2 2 0 0 0 false 115 57 false 0 ! !
+Label_Table Index X Y Text Font_Name Size Bold Italic UL ST Colour Parent_Object Type Backgnd Locked Rotate Ftranspcy Btranspcy Layer Style Parent_Link Link_pos Link_Seg Xoffset Yoffset
+ label 1 s 62 Master ! ! ! ! false ! &h0& 1 object ! ! 0 255 0 0 ! 0 0 0 false
+ label 2 e 0 192.168.1.10 ! ! ! ! false ! &h0& 1 ip ! ! 0 255 0 0 ! 0 0 0 false
+ label 3 s 62 Slave ! ! ! ! false ! &h0& 2 object ! ! 0 255 0 0 ! 0 0 0 false
+ label 4 w 0 192.168.1.5 ! ! ! ! false ! &h0& 2 ip ! ! 0 255 0 0 ! 0 0 0 false
+ label 5 s 62 Atacante ! ! ! ! false ! &h0& 3 object ! ! 0 255 0 0 ! 0 0 0 false
+ label 6 e 0 192.168.1.42 ! ! ! ! false ! &h0& 3 ip ! ! 0 255 0 0 ! 0 0 0 false
+ no_label 7
+ no_label 8
+ no_label 9
+ label 10 s 42 "small hub_2.wmf" ! ! ! ! false ! &h0& 4 object ! ! 0 255 0 0 ! 0 0 0 false
+ label 11 n -28.5 ! ! ! ! ! false ! &h0& 4 ip ! ! 0 255 0 0 ! 0 0 0 false
+Link_Table Index Obj1 Obj2 Style Hostname1_Lbl Hostname2_Lbl Addr1_Lbl Addr2_Lbl Comment1 Comment2 Xoffset1 Yoffset1 Xoffset2 Yoffset2 Node_List Align Layer
+ link_object 1 4 2 100baseT 0 0 0 0 ! ! -30 2 16 -2 ! False 3 -1
+ link_object 2 4 3 100baseT 0 0 0 0 ! ! 24 0 16 -26 ! False 3 -1
+ link_object 3 4 1 100baseT 0 0 0 0 ! ! 8 -16 -2 -8 ! False 3 -1
+Link_Styles_table Type Format Colour Style Width Misc Angle Style2 Length Endcap Join Startcap Dashcap Transpcy Align Secondary_Style start_cap_type variant width height x y end_cap_type variant width height x y
+ define_link 100baseT 0 &h808080& 1 1 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link 1000BaseT 0 &h9797FF& 1 1 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link "MM Fibre" 0 &hFF8080& 1 2 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link "SM Fibre" 0 &h80FF00& 1 2 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link 10baseT 0 &h808080& 1 1 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link "Leased Line" 1 &hFF00& 1 14 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link ISDN 0 &hFF& 3 2 9 1 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link ADSL 1 &hFFFF00& 1 14 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link backbone 0 &hC0C0C0& 1 6 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link "black pointer" 0 &h0& 1 1 128 .3 1 13 9 0 0 0 255 False ! 0 0 0 0 0 0 0 1 8 12 0 0 0
+ define_link "red pointer" 0 &hFF& 1 1 128 0 1 15 9 0 0 0 255 False ! 0 0 0 0 0 0 0 1 8 14 0 0 0
+ define_link unknown 0 &h7F7F7F& 1 2 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link "GRE Tunnel" 0 &hFF& 2 2 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link L2TP 0 &h80FF& 2 2 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
+ define_link box 0 &h7C7C7C& 1 2 9 0 0 0 0 0 0 0 255 False ! 0 0 0 0 0 0 0 0 0 0 0 0 0
