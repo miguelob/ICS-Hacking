@@ -1,5 +1,5 @@
-# TFG
-This is a cibersecurity repository where several industrial protocols and systems were investigated and pentested.
+# ICS and PLC Pentesting and Hacking
+This is a cibersecurity repository where several industrial protocols and systems were investigated and pentested. This project was born as a telecommunications engineering final degree work at the [Universidad Pontificia de Comillas ICAI](https://www.comillas.edu/icai) by me, **Miguel Oleo Blanco**. For contacting me, please check the Contact section at the end. You can find examples of the attacks on my [YouTube channel](https://www.youtube.com/c/Migueloleoblanco)
 ## Protocols
 - S7Comm & S7Comm Plus
 - Profinet & Profibus
@@ -57,5 +57,39 @@ In this resopitory you will find attacks, documents, and pcaps of both S7Comm pr
 
 - [S7Comm-plus](https://github.com/miguelob/ICS-Hacking/tree/main/S7comm-plus): For these protocol you will find two scripts. The *pr.py* is an example of a simple packet replay and the *denial.py* is an example of a request overflow that denies the PLC for few seconds. If this last script is continiously being executed, the PLC would be completely denied for that perior of time.
 
+For the attacks of both protocols, you would need to install Snap7 for python with this command:
+
+`$ pip install python-snap7`
+
+In  addition, you will also need to install the binaries of the protocol into your computer.
+
+**Windows install**
+
+You just need to install move into your PC the *Snap7.dll* from [Snap7 download](https://sourceforge.net/projects/snap7/)
+
+**MacOS install**
+
+You will need to have Brew cli previously install and then install Snap7 with Brew:
+
+`$ brew install snap7`
+
+
 ## SCADA
 ![SCADA example](https://github.com/miguelob/ICS-Hacking/blob/main/images/SCADA.png)
+
+In this section you will find a Python programm with a UI simulating a very simple SCADA system. This UI only have text showing the state of diferent variables and buttons to change its state. The UI is simple but it keeps it all real when it comes to a cyber attack. This SCADA example implements two protocols to make it more realistic. It works at the same time with ModBus and Snap7, with real time reading and writting. In order to attack this SCADA, please reffer to the attacks of each protocol.
+
+For running this app you will need to install diferent Python modules (or create a requirements.txt with the following packages):
+
+```
+pip install python-snap7
+pip install pickle-mixin
+pip install python-tk
+pip install pymodbus
+```
+
+## Contact
+
+- **Email**: miguel.oleo@alu.comillas.edu
+- **Linkedin**: https://www.linkedin.com/in/miguel-oleo-blanco/
+- **YouTube**: https://www.youtube.com/c/Migueloleoblanco
