@@ -23,10 +23,10 @@ print(f'State: {state}')
 
 db = plc.db_read(DB_NUMBER, START_ADDRESS, SIZE)
 
-#print de la db en formato hexadecimal
+#print of the internal DB on hexstream
 print(db)
 
-#Descomposicion de la db, se hace a partir del print y los offset de tia
+#Decompose of the DB from the previous prunt and from the offsets of TIA PORTAL
 product_name = db[1:256].decode('UTF-8').strip('\x00')
 print("Product name: ", product_name)
 

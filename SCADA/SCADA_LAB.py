@@ -43,11 +43,11 @@ class GUI():
 
     def botones(self,opc):
         if opc == '1':
-            #Invierte valor de poGiro
+            #Inverts the value of the variable poGiro
             snap7.util.set_bool(QB,0,6,not snap7.util.get_bool(QB,0,6))
             plc.ab_write(2,QB)
         elif opc == '2':
-            #Invierte el valor de poSentido
+            #Inverts the value of the variable poSentido
             snap7.util.set_bool(QB,0,7,not snap7.util.get_bool(QB,0,7))
             plc.ab_write(2,QB)
         elif opc == '3':
@@ -80,15 +80,15 @@ class GUI():
             self.valorMod1.set("Mod1: "+str(result.bits[1]))
             time.sleep(0.5)
 
-IP = '192.168.1.10' #IP del PLC que contiene el NetToPLCSim
-#Para el laboratorio sería el siguiente
-#IP = '192.168.56.15'
-#Para s7-1200 y s7-1500 siempre rack = 0 y slot = 1
+IP = '192.168.1.10' #Ip of the PLC inside NetToPLCSim
+#For testing on a real PLC use your own PLC ip below
+#IP = '192.168.56.15' --> My PLC IP
+#For s7-1200 and s7-1500 always rack = 0 & slot = 1
 RACK = 0
 SLOT = 1    
 
-plc = snap7.client.Client() #Creamos un cliente
-plc.connect(IP,RACK,SLOT)   #Nos conectamos
+plc = snap7.client.Client() #Creates a client
+plc.connect(IP,RACK,SLOT)   #Connects to the client
 QB = plc.ab_read(2,7)
 
 client = ModbusTcpClient(IP)

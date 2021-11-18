@@ -24,14 +24,14 @@ print(f'State: {state}')
 
 db = plc.db_read(DB_NUMBER, START_ADDRESS, SIZE)
 
-#print de la db en formato hexadecimal
+#print of the internal DB in hex stream
 print(db)
-#print("texto: ",binascii.unhexlify(db))
-#Descomposicion de la db, se hace a partir del print y los offset de tia
+#print("text: ",binascii.unhexlify(db))
+#Decompose of the DB from the print avobe and from the offsets of TIA PORTAL
 product_name = bool(db[0])
-print("Boton: ", product_name)
+print("Button: ", product_name)
 
 product_value = bool(db[1])
-print(f'luz: {product_value}')
+print(f'LED: {product_value}')
 
 plc.db_write(DB_NUMBER, START_ADDRESS, b'\x00')

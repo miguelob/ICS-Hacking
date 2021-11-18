@@ -1,6 +1,6 @@
 import snap7
 
-
+#This is an example for my own project reading my project's variables
 def Lectura():
     datos=[]
     QB = plc.ab_read(2,7)
