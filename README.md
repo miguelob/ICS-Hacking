@@ -46,3 +46,10 @@ On this folder you will find several attacks and pcaps for pentesting devices wo
 - [Discovery.py](https://github.com/miguelob/TFG/blob/main/Profinet%20%26%20Profibus/Discovery.py): This scripts sends a Ethernet packet containing a hex string that acts as a Profinet discovery packet (pn_dcp). **You must need to change the hex stream according to the source mac address to your mac address.** It is recommended to use [Wireshark](https://www.wireshark.org) and filtering by this type of packets. You must need Scapy to run the script.
 - [FlashLED.py](https://github.com/miguelob/TFG/blob/main/Profinet%20%26%20Profibus/FlashLED.py): This script is similar to the previous one. First you will need to run the *Discovery.py* in order to get a mac address of any Profinet device. This programm is optimized to blick the status led on a S7-1500 PLC. One you got the mac address, replace it on the hex stream, as well as the origin mac address.
 - [PacketReplay-Completo.py](https://github.com/miguelob/TFG/blob/main/Profinet%20%26%20Profibus/PacketReplay-Completo.py): This script is a complete python programm to scann, craft and send profinet packets. You must edit the full code in order to be prepeared to run it.
+
+## Snap7 (S7Comm & S7Comm Plus)
+![Snap7 logo](https://www.dmcinfo.com/DesktopModules/DnnForge%20-%20NewsArticles/ImageHandler.ashx?Width=925&Height=400&HomeDirectory=%2FPortals%2F0%2F&FileName=Blog+Pictures%2FSiemens.png&PortalID=0&q=1)
+
+In this resopitory you will find attacks, documents, and pcaps of both S7Comm protocol and its bigger brother S7Comm+:
+- [S7Comm](https://github.com/miguelob/TFG/tree/main/S7comm): 
+
