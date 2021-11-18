@@ -1,5 +1,5 @@
 # ICS and PLC Pentesting and Hacking
-This is a cibersecurity repository where several industrial protocols and systems were investigated and pentested. This project was born as a telecommunications engineering final degree work at the [Universidad Pontificia de Comillas ICAI](https://www.comillas.edu/icai) by me, **Miguel Oleo Blanco**. For contacting me, please check the Contact section at the end. You can find examples of the attacks on my [YouTube channel](https://www.youtube.com/c/Migueloleoblanco)
+This is a cibersecurity repository where several industrial protocols and systems were investigated and pentested. This project was born as a telecommunications engineering final degree work at the [Universidad Pontificia de Comillas ICAI](https://www.comillas.edu/icai) by me, **Miguel Oleo Blanco**. For contacting me, please check the Contact section at the end. You can find examples of the attacks on my [YouTube channel](https://www.youtube.com/c/Migueloleoblanco).
 ## Protocols
 - S7Comm & S7Comm Plus
 - Profinet & Profibus
@@ -18,15 +18,15 @@ For both Python scripts, you will need to import Scapy module with the following
 
 **Windows Scapy install**
 
-`pip install --pre scapy[complete]`
+`$ pip install --pre scapy[complete]`
 
 **MacOS Scapy install**
 
-`pip install --pre scapy[basic]`
+`$ pip install --pre scapy[basic]`
 
 Then you need to instal *Brew* packet if you have not already have it:
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+`$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 
 Then you proceed installing Scapy's dependencies using Brew:
 ```
@@ -82,10 +82,10 @@ In this section you will find a Python programm with a UI simulating a very simp
 For running this app you will need to install diferent Python modules (or create a requirements.txt with the following packages):
 
 ```
-pip install python-snap7
-pip install pickle-mixin
-pip install python-tk
-pip install pymodbus
+$ pip install python-snap7
+$ pip install pickle-mixin
+$ pip install python-tk
+$ pip install pymodbus
 ```
 
 ## Contact
