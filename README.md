@@ -52,5 +52,8 @@ On this folder you will find several attacks and pcaps for pentesting devices wo
 
 In this resopitory you will find attacks, documents, and pcaps of both S7Comm protocol and its bigger brother S7Comm+:
 - [S7Comm](https://github.com/miguelob/ICS-Hacking/tree/main/S7comm): In this folder you will find multiple Python Scripts that let you read and write data to internal variables of the PLC CPU. On the [Test Scripts folder](https://github.com/miguelob/ICS-Hacking/tree/main/S7comm/Test%20Scripts) you will find multiple test scripts in which you can base your own developed code. You will find example codes of writing and reading from internal variables and interal databases. 
-As an example for developing your own hacking interface, you can see the [Read&Write.py](https://github.com/miguelob/ICS-Hacking/blob/main/S7comm/Read%26Write.py) which adds iteraction with the user by cli. For a realistic TIA PORTAL project, i used the [CyberLabProject.py](https://github.com/miguelob/ICS-Hacking/blob/main/S7comm/CyberLabProject.py) script.
+
+  As an example for developing your own hacking interface, you can see the [Read&Write.py](https://github.com/miguelob/ICS-Hacking/blob/main/S7comm/Read%26Write.py) which adds iteraction with the user by cli. For a realistic TIA PORTAL project, i used the [CyberLabProject.py](https://github.com/miguelob/ICS-Hacking/blob/main/S7comm/CyberLabProject.py) script.
+
+- [S7Comm-plus](https://github.com/miguelob/ICS-Hacking/tree/main/S7comm-plus): For these protocol you will find two scripts. The *pr.py* is an example of a simple packet replay and the *denial.py* is an example of a request overflow that denies the PLC for few seconds. If this last script is continiously being executed, the PLC would be completely denied for that perior of time.
 
