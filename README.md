@@ -57,3 +57,5 @@ In this resopitory you will find attacks, documents, and pcaps of both S7Comm pr
 
 - [S7Comm-plus](https://github.com/miguelob/ICS-Hacking/tree/main/S7comm-plus): For these protocol you will find two scripts. The *pr.py* is an example of a simple packet replay and the *denial.py* is an example of a request overflow that denies the PLC for few seconds. If this last script is continiously being executed, the PLC would be completely denied for that perior of time.
 
+## SCADA
+![SCADA example](https://github.com/miguelob/ICS-Hacking/blob/main/images/SCADA.png)
