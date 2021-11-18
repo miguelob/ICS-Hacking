@@ -37,3 +37,12 @@ $ brew install libpcap
 Finally enable it on Scapy:
 
 `conf.use_pcap = True`
+
+## Profinet & Profibus
+![Profinet & Profibus logos](https://promo.comunicacionesindustrialeslogitek.com/wp-content/uploads/2015/09/logos-profibus-profinet.jpg)
+
+On this folder you will find several attacks and pcaps for pentesting devices working on these protocols.
+
+- [Discovery.py](https://github.com/miguelob/TFG/blob/main/Profinet%20%26%20Profibus/Discovery.py): This scripts sends a Ethernet packet containing a hex string that acts as a Profinet discovery packet (pn_dcp). **You must need to change the hex stream according to the source mac address to your mac address.** It is recommended to use [Wireshark](https://www.wireshark.org) and filtering by this type of packets. You must need Scapy to run the script.
+- [FlashLED.py](https://github.com/miguelob/TFG/blob/main/Profinet%20%26%20Profibus/FlashLED.py): This script is similar to the previous one. First you will need to run the *Discovery.py* in order to get a mac address of any Profinet device. This programm is optimized to blick the status led on a S7-1500 PLC. One you got the mac address, replace it on the hex stream, as well as the origin mac address.
+- [PacketReplay-Completo.py](https://github.com/miguelob/TFG/blob/main/Profinet%20%26%20Profibus/PacketReplay-Completo.py): This script is a complete python programm to scann, craft and send profinet packets. You must edit the full code in order to be prepeared to run it.
