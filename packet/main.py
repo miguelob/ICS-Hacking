@@ -1,5 +1,10 @@
 from numpy import character
 from S7comm import mainS7comm
+import os
+
+def clearScreen():
+    clear = lambda: os.system('clear')
+    clear()
 
 def intro():
     display = \
@@ -37,8 +42,9 @@ def menuS7Comm():
 
 
 if __name__ == "__main__":
-    intro()
     while(True):
+        clearScreen()
+        intro()
         menu()
         option = ''
         try:
@@ -48,6 +54,7 @@ if __name__ == "__main__":
         #Check what choice was entered and act accordingly
         if option == 1:
             while(True):
+                clearScreen()
                 menuS7Comm()
                 try:
                     choice = int(input('Enter your choice: '))
@@ -60,9 +67,27 @@ if __name__ == "__main__":
                     RACK = int(input('Please, type in the RACK number (defult is set to 0): '))
                     SLOT = int(input('Please, type in the SLOT number (default is set to 1): '))
                     mainS7comm.labProject(IP,RACK,SLOT)
-                elif option == 5:
+
+                elif choice == 2:
+                    print("Now you will be asked to type in the dst IP, RACK and SLOT.\n")
+                    print("No error will be corrected, please make sure you type in valid values.\n")
+                    IP = str(input('Please, type in the destination IP: '))
+                    HEX = str(input('Please, type in the hex dump of the packet you want to send: '))
+
+                    mainS7comm.packetReplay(IP,HEX)
+
+                elif choice == 3:
+                    print("Now you will be asked to type in the dst IP, RACK and SLOT.\n")
+                    print("No error will be corrected, please make sure you type in valid values.\n")
+                    IP = str(input('Please, type in the destination IP: '))
+                    RACK = int(input('Please, type in the RACK number (defult is set to 0): '))
+                    SLOT = int(input('Please, type in the SLOT number (default is set to 1): '))
+
+                    mainS7comm.QReadWrite(IP,RACK,SLOT)
+
+                elif choice == 4:
                     print('Thanks message before exiting')
-                    exit()
+                    break
                 else:
                     print('Invalid option. Please enter a number between 1 and 4.\n\n')
 
@@ -73,7 +98,7 @@ if __name__ == "__main__":
         elif option == 4:
             P&P()
         elif option == 5:
-            print('Thanks message before exiting')
+            print('Thanks for using the package. For more info, refer to the GitHub Repo.')
             exit()
         else:
             print('Invalid option. Please enter a number between 1 and 5.\n\n')
