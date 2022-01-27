@@ -1,1 +1,2 @@
 python-snap7==1.1
+scapy==2.4.5
