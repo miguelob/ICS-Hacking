@@ -1,5 +1,5 @@
 # ICS and PLC Pentesting and Hacking
-This is a cibersecurity repository where several industrial protocols and systems were investigated and pentested. This project was born as a telecommunications engineering final degree work at the [Universidad Pontificia de Comillas ICAI](https://www.comillas.edu/icai) by me, **Miguel Oleo Blanco**. For contacting me, please check the Contact section at the end. You can find examples of the attacks on my [YouTube channel](https://www.youtube.com/c/Migueloleoblanco).
+This is a cibersecurity repository where several industrial protocols and systems were investigated and pentested. This project was born as a telecommunications engineering final degree project at the [Universidad Pontificia de Comillas ICAI](https://www.comillas.edu/icai) by me, **Miguel Oleo Blanco**. For contacting me, please check the Contact section at the end. You can find examples of the attacks on my [YouTube channel](https://www.youtube.com/c/Migueloleoblanco).
 ## Protocols
 - S7Comm & S7Comm Plus
 - Profinet & Profibus
