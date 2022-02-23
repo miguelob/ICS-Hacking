@@ -1,5 +1,6 @@
 from numpy import character
 from S7comm import mainS7comm
+from S7comm-plus import pr
 import os
 
 def clearScreen():
