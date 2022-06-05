@@ -4,7 +4,7 @@ from pymodbus.client.sync import ModbusTcpClient
 
 
 class GUI(plc, client):
-    def __init__(self):
+    def __init__(self, plc, client):
         self.Window = Tk()
         self.Window.withdraw()
         self.scada = Toplevel()
