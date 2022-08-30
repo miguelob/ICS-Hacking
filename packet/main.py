@@ -45,6 +45,16 @@ def menuS7Comm():
     for key in menu_options.keys():
         print (key, '--', menu_options[key] )
 
+def menuPandP():
+    menu_options = {
+    1: 'Discovery',
+    2: 'Flash LED',
+    3: 'Exit',
+    }
+
+    for key in menu_options.keys():
+        print (key, '--', menu_options[key] )
+
 
 if __name__ == "__main__":
     while(True):
