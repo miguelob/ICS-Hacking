@@ -6,7 +6,11 @@ import binascii
 #810000008892fefd04000000000400000008050300040000010000000000000000000000000000000000000000000000 Payload + Others (Do not change)
 
 # Change org mac address and merge 3 parts into one hex string and replace the one below
-raw_pkt = binascii.unhexlify('2863369a210400e04c680628810000008892fefd04000000000400000008050300040000010000000000000000000000000000000000000000000000')
-pn_dcp = Ether(raw_pkt)
-pn_dcp.show()
-sendp(pn_dcp,iface="en8")
+class FlashLED(macog,macdst):
+    def __init__(self, macog,macdst):
+        Hex = macdst + macog + '810000008892fefd04000000000400000008050300040000010000000000000000000000000000000000000000000000'
+        raw_pkt = binascii.unhexlify(Hex)
+        pn_dcp = Ether(raw_pkt)
+        pn_dcp.show()
+        sendp(pn_dcp,iface="en8")
+        print("Flash LED packet sent")

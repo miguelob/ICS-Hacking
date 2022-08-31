@@ -1,5 +1,7 @@
 from numpy import character
 from S7comm import mainS7comm
+from PnetPbus import Discovery
+from PnetPbus import FlashLED
 import sys, socket, pickle, struct,time, threading, snap7
 from tkinter import *
 from pymodbus.client.sync import ModbusTcpClient
@@ -140,7 +142,24 @@ if __name__ == "__main__":
 
             g = SCADA_LAB.GUI(plc,client)
         elif option == 4:
-            P&P()
+            while(True):
+                clearScreen()
+                menuPandP()
+                try:
+                    choice = int(input('Enter your choice: '))
+                except:
+                    print('Wrong input. Please enter a number ...')
+                if choice == 1:
+
+                    MAC = str(input('Please, type in your MAC address without colons (example: 001122334455): '))
+                    Discovery(MAC)
+                elif choice == 2:
+                    Macdst = str(input('Please, type in the destination MAC address without colons (example: 001122334455): '))
+                    Macog = str(input('Please, type in your MAC address without colons (example: 001122334455): '))
+                    FlashLED(Macdst,Macog)
+                elif choice == 3:
+                    print('Thanks message before exiting')
+                    break
         elif option == 5:
             print('Thanks for using the package. For more info, refer to the GitHub Repo.')
             exit()
