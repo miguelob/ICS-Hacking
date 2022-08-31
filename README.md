@@ -87,9 +87,17 @@ $ pip install pickle-mixin
 $ pip install python-tk
 $ pip install pymodbus
 ```
+## Package
+This packages contain all the code and funtionality from the repository on a terminal based GUI.
+You can find the realeases on the [Releases website](https://github.com/miguelob/ICS-Hacking/releases). It is recommended to download the latest version. Inside this package you will find the requirements.txt that need to be installed before running the main.py, with the following command:
+
+`pip install -r requirements.txt`
+
+After installing the requirements, you can directly run the main.py and the terminal GUI will guide you throught the different functionalities.
+
 
 ## Contact
-
-- **Email**: miguel.oleo@alu.comillas.edu
+- **Email 1**: moleoblanco@hawk.iit.edu
+- **Email 2**: miguel.oleo@alu.comillas.edu
 - **Linkedin**: https://www.linkedin.com/in/miguel-oleo-blanco/
 - **YouTube**: https://www.youtube.com/c/Migueloleoblanco
