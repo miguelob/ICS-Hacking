@@ -1,11 +1,10 @@
 from numpy import character
 from S7comm import mainS7comm
-from PnetPbus import Discovery
-from PnetPbus import FlashLED
+from PnetPbus import mainPnetPbus
 import sys, socket, pickle, struct,time, threading, snap7
 from tkinter import *
 from pymodbus.client.sync import ModbusTcpClient
-from SCADA import SCADA_LAB
+#from SCADA import SCADA_LAB
 from time import sleep 
 import os
 
@@ -145,18 +144,18 @@ if __name__ == "__main__":
             while(True):
                 clearScreen()
                 menuPandP()
+                iface = str(input('Please, type in the interface you want to use. (e.g. eth0): '))
                 try:
                     choice = int(input('Enter your choice: '))
                 except:
                     print('Wrong input. Please enter a number ...')
                 if choice == 1:
-
                     MAC = str(input('Please, type in your MAC address without colons (example: 001122334455): '))
-                    Discovery(MAC)
+                    mainPnetPbus.Discovery(MAC,iface)
                 elif choice == 2:
                     Macdst = str(input('Please, type in the destination MAC address without colons (example: 001122334455): '))
                     Macog = str(input('Please, type in your MAC address without colons (example: 001122334455): '))
-                    FlashLED(Macdst,Macog)
+                    mainPnetPbus.FlashLED(Macdst,Macog,iface)
                 elif choice == 3:
                     print('Thanks message before exiting')
                     break
