@@ -141,10 +141,12 @@ if __name__ == "__main__":
 
             g = SCADA_LAB.GUI(plc,client)
         elif option == 4:
+            clearScreen()
+            iface = str(input('Please, type in the interface you want to use. (e.g. eth0): '))
+            clearScreen()
             while(True):
                 clearScreen()
                 menuPandP()
-                iface = str(input('Please, type in the interface you want to use. (e.g. eth0): '))
                 try:
                     choice = int(input('Enter your choice: '))
                 except:
@@ -152,10 +154,12 @@ if __name__ == "__main__":
                 if choice == 1:
                     MAC = str(input('Please, type in your MAC address without colons (example: 001122334455): '))
                     mainPnetPbus.Discovery(MAC,iface)
+                    input("Press Enter to continue...")
                 elif choice == 2:
                     Macdst = str(input('Please, type in the destination MAC address without colons (example: 001122334455): '))
                     Macog = str(input('Please, type in your MAC address without colons (example: 001122334455): '))
                     mainPnetPbus.FlashLED(Macdst,Macog,iface)
+                    input("Press Enter to continue...")
                 elif choice == 3:
                     print('Thanks message before exiting')
                     break
