@@ -2,7 +2,7 @@
 from numpy import character
 from S7comm import mainS7comm
 from PnetPbus import mainPnetPbus
-import sys, socket, pickle, struct,time, threading, snap7
+import sys, socket, pickle, struct,time, threading, snap7, subprocess
 from tkinter import *
 from pymodbus.client.sync import ModbusTcpClient
 #from SCADA import SCADA_LAB
@@ -30,7 +30,8 @@ def menu():
     2: 'S7Comm-plus',
     3: 'SCADA',
     4: 'Profinet & Profibus',
-    5: 'Exit',
+    5: 'Install requirements',
+    6: 'Exit',
     }
 
     for key in menu_options.keys():
@@ -165,6 +166,9 @@ if __name__ == "__main__":
                     print('Thanks message before exiting')
                     break
         elif option == 5:
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
+            input("All requirements installed sucessfully. Type any key to continue...")
+        elif option == 6:
             print('Thanks for using the package. For more info, refer to the GitHub Repo.')
             exit()
         else:
