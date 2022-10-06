@@ -16,7 +16,7 @@ def clearScreen():
 def intro():
     display = \
     "==========================\n\n"+\
-    "       ICS-Hacking\n\n"+\
+    "      ICS-Hacking\n\n"+\
     "==========================\n"+\
     "® by Miguel Oleo Blanco\n\n"
 
