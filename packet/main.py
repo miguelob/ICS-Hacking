@@ -67,7 +67,7 @@ if __name__ == "__main__":
         try:
             option = int(input('Enter your choice: '))
         except:
-            print('Wrong input. Please enter a number ...')
+            input('Wrong input. Please enter a number. Type any key to continue...')
         #Check what choice was entered and act accordingly
         if option == 1:
             while(True):
