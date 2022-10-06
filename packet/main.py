@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from numpy import character
 from S7comm import mainS7comm
 from PnetPbus import mainPnetPbus
