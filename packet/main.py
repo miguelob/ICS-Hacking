@@ -2,6 +2,7 @@
 from numpy import character
 from S7comm import mainS7comm
 from PnetPbus import mainPnetPbus
+from SCADA import SCADA_LAB
 import sys, socket, pickle, struct,time, threading, snap7, subprocess
 from tkinter import *
 from pymodbus.client.sync import ModbusTcpClient
@@ -130,18 +131,11 @@ if __name__ == "__main__":
             
         elif option == 3:
             IP = str(input('Please, type in the destination IP: '))
-            RACK = str(input('Please, type in the RACK (DEFAULT IS 0): '))
-            SLOT = str(input('Please, type in the the SLOT (DEFAULT IS 1): '))    
+            RACK = int(str(input('Please, type in the RACK (DEFAULT IS 0): ')))
+            SLOT = int(str(input('Please, type in the the SLOT (DEFAULT IS 1): ')))    
 
-            plc = snap7.client.Client() #Creates a client
-            plc.connect(IP,RACK,SLOT)   #Connects to the client
-            QB = plc.ab_read(2,7)
+            SCADA_LAB.SCADA(IP,RACK,SLOT)
 
-            client = ModbusTcpClient(IP)
-            #client.write_coil(0, 0)
-            client.close()
-
-            g = SCADA_LAB.GUI(plc,client)
         elif option == 4:
             clearScreen()
             iface = str(input('Please, type in the interface you want to use. (e.g. eth0): '))
