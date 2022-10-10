@@ -8,7 +8,6 @@ from pymodbus.client.sync import ModbusTcpClient
 #from SCADA import SCADA_LAB
 from time import sleep 
 import os
-#branch for testing
 
 def clearScreen():
     clear = lambda: os.system('clear')
