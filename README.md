@@ -65,7 +65,9 @@ In this resopitory you will find attacks, documents, and pcaps of both S7Comm pr
 
 For the attacks of both protocols, you would need to install Snap7 for python with this command:
 
-`$ pip install python-snap7`
+```
+pip install python-snap7
+```
 
 In  addition, you will also need to install the binaries of the protocol into your computer.
 
@@ -77,7 +79,9 @@ You just need to install move into your PC the *Snap7.dll* from [Snap7 download]
 
 You will need to have Brew cli previously install and then install Snap7 with Brew:
 
-`$ brew install snap7`
+```
+brew install snap7
+```
 
 
 ## SCADA
@@ -88,16 +92,18 @@ In this section you will find a Python programm with a UI simulating a very simp
 For running this app you will need to install diferent Python modules (or create a requirements.txt with the following packages):
 
 ```
-$ pip install python-snap7
-$ pip install pickle-mixin
-$ pip install python-tk
-$ pip install pymodbus
+pip install python-snap7
+pip install pickle-mixin
+pip install python-tk
+pip install pymodbus
 ```
 ## Package
 This packages contain all the code and funtionality from the repository on a terminal based GUI.
 You can find the realeases on the [Releases website](https://github.com/miguelob/ICS-Hacking/releases). It is recommended to download the latest version. Inside this package you will find the requirements.txt that need to be installed before running the main.py, with the following command:
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 After installing the requirements, you can directly run the main.py and the terminal GUI will guide you throught the different functionalities.
 
