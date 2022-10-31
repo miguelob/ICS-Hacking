@@ -18,15 +18,21 @@ For both Python scripts, you will need to import Scapy module with the following
 
 **Windows Scapy install**
 
-`$ pip install --pre scapy[complete]`
+```
+pip install --pre scapy[complete]
+```
 
 **MacOS Scapy install**
 
-`$ pip install --pre scapy[basic]`
+```
+pip install --pre scapy[basic]
+```
 
 Then you need to instal *Brew* packet if you have not already have it:
 
-`$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
 
 Then you proceed installing Scapy's dependencies using Brew:
 ```
